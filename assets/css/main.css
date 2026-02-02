@@ -2906,7 +2906,8 @@ input, select, textarea {
 			}
 
 	}
-.hero-content {
+/* Hero Video Content */
+section#banner .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2921,22 +2922,22 @@ input, select, textarea {
   max-width: 800px;
 }
 
-.hero-content h1 {
+section#banner .hero-content h1 {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300;          /* light font weight */
-  font-size: 3rem;           /* adjust if needed */
-  letter-spacing: 2px;       /* tracking for contemporary feel */
-  color: #F25D27;            /* primary color from your palette */
-  margin-bottom: 3rem;       /* extra spacing above CTA button */
+  font-weight: 300;         /* light font */
+  font-size: 3rem;
+  letter-spacing: 2px;
+  color: #F25D27;           /* primary palette color */
+  margin-bottom: 3rem;      /* spacing above CTA */
 }
 
-.hero-content .button {
+section#banner .hero-content .button {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400;          /* regular weight */
+  font-weight: 400;
   font-size: 1.1rem;
-  letter-spacing: 1px;       /* subtle tracking on button */
-  background-color: #F25D27; /* CTA button color from palette */
-  color: #FFFFFF;             /* button text in white for contrast */
+  letter-spacing: 1px;
+  background-color: #F25D27;
+  color: #FFFFFF;
   padding: 0.75rem 2rem;
   text-decoration: none;
   border: none;
@@ -2945,6 +2946,6 @@ input, select, textarea {
   transition: background-color 0.3s ease;
 }
 
-.hero-content .button:hover {
-  background-color: #A64E2E; /* optional subtle hover accent */
+section#banner .hero-content .button:hover {
+  background-color: #A64E2E; /* subtle hover accent */
 }
