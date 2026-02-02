@@ -2917,7 +2917,34 @@ input, select, textarea {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
   width: 90%;
   max-width: 800px;
+}
+
+.hero-content h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;          /* light font weight */
+  font-size: 3rem;           /* adjust if needed */
+  letter-spacing: 2px;       /* tracking for contemporary feel */
+  color: #F25D27;            /* primary color from your palette */
+  margin-bottom: 3rem;       /* extra spacing above CTA button */
+}
+
+.hero-content .button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;          /* regular weight */
+  font-size: 1.1rem;
+  letter-spacing: 1px;       /* subtle tracking on button */
+  background-color: #F25D27; /* CTA button color from palette */
+  color: #FFFFFF;             /* button text in white for contrast */
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .button:hover {
+  background-color: #A64E2E; /* optional subtle hover accent */
 }
