@@ -2906,46 +2906,46 @@ input, select, textarea {
 			}
 
 	}
-/* Hero Video Content */
+/* Hero Video Content — Force Styles */
 section#banner .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 90%;
-  max-width: 800px;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 2 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 90% !important;
+  max-width: 800px !important;
 }
 
 section#banner .hero-content h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;         /* light font */
-  font-size: 3rem;
-  letter-spacing: 2px;
-  color: #F25D27;           /* primary palette color */
-  margin-bottom: 3rem;      /* spacing above CTA */
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 3rem !important;
+  letter-spacing: 2px !important;
+  color: #F25D27 !important;
+  margin-bottom: 3rem !important;
 }
 
 section#banner .hero-content .button {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  background-color: #F25D27;
-  color: #FFFFFF;
-  padding: 0.75rem 2rem;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 1px !important;
+  background-color: #F25D27 !important;
+  color: #FFFFFF !important;
+  padding: 0.75rem 2rem !important;
+  text-decoration: none !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
 }
 
 section#banner .hero-content .button:hover {
-  background-color: #A64E2E; /* subtle hover accent */
+  background-color: #A64E2E !important;
 }
