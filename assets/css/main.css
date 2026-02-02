@@ -2906,8 +2906,8 @@ input, select, textarea {
 			}
 
 	}
-/* Hero Video Content — Force Styles */
-section#banner .hero-content {
+/* Hero Text — Force Styles */
+section#banner .hero-text {
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
@@ -2922,77 +2922,6 @@ section#banner .hero-content {
   max-width: 800px !important;
 }
 
-section#banner .hero-content h1 {
-  font-family: 'Open Sans', sans-serif !important;
-  font-weight: 300 !important;
-  font-size: 3rem !important;
-  letter-spacing: 2px !important;
-  color: #F25D27 !important;
-  margin-bottom: 3rem !important;
-}
-
-section#banner .hero-content .button {
-  font-family: 'Open Sans', sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 1.1rem !important;
-  letter-spacing: 1px !important;
-  background-color: #F25D27 !important;
-  color: #FFFFFF !important;
-  padding: 0.75rem 2rem !important;
-  text-decoration: none !important;
-  border: none !important;
-  border-radius: 4px !important;
-  cursor: pointer !important;
-  transition: background-color 0.3s ease !important;
-}
-
-section#banner .hero-content .button:hover {
-  background-color: #A64E2E !important;
-}
-/* Hero Text Styling */
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 90%;
-  max-width: 800px;
-}
-
-.hero-text h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-size: 3rem;
-  letter-spacing: 2px;
-  color: #F25D27;
-  margin-bottom: 3rem;
-}
-
-.cta-button {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  background-color: #F25D27;
-  color: #FFFFFF;
-  padding: 0.75rem 2rem;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #A64E2E;
-}
-/* Force hero text styles */
 section#banner .hero-text h1 {
   font-family: 'Open Sans', sans-serif !important;
   font-weight: 300 !important;
@@ -3010,7 +2939,12 @@ section#banner .hero-text .cta-button {
   background-color: #F25D27 !important;
   color: #FFFFFF !important;
   padding: 0.75rem 2rem !important;
+  border: none !important;
   border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
 }
 
- 
+section#banner .hero-text .cta-button:hover {
+  background-color: #A64E2E !important;
+}
