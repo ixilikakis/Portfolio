@@ -2969,5 +2969,37 @@ input, select, textarea {
   content: none !important;
   background: none !important;
 }
+/* Sticky header */
+#header {
+  position: sticky;
+  top: 0;
+  height: 60px; /* short height */
+  line-height: 60px; /* center text vertically */
+  background: #261E17;
+  z-index: 1000; /* above other content */
+  font-family: 'Open Sans', sans-serif;
+  padding: 0 20px;
+  transition: background 0.3s ease, height 0.3s ease;
+}
+
+/* Header links */
+#header a {
+  color: #A6785D;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.2s ease;
+}
+
+#header a:hover,
+#header a.active {
+  color: #F25D27;
+}
+
+/* Optional: shrink header slightly on scroll */
+#header.shrink {
+  height: 50px;
+  line-height: 50px;
+}
 
 
