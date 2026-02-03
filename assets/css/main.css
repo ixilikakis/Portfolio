@@ -2961,5 +2961,13 @@ input, select, textarea {
 #banner .inner:after {
   display: none !important;
 }
+#banner:before,
+#banner:after,
+#banner .hero-video:before,
+#banner .hero-video:after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+}
 
 
