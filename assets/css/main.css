@@ -2906,3 +2906,48 @@ input, select, textarea {
 			}
 
 	}
+/* HERO VIDEO TEXT */
+#banner {
+  position: relative;
+}
+
+#banner .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+}
+
+#banner .hero-text h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  color: #F25D27;
+  margin-bottom: 3rem;
+}
+
+#banner .hero-text .cta-button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  background-color: #F25D27;
+  color: #ffffff;
+  padding: 0.75rem 2.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#banner .hero-text .cta-button:hover {
+  background-color: #A64E2E;
+}
+
