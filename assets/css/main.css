@@ -2953,4 +2953,13 @@ input, select, textarea {
 #banner .hero-text .cta-button:hover {
   background-color: #A64E2E;
 }
+#banner .inner {
+  background: none !important;
+}
+
+#banner .inner:before,
+#banner .inner:after {
+  display: none !important;
+}
+
 
