@@ -3001,5 +3001,10 @@ input, select, textarea {
   height: 50px;
   line-height: 50px;
 }
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
 
 
