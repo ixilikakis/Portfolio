@@ -3040,44 +3040,39 @@ a.cta-button:hover,
   background-color: #3E4A3B;
 }
 /* Main Navigation */
-.main-nav {
-    display: flex;                /* Align logo and links in a row */
-    justify-content: space-between; /* Logo left, links right */
-    align-items: center;          /* Vertically center items */
-    padding: 1rem 2rem;           /* Space around nav */
-    background-color: #F2F3F1;    /* Your background color */
+nav.main-nav {
+    display: flex;                     /* Align logo and links in a row */
+    justify-content: space-between;    /* Logo left, links right */
+    align-items: center;               /* Vertically center items */
+    padding: 1rem 2rem;                /* Space around nav */
+    background-color: #F2F3F1;         /* Site background */
     font-family: 'Open Sans', sans-serif;
+    z-index: 1000;
 }
 
 /* Logo styling */
-.main-nav .logo a {
+nav.main-nav .logo a {
     text-decoration: none;
-    color: #1F1F1F;              /* Primary text color */
-    font-weight: 700;             /* Bold for emphasis */
-    font-size: 1.5rem;            /* Adjust as needed */
+    color: #1F1F1F;                   /* Primary text color */
+    font-weight: 700;                  /* Bold for emphasis */
+    font-size: 1.5rem;
 }
 
-/* Nav links styling */
-.nav-links {
+/* Nav links container */
+nav.main-nav .nav-links {
     display: flex;
-    gap: 2rem;                    /* Space between links */
+    gap: 2rem;                         /* Space between links */
     list-style: none;
 }
 
-.nav-links a {
+/* Nav links */
+nav.main-nav .nav-links a {
     text-decoration: none;
-    color: #1F1F1F;              /* Primary text color */
+    color: #1F1F1F;                    /* Primary text color */
     font-weight: 600;
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: #4F5D4A;              /* Accent color on hover */
+nav.main-nav .nav-links a:hover {
+    color: #4F5D4A;                    /* Accent color */
 }
-
-
-
-
-
-
-
