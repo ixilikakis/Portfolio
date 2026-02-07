@@ -3101,6 +3101,12 @@ nav.main-nav .nav-links a:hover {
 #header h1 {
     display: none;
 }
+#header {
+    background: none !important; /* removes the dark background */
+    height: auto !important;     /* optional: lets it shrink to fit content */
+    line-height: normal !important;
+    padding: 0 !important;
+}
 
 
 
