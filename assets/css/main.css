@@ -2909,204 +2909,150 @@ input, select, textarea {
 			}
 
 	}
-/* HERO VIDEO TEXT */
-#banner {
-  position: relative;
-}
-
-#banner .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 90%;
-  max-width: 900px;
-}
-
-#banner .hero-text h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-size: 3.2rem;
-  letter-spacing: 2px;
-  color: #F25D27;
-  margin-bottom: 3rem;
-}
-
-#banner .hero-text .cta-button {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  background-color: #F25D27;
-  color: #ffffff;
-  padding: 0.75rem 2.2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-#banner .hero-text .cta-button:hover {
-  background-color: #A64E2E;
-}
-#banner .inner {
-  background: none !important;
-}
-
-#banner .inner:before,
-#banner .inner:after {
-  display: none !important;
-}
-#banner:before,
-#banner:after,
-#banner .hero-video:before,
-#banner .hero-video:after {
-  display: none !important;
-  content: none !important;
-  background: none !important;
-}
-/* Sticky header */
-#header {
-  position: sticky;
-  top: 0;
-  height: 60px; /* short height */
-  line-height: 60px; /* center text vertically */
-  background: #261E17;
-  z-index: 1000; /* above other content */
-  font-family: 'Open Sans', sans-serif;
-  padding: 0 20px;
-  transition: background 0.3s ease, height 0.3s ease;
-}
-
-/* Header links */
-#header a {
-  color: #A6785D;
-  font-weight: 600;
-  text-decoration: none;
-  margin: 0 15px;
-  transition: color 0.2s ease;
-}
-
-#header a:hover,
-#header a.active {
-  color: #F25D27;
-}
-
-/* Optional: shrink header slightly on scroll */
-#header.shrink {
-  height: 50px;
-  line-height: 50px;
-}
+/* ==========================
+   GLOBAL STYLES
+   ========================== */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-primary);
-}
-/* Global base colors */
-body {
-  background-color: #F2F3F1;
-  color: #2B2E2A;
+    background-color: #F2F3F1;       /* Background color */
+    color: #1F1F1F;                  /* Primary text color */
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Headings */
 h1, h2, h3, h4 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  letter-spacing: 1.5px;
-  color: #2B2E2A;
-}
-
-/* Primary CTA buttons */
-a.button,
-a.cta-button,
-.button {
-  background-color: #4F5D4A;
-  color: #FFFFFF;
-  padding: 0.75rem 2rem;
-  text-decoration: none;
-  border-radius: 4px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  letter-spacing: 1px;
-  transition: background-color 0.25s ease;
-}
-
-a.button:hover,
-a.cta-button:hover,
-.button:hover {
-  background-color: #3E4A3B;
-}
-/* Main Navigation */
-nav.main-nav {
-    display: flex;                     /* Align logo and links in a row */
-    justify-content: space-between;    /* Logo left, links right */
-    align-items: center;               /* Vertically center items */
-    padding: 1rem 2rem;                /* Space around nav */
-    background-color: #F2F3F1;         /* Site background */
     font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    color: #1F1F1F;                  /* Primary text color */
+}
+
+/* ==========================
+   HERO VIDEO TEXT
+   ========================== */
+#banner {
+    position: relative;
+}
+
+#banner .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+}
+
+#banner .hero-text h1 {
+    font-weight: 300;
+    font-size: 3.2rem;
+    letter-spacing: 2px;
+    color: #1F1F1F;                  /* Updated to primary text color */
+    margin-bottom: 3rem;
+}
+
+#banner .hero-text .cta-button {
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    background-color: #4F5D4A;       /* Updated to accent color */
+    color: #FFFFFF;
+    padding: 0.75rem 2.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#banner .hero-text .cta-button:hover {
+    background-color: #3E4A3B;       /* Slightly darker accent */
+}
+
+#banner .inner,
+#banner .inner:before,
+#banner .inner:after,
+#banner:before,
+#banner:after,
+#banner .hero-video:before,
+#banner .hero-video:after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+}
+
+/* ==========================
+   NAVIGATION
+   ========================== */
+nav.main-nav {
+    display: flex;                     
+    justify-content: space-between;    
+    align-items: center;               
+    padding: 1rem 2rem;                
+    background-color: #F2F3F1;         
     z-index: 1000;
+    position: relative;                
 }
 
 /* Logo styling */
 nav.main-nav .logo a {
     text-decoration: none;
-    color: #1F1F1F;                   /* Primary text color */
-    font-weight: 700;                  /* Bold for emphasis */
+    color: #1F1F1F;                   
+    font-weight: 700;                  
     font-size: 1.5rem;
 }
 
-/* Nav links container */
+/* Navigation links */
 nav.main-nav .nav-links {
     display: flex;
-    gap: 2rem;                         /* Space between links */
+    gap: 2rem;                         
     list-style: none;
 }
 
-/* Nav links */
 nav.main-nav .nav-links a {
     text-decoration: none;
-    color: #1F1F1F;                    /* Primary text color */
+    color: #1F1F1F;                    
     font-weight: 600;
     transition: color 0.3s;
 }
 
 nav.main-nav .nav-links a:hover {
-    color: #4F5D4A;                    /* Accent color */
-}
-/* Force nav and logo colors */
-nav.main-nav .logo a {
-    color: #1F1F1F !important; /* Primary text color */
+    color: #4F5D4A;                    
 }
 
-nav.main-nav .nav-links a {
-    color: #1F1F1F !important; /* Primary text color */
+/* ==========================
+   BUTTONS
+   ========================== */
+a.button,
+a.cta-button,
+.button {
+    background-color: #4F5D4A;         
+    color: #FFFFFF;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: background-color 0.25s ease;
 }
 
-nav.main-nav .nav-links a:hover {
-    color: #4F5D4A !important; /* Accent color on hover */
-}
-/* Updated nav colors */
-#header nav.main-nav .logo a,
-#header nav.main-nav .nav-links a {
-    color: #1F1F1F !important;  /* Primary text color */
+a.button:hover,
+a.cta-button:hover,
+.button:hover {
+    background-color: #3E4A3B;        
 }
 
-#header nav.main-nav .nav-links a:hover {
-    color: #4F5D4A !important;  /* Accent color */
-}
-/* Hide the old header logo */
-#header h1 {
-    display: none;
-}
+/* ==========================
+   HIDE OLD TEMPLATE HEADER ELEMENTS
+   ========================== */
 #header {
-    background: none !important; /* removes the dark background */
-    height: auto !important;     /* optional: lets it shrink to fit content */
-    line-height: normal !important;
-    padding: 0 !important;
+    display: none !important;          /* Remove sticky header and old logo */
 }
 
-
-
+#header h1 {
+    display: none !important;          /* Extra logo if still present */
+}
