@@ -3044,3 +3044,19 @@ nav.main-nav .nav-links a:hover {
         font-size: 2.2rem;
     }
 }
+/* Align logo with nav links */
+nav.main-nav {
+    display: flex;
+    align-items: baseline; /* Align items along text baseline */
+}
+
+nav.main-nav .logo a {
+    font-size: 1.5rem;      /* Adjust if needed */
+    font-weight: 700;
+    line-height: 1;          /* Makes text sit on baseline */
+}
+
+nav.main-nav .nav-links a {
+    line-height: 1.5;        /* Adjust spacing of links if needed */
+}
+
