@@ -2912,10 +2912,21 @@ input, select, textarea {
 //* ==========================
    GLOBAL RESET & BASE
    ========================== */
-/* REMOVE SPACE ABOVE NAV */
-body.homepage, #page-wrapper, #header {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+
+/* REMOVE ALL TOP SPACE ABOVE NAV */
+body.homepage, 
+#page-wrapper, 
+#header, 
+#header section {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 }
 
 * {
