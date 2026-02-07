@@ -3076,3 +3076,16 @@ nav.main-nav .nav-links a {
 nav.main-nav .nav-links a:hover {
     color: #4F5D4A;                    /* Accent color */
 }
+/* Force nav and logo colors */
+nav.main-nav .logo a {
+    color: #1F1F1F !important; /* Primary text color */
+}
+
+nav.main-nav .nav-links a {
+    color: #1F1F1F !important; /* Primary text color */
+}
+
+nav.main-nav .nav-links a:hover {
+    color: #4F5D4A !important; /* Accent color on hover */
+}
+
