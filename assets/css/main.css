@@ -3081,20 +3081,29 @@ nav.main-nav .nav-links a:hover {
 /* ==========================
    PORTFOLIO GRID - FULL WIDTH FIXED HEIGHT
    ========================== */
+/* ==========================
+   PORTFOLIO SECTION
+   ========================== */
 #portfolio {
   padding: 4rem 2rem;
   margin: 0 auto;
   max-width: 100%;
 }
 
-.section-title {
+/* Intro text above grid */
+.section-intro {
   text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.5rem;      /* slightly bigger */
+  font-weight: 700;        /* bold */
   margin-bottom: 2rem;
   color: #1F1F1F;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: none;    /* keeps capitalization as typed */
 }
 
+/* Grid container */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
@@ -3102,6 +3111,7 @@ nav.main-nav .nav-links a:hover {
   width: 100%;
 }
 
+/* Each portfolio item */
 .portfolio-item {
   height: 1000px;               /* fixed tall height */
   overflow: hidden;
@@ -3110,6 +3120,7 @@ nav.main-nav .nav-links a:hover {
   position: relative;
 }
 
+/* Image styling */
 .portfolio-item img {
   position: absolute;
   top: 0;
@@ -3122,6 +3133,7 @@ nav.main-nav .nav-links a:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect */
 .portfolio-item img:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -3133,23 +3145,11 @@ nav.main-nav .nav-links a:hover {
     grid-template-columns: 1fr;
   }
 
-  .section-title {
-    font-size: 1.75rem;
+  .section-intro {
+    font-size: 1.35rem;
   }
 
   .portfolio-item {
     height: 600px; /* reduce height on smaller screens */
   }
 }
-/* Portfolio intro text */
-.section-intro {
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  color: #1F1F1F;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
