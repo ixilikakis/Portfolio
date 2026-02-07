@@ -3079,12 +3079,12 @@ nav.main-nav .nav-links a:hover {
     }
 }
 /* ==========================
-   PORTFOLIO GRID
+   PORTFOLIO GRID - FULL WIDTH
    ========================== */
 #portfolio {
-  padding: 4rem 2rem;
-  max-width: 1200px;
+  padding: 4rem 2rem;          /* vertical spacing from other sections */
   margin: 0 auto;
+  max-width: 100%;             /* full width */
 }
 
 .section-title {
@@ -3097,14 +3097,29 @@ nav.main-nav .nav-links a:hover {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 2rem;                             /* spacing between items */
+  width: 100%;
+}
+
+.portfolio-item {
+  min-height: 250px;            /* fallback height if image is missing */
+  height: 0;
+  padding-bottom: 66.66%;       /* 3:2 aspect ratio */
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #e0e0e0;    /* placeholder color */
+  position: relative;
 }
 
 .portfolio-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;            /* fit image to box */
   display: block;
-  border-radius: 6px;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -3114,14 +3129,13 @@ nav.main-nav .nav-links a:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive for tablets and mobile */
+/* Responsive: single column on mobile */
 @media (max-width: 768px) {
   .portfolio-grid {
-    grid-template-columns: 1fr; /* single column */
+    grid-template-columns: 1fr;
   }
 
   .section-title {
     font-size: 1.75rem;
   }
 }
-
