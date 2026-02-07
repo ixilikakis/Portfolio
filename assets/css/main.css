@@ -3044,19 +3044,46 @@ nav.main-nav .nav-links a:hover {
         font-size: 2.2rem;
     }
 }
-/* Align logo with nav links */
+/* Navigation container */
 nav.main-nav {
     display: flex;
-    align-items: baseline; /* Align items along text baseline */
+    justify-content: space-between; /* Logo left, links right */
+    align-items: flex-end;          /* Align bottom of all text */
+    padding: 1rem 2rem;
+}
+
+/* Logo styling */
+nav.main-nav .logo {
+    display: flex;
+    align-items: flex-end;          /* Logo text bottom aligns with nav links */
+    margin: 0;
 }
 
 nav.main-nav .logo a {
-    font-size: 1.5rem;      /* Adjust if needed */
+    font-size: 1.7rem;              /* Slightly larger than links */
     font-weight: 700;
-    line-height: 1;          /* Makes text sit on baseline */
+    line-height: 1;
+    display: inline-block;
+}
+
+/* Nav links styling */
+nav.main-nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: flex-end;          /* Bottom of links line up with logo */
 }
 
 nav.main-nav .nav-links a {
-    line-height: 1.5;        /* Adjust spacing of links if needed */
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 600;
+    color: #1F1F1F;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav.main-nav .nav-links a:hover {
+    color: #4F5D4A; /* Accent color on hover */
 }
 
