@@ -3077,6 +3077,35 @@ nav.main-nav .nav-links a:hover {
     .hero-text h1 {
         font-size: 2.2rem;
     }
+	/* ==========================
+   HERO TEXT ANIMATION
+   ========================== */
+.hero-text {
+    animation: fadePulse 6s infinite;
+}
+
+@keyframes fadePulse {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    25% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(0.98);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    75% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+}
+
 }
 /* ==========================
    PORTFOLIO GRID - FULL WIDTH FIXED HEIGHT
