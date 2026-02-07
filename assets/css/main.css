@@ -2909,7 +2909,7 @@ input, select, textarea {
 			}
 
 	}
-/* ==========================
+//* ==========================
    GLOBAL RESET & BASE
    ========================== */
 * {
@@ -2936,33 +2936,44 @@ h1, h2, h3, h4 {
 nav.main-nav {
     display: flex;
     justify-content: space-between; /* Logo left, links right */
-    align-items: center;
+    align-items: center;             /* Vertically center logo and links */
     padding: 1rem 2rem;
-    background-color: #F2F3F1; /* Matches body */
+    background-color: #F2F3F1;      /* Matches body */
+    position: relative;
+    z-index: 10;                     /* Ensure nav sits above video */
+}
+
+nav.main-nav .logo {
+    display: flex;
+    align-items: center;             /* Align logo text vertically with links */
 }
 
 nav.main-nav .logo a {
-    text-decoration: none;
-    color: #1F1F1F;
+    font-size: 1.7rem;               /* Slightly larger than links */
     font-weight: 700;
-    font-size: 1.5rem;
+    line-height: 1;
+    color: #1F1F1F;
+    text-decoration: none;
 }
 
 nav.main-nav .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
+    align-items: center;             /* Vertically align links */
 }
 
 nav.main-nav .nav-links a {
-    text-decoration: none;
-    color: #1F1F1F;
+    font-size: 1rem;
     font-weight: 600;
+    line-height: 1;
+    color: #1F1F1F;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
 nav.main-nav .nav-links a:hover {
-    color: #4F5D4A; /* Accent color */
+    color: #4F5D4A; /* Accent color on hover */
 }
 
 /* ==========================
@@ -2990,7 +3001,7 @@ nav.main-nav .nav-links a:hover {
 
 .hero-text {
     position: absolute;
-    top: 30%;                   /* Closer to nav */
+    top: 50%;                   /* Vertically center text */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;                 /* Above video */
@@ -3025,6 +3036,19 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ==========================
+   REMOVE EXTRA SPACING
+   ========================== */
+#header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#banner {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* ==========================
    RESPONSIVE
    ========================== */
 @media (max-width: 768px) {
@@ -3044,107 +3068,3 @@ nav.main-nav .nav-links a:hover {
         font-size: 2.2rem;
     }
 }
-/* Navigation container */
-nav.main-nav {
-    display: flex;
-    justify-content: space-between; /* Logo left, links right */
-    align-items: flex-end;          /* Align bottom of all text */
-    padding: 1rem 2rem;
-}
-
-/* Logo styling */
-nav.main-nav .logo {
-    display: flex;
-    align-items: flex-end;          /* Logo text bottom aligns with nav links */
-    margin: 0;
-}
-
-nav.main-nav .logo a {
-    font-size: 1.7rem;              /* Slightly larger than links */
-    font-weight: 700;
-    line-height: 1;
-    display: inline-block;
-}
-
-/* Nav links styling */
-nav.main-nav .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    align-items: flex-end;          /* Bottom of links line up with logo */
-}
-
-nav.main-nav .nav-links a {
-    font-size: 1rem;
-    line-height: 1;
-    font-weight: 600;
-    color: #1F1F1F;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav.main-nav .nav-links a:hover {
-    color: #4F5D4A; /* Accent color on hover */
-}
-/* Remove spacing above and below banner */
-#header {
-    margin-bottom: 0; /* remove any bottom margin */
-    padding-bottom: 0; /* remove padding if any */
-}
-
-#banner {
-    margin-top: 0;     /* remove top margin */
-    padding-top: 0;    /* remove top padding */
-}
-
-/* Optional: make sure nav is visually above video */
-nav.main-nav {
-    z-index: 10;       /* ensures nav sits above video */
-    position: relative;
-}
-
-/* Hero text stays above video */
-.hero-text {
-    top: 25%;           /* slightly higher, adjust if needed */
-}
-/* Refined nav alignment */
-nav.main-nav {
-    display: flex;
-    justify-content: space-between;  /* Logo left, links right */
-    align-items: center;              /* Vertical center of nav */
-    padding: 0.75rem 2rem;            /* Slight padding inside nav */
-    background-color: #F2F3F1;       /* Matches body */
-}
-
-nav.main-nav .logo a {
-    font-size: 1.7rem;
-    font-weight: 700;
-    line-height: 1;                  /* Prevents extra height */
-    display: inline-block;
-}
-
-nav.main-nav .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-nav.main-nav .nav-links a {
-    font-size: 1rem;
-    line-height: 1;
-    font-weight: 600;
-    color: #1F1F1F;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav.main-nav .nav-links a:hover {
-    color: #4F5D4A; /* Accent color on hover */
-}
-.hero-text {
-    top: 20%;  /* Adjust higher/lower to taste */
-    text-align: center;
-}
-
-
-
