@@ -3097,5 +3097,10 @@ nav.main-nav .nav-links a:hover {
 #header nav.main-nav .nav-links a:hover {
     color: #4F5D4A !important;  /* Accent color */
 }
+/* Hide the old header logo */
+#header h1 {
+    display: none;
+}
+
 
 
