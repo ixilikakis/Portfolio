@@ -2912,6 +2912,12 @@ input, select, textarea {
 //* ==========================
    GLOBAL RESET & BASE
    ========================== */
+/* REMOVE SPACE ABOVE NAV */
+body.homepage, #page-wrapper, #header {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
 * {
     margin: 0;
     padding: 0;
