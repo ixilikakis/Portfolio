@@ -3005,6 +3005,41 @@ body {
   background-color: var(--bg-color);
   color: var(--text-primary);
 }
+/* Global base colors */
+body {
+  background-color: #F2F3F1;
+  color: #2B2E2A;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: #2B2E2A;
+}
+
+/* Primary CTA buttons */
+a.button,
+a.cta-button,
+.button {
+  background-color: #4F5D4A;
+  color: #FFFFFF;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: background-color 0.25s ease;
+}
+
+a.button:hover,
+a.cta-button:hover,
+.button:hover {
+  background-color: #3E4A3B;
+}
+
 
 
 
