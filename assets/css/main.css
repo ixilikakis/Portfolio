@@ -3086,4 +3086,26 @@ nav.main-nav .nav-links a {
 nav.main-nav .nav-links a:hover {
     color: #4F5D4A; /* Accent color on hover */
 }
+/* Remove spacing above and below banner */
+#header {
+    margin-bottom: 0; /* remove any bottom margin */
+    padding-bottom: 0; /* remove padding if any */
+}
+
+#banner {
+    margin-top: 0;     /* remove top margin */
+    padding-top: 0;    /* remove top padding */
+}
+
+/* Optional: make sure nav is visually above video */
+nav.main-nav {
+    z-index: 10;       /* ensures nav sits above video */
+    position: relative;
+}
+
+/* Hero text stays above video */
+.hero-text {
+    top: 25%;           /* slightly higher, adjust if needed */
+}
+
 
