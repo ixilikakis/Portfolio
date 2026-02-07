@@ -3107,5 +3107,44 @@ nav.main-nav {
 .hero-text {
     top: 25%;           /* slightly higher, adjust if needed */
 }
+/* Refined nav alignment */
+nav.main-nav {
+    display: flex;
+    justify-content: space-between;  /* Logo left, links right */
+    align-items: center;              /* Vertical center of nav */
+    padding: 0.75rem 2rem;            /* Slight padding inside nav */
+    background-color: #F2F3F1;       /* Matches body */
+}
+
+nav.main-nav .logo a {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1;                  /* Prevents extra height */
+    display: inline-block;
+}
+
+nav.main-nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav.main-nav .nav-links a {
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 600;
+    color: #1F1F1F;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav.main-nav .nav-links a:hover {
+    color: #4F5D4A; /* Accent color on hover */
+}
+.hero-text {
+    top: 20%;  /* Adjust higher/lower to taste */
+    text-align: center;
+}
+
 
 
