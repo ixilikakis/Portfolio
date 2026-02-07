@@ -2926,6 +2926,12 @@ html, body {
     margin: 0;
     padding: 0;
 }
+#header::before,
+#header::after {
+    display: none !important;
+    content: none !important;
+}
+
 
 }
 
