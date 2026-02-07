@@ -3039,6 +3039,42 @@ a.cta-button:hover,
 .button:hover {
   background-color: #3E4A3B;
 }
+/* Main Navigation */
+.main-nav {
+    display: flex;                /* Align logo and links in a row */
+    justify-content: space-between; /* Logo left, links right */
+    align-items: center;          /* Vertically center items */
+    padding: 1rem 2rem;           /* Space around nav */
+    background-color: #F2F3F1;    /* Your background color */
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Logo styling */
+.main-nav .logo a {
+    text-decoration: none;
+    color: #1F1F1F;              /* Primary text color */
+    font-weight: 700;             /* Bold for emphasis */
+    font-size: 1.5rem;            /* Adjust as needed */
+}
+
+/* Nav links styling */
+.nav-links {
+    display: flex;
+    gap: 2rem;                    /* Space between links */
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1F1F1F;              /* Primary text color */
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4F5D4A;              /* Accent color on hover */
+}
+
 
 
 
