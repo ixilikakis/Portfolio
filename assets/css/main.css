@@ -3088,4 +3088,14 @@ nav.main-nav .nav-links a {
 nav.main-nav .nav-links a:hover {
     color: #4F5D4A !important; /* Accent color on hover */
 }
+/* Updated nav colors */
+#header nav.main-nav .logo a,
+#header nav.main-nav .nav-links a {
+    color: #1F1F1F !important;  /* Primary text color */
+}
+
+#header nav.main-nav .nav-links a:hover {
+    color: #4F5D4A !important;  /* Accent color */
+}
+
 
