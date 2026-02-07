@@ -3141,3 +3141,15 @@ nav.main-nav .nav-links a:hover {
     height: 600px; /* reduce height on smaller screens */
   }
 }
+/* Portfolio intro text */
+.section-intro {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #1F1F1F;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
