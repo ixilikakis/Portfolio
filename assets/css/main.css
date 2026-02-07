@@ -2913,34 +2913,72 @@ input, select, textarea {
    GLOBAL STYLES
    ========================== */
 body {
-    background-color: #F2F3F1;       /* Background color */
-    color: #1F1F1F;                  /* Primary text color */
+    margin: 0;
+    padding: 0;
     font-family: 'Open Sans', sans-serif;
+    background-color: #F2F3F1;
+    color: #1F1F1F;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    color: #1F1F1F;
+}
+
+/* ==========================
+   NAVIGATION
+   ========================== */
+nav.main-nav {
+    display: flex;
+    justify-content: space-between; /* Logo left, links right */
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #F2F3F1;
+}
+
+/* Logo styling */
+nav.main-nav .logo a {
+    text-decoration: none;
+    color: #1F1F1F;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Navigation links */
+nav.main-nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-/* Headings */
-h1, h2, h3, h4 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    letter-spacing: 1.5px;
-    color: #1F1F1F;                  /* Primary text color */
+nav.main-nav .nav-links a {
+    text-decoration: none;
+    color: #1F1F1F;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav.main-nav .nav-links a:hover {
+    color: #4F5D4A;
 }
 
 /* ==========================
-   HERO VIDEO TEXT
+   HERO / BANNER
    ========================== */
 #banner {
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 #banner .hero-text {
     position: absolute;
-    top: 50%;
+    top: 35%;             /* Adjust vertical position */
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2950,18 +2988,18 @@ h1, h2, h3, h4 {
 }
 
 #banner .hero-text h1 {
-    font-weight: 300;
     font-size: 3.2rem;
+    font-weight: 300;
     letter-spacing: 2px;
-    color: #1F1F1F;                  /* Updated to primary text color */
     margin-bottom: 3rem;
+    color: #1F1F1F;
 }
 
 #banner .hero-text .cta-button {
     font-weight: 400;
     font-size: 1.1rem;
     letter-spacing: 1px;
-    background-color: #4F5D4A;       /* Updated to accent color */
+    background-color: #4F5D4A;
     color: #FFFFFF;
     padding: 0.75rem 2.2rem;
     border-radius: 4px;
@@ -2970,89 +3008,5 @@ h1, h2, h3, h4 {
 }
 
 #banner .hero-text .cta-button:hover {
-    background-color: #3E4A3B;       /* Slightly darker accent */
-}
-
-#banner .inner,
-#banner .inner:before,
-#banner .inner:after,
-#banner:before,
-#banner:after,
-#banner .hero-video:before,
-#banner .hero-video:after {
-    display: none !important;
-    content: none !important;
-    background: none !important;
-}
-
-/* ==========================
-   NAVIGATION
-   ========================== */
-nav.main-nav {
-    display: flex;                     
-    justify-content: space-between;    
-    align-items: center;               
-    padding: 1rem 2rem;                
-    background-color: #F2F3F1;         
-    z-index: 1000;
-    position: relative;                
-}
-
-/* Logo styling */
-nav.main-nav .logo a {
-    text-decoration: none;
-    color: #1F1F1F;                   
-    font-weight: 700;                  
-    font-size: 1.5rem;
-}
-
-/* Navigation links */
-nav.main-nav .nav-links {
-    display: flex;
-    gap: 2rem;                         
-    list-style: none;
-}
-
-nav.main-nav .nav-links a {
-    text-decoration: none;
-    color: #1F1F1F;                    
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-nav.main-nav .nav-links a:hover {
-    color: #4F5D4A;                    
-}
-
-/* ==========================
-   BUTTONS
-   ========================== */
-a.button,
-a.cta-button,
-.button {
-    background-color: #4F5D4A;         
-    color: #FFFFFF;
-    padding: 0.75rem 2rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    transition: background-color 0.25s ease;
-}
-
-a.button:hover,
-a.cta-button:hover,
-.button:hover {
-    background-color: #3E4A3B;        
-}
-
-/* ==========================
-   HIDE OLD TEMPLATE HEADER ELEMENTS
-   ========================== */
-#header {
-    display: none !important;          /* Remove sticky header and old logo */
-}
-
-#header h1 {
-    display: none !important;          /* Extra logo if still present */
+    background-color: #3E4A3B;
 }
