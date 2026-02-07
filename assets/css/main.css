@@ -3078,32 +3078,30 @@ nav.main-nav .nav-links a:hover {
         font-size: 2.2rem;
     }
 	/* ==========================
-   HERO TEXT ANIMATION
+   /* ==========================
+   HERO TEXT FADE IN/OUT
    ========================== */
 .hero-text {
-    animation: fadePulse 6s infinite;
+    animation: fadeInOut 6s infinite;
 }
 
-@keyframes fadePulse {
+@keyframes fadeInOut {
     0% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }
-    25% {
-        opacity: 0.8;
-        transform: translate(-50%, -50%) scale(0.98);
+    45% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.95);
     }
-    50% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-    75% {
-        opacity: 0.8;
-        transform: translate(-50%, -50%) scale(0.98);
+    55% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.95);
     }
     100% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
+    }
 }
 
 }
