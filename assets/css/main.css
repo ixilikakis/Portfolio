@@ -3081,23 +3081,22 @@ nav.main-nav .nav-links a:hover {
    HERO TEXT FADE IN/OUT
    ========================== */
 .hero-text {
-    animation: fadeInOut 6s infinite;
+    animation: fadeInOut 6s ease-in-out infinite;
+    opacity: 1; /* ensure starting opacity */
 }
 
 @keyframes fadeInOut {
     0% {
         opacity: 1;
     }
-    45% {
-        opacity: 0;
-    }
-    55% {
+    50% {
         opacity: 0;
     }
     100% {
         opacity: 1;
     }
 }
+
 
 
 }
