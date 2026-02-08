@@ -3088,11 +3088,22 @@ nav.main-nav .nav-links a:hover {
   background: #fff; /* optional, change if you want a background */
 }
 
-.portfolio-intro {
-  max-width: 70em; /* same as .container for About section */
-  margin: 0 auto 3em auto; /* center horizontally, spacing below */
-  padding: 0 2em; /* some side padding on smaller screens */
-  text-align: left; /* left-aligned like About section */
+/* Portfolio Intro Alignment */
+.portfolio-intro.container {
+  max-width: 1200px; /* match About Us container width */
+  margin: 0 auto; /* center container */
+  padding: 0 20px; /* match About Us horizontal padding */
+}
+
+/* Portfolio Grid Alignment */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1000px;
+  gap: 0;
+  max-width: 1200px; /* same as intro container */
+  margin: 0 auto; /* center grid */
+  padding: 0 20px; /* match section padding */
 }
 
 .portfolio-label {
@@ -3114,20 +3125,6 @@ nav.main-nav .nav-links a:hover {
   font-size: 1em;
   line-height: 1.75em;
   color: #5d5d5d;
-}
-
-//* Portfolio Grid - 2x3 fixed layout */
-.portfolio-grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.portfolio-grid > * {
-  width: 50%;          /* each project takes half the screen */
-  height: 1000px;      /* fixed height */
-  box-sizing: border-box;
-  padding: 0;           /* remove padding for full width */
 }
 
 
