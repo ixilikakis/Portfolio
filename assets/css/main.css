@@ -3081,8 +3081,7 @@ nav.main-nav .nav-links a:hover {
 }
 
 
-}
-//* ==========================
+}/* ==========================
    PORTFOLIO SECTION
    ========================== */
 
@@ -3121,21 +3120,19 @@ nav.main-nav .nav-links a:hover {
   max-width: 640px;
 }
 
-
 /* Grid container */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 0; /* remove spacing between items */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0; /* no spacing between items */
   width: 100%;
 }
 
 /* Each portfolio item */
 .portfolio-item {
-  position: relative;   /* for overlay */
+  position: relative;
   overflow: hidden;
-  height: 1000px;       /* fixed tall height */
-  border-radius: 6px;
+  height: 1000px;
 }
 
 /* Images */
@@ -3144,68 +3141,59 @@ nav.main-nav .nav-links a:hover {
   height: 100%;
   object-fit: cover;
   display: block;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Image hover effect */
-.portfolio-item img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Overlay */
+/* Overlay on hover */
 .portfolio-overlay {
   position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
-  background-color: rgba(79,93,74,0.7); /* olive green */
+  inset: 0;
+  background-color: rgba(79, 93, 74, 0.7); /* olive green */
   opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: opacity 0.3s ease;
-  pointer-events: none; /* allows clicking the image */
+  pointer-events: none;
 }
 
-/* Show overlay on hover */
 .portfolio-item:hover .portfolio-overlay {
   opacity: 1;
 }
 
-/* Overlay text */
 .portfolio-title {
-  color: #F2F3F1; /* light neutral */
-  font-size: 1.5rem;
-  font-weight: 700;
+  color: #f2f3f1;
+  font-size: 1.3rem;
   text-align: center;
   padding: 0 1rem;
-  pointer-events: none; /* ensures clicks still open lightbox */
 }
 
-/* ==========================
-   RESPONSIVE
-   ========================== */
+/* Responsive */
 @media (max-width: 768px) {
   .portfolio-grid {
-    grid-template-columns: 1fr; /* single column on mobile */
+    grid-template-columns: 1fr;
   }
 
-  .section-title {
-    font-size: 1.75rem;
+  .portfolio-intro {
+    padding: 0 1rem;
   }
 
-  .section-intro {
-    font-size: 1.35rem;
+  .portfolio-primary {
+    font-size: 1.4rem;
+  }
+
+  .portfolio-secondary {
+    font-size: 1rem;
   }
 
   .portfolio-item {
-    height: 600px; /* reduce height on smaller screens */
+    height: 600px;
   }
 
   .portfolio-title {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 }
+
 /* ==========================
    ABOUT / POSITIONING
    ========================== */
