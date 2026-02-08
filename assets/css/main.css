@@ -3034,13 +3034,15 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* Only the heading fades */
-.hero-text h1 {
-    font-size: 3rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    margin-bottom: 2.5rem;
-    color: #1F1F1F;
-    animation: fadeInOut 6s ease-in-out infinite;
+.fade-text {
+  position: absolute;   /* stack the two phrases on top of each other */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  text-transform: lowercase;  /* make all text lowercase */
+}
+
+.fade-text.active {
+  opacity: 1;
 }
 
 /* CTA button stays static */
