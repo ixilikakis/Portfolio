@@ -3198,3 +3198,39 @@ nav.main-nav .nav-links a:hover {
     font-size: 1.25rem;
   }
 }
+/* ==========================
+   ABOUT / POSITIONING
+   ========================== */
+
+#about {
+  padding: 6rem 2rem;
+  background-color: #ffffff;
+}
+
+.about-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  color: #6f6f6f;
+  margin-bottom: 2rem;
+}
+
+.about-primary {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #1f1f1f;
+  margin-bottom: 1.75rem;
+}
+
+.about-secondary {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
