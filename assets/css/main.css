@@ -3090,10 +3090,13 @@ nav.main-nav .nav-links a:hover {
 
 .portfolio-intro {
   max-width: 720px;
-  margin: 0 0 4rem 0;
-  padding: 0 2rem;
+  margin-left: calc((100% - 1200px) / 2);
+  margin-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   text-align: left;
 }
+
 
 }
 
