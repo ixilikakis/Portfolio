@@ -2999,15 +2999,15 @@ nav.main-nav .nav-links a:hover {
 }
 
 
-/* ==========================
+//* ==========================
    HERO / VIDEO BANNER
    ========================== */
 #banner {
     position: relative;
-    height: 75vh;             /* Banner height */
+    height: 75vh;
     overflow: hidden;
     margin: 0;
-    background-color: #F2F3F1; /* Fallback if video doesn’t load */
+    background-color: #F2F3F1;
 }
 
 /* Video background */
@@ -3026,7 +3026,7 @@ nav.main-nav .nav-links a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* true vertical & horizontal centering */
+    transform: translate(-50%, -50%);
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -3034,10 +3034,6 @@ nav.main-nav .nav-links a:hover {
     align-items: center;
     text-align: center;
     padding: 0 1rem;
-
-    /* Fade animation */
-    animation: fadeInOut 6s ease-in-out infinite;
-    opacity: 1;
 }
 
 .hero-text h1 {
@@ -3046,9 +3042,13 @@ nav.main-nav .nav-links a:hover {
     letter-spacing: 2px;
     margin-bottom: 2.5rem;
     color: #1F1F1F;
+
+    /* Fade animation applied only to the heading */
+    animation: fadeInOut 6s ease-in-out infinite;
+    opacity: 1;
 }
 
-/* CTA button */
+/* CTA button remains unaffected */
 .cta-button {
     background-color: #4F5D4A;
     color: #FFFFFF;
