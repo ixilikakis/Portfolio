@@ -3074,6 +3074,23 @@ nav.main-nav .nav-links a:hover {
         font-size: 2.2rem; /* smaller on mobile */
         margin-bottom: 1.5rem;
     }
+	
+}
+.portfolio-text-section {
+  padding-top: 80px;    /* space from the hero video */
+  padding-bottom: 60px; /* space before the grid */
+  max-width: 1200px;    /* keeps it aligned with About section */
+  margin: 0 auto;       /* center it horizontally */
+}
+
+.portfolio-text-section .about-label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.portfolio-text-section .about-primary,
+.portfolio-text-section .about-secondary {
+  margin-bottom: 20px;
 }
 
 
