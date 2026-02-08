@@ -2905,5 +2905,342 @@ input, select, textarea {
 			}
 
 	}
-/* ==========================   GLOBAL RESET & BASE   ========================== */* {    margin: 0;    padding: 0;    box-sizing: border-box;}html, body {    margin: 0;    padding: 0;}body {    font-family: 'Open Sans', sans-serif;    background-color: #F2F3F1;    color: #1F1F1F;}/* Headings */h1, h2, h3, h4 {    font-weight: 300;    letter-spacing: 1.5px;    color: #1F1F1F;}/* ==========================   HEADER / NAVIGATION   ========================== *//* Kill all leftover Dopetrope spacing */#header {    margin: 0;    padding: 0;}#header::before,#header::after {    display: none;    content: none;}nav.main-nav {    display: flex;    justify-content: space-between;    align-items: center;    padding: 1rem 2rem;    background-color: #F2F3F1;    position: relative;    z-index: 10;}/* Logo */nav.main-nav .logo {    margin: 0;}nav.main-nav .logo a {    font-size: 1.7rem;    font-weight: 700; /* BOLD name */    letter-spacing: 1px;    line-height: 1;    color: #1F1F1F;    text-decoration: none;}/* Navigation links */nav.main-nav .nav-links {    display: flex;    gap: 2rem;    list-style: none;}nav.main-nav .nav-links a {    font-size: 1rem;    font-weight: 600;    line-height: 1;    color: #1F1F1F;    text-decoration: none;    transition: color 0.3s ease;}nav.main-nav .nav-links a:hover {    color: #4F5D4A;}#banner {    position: relative;    height: 75vh;    overflow: hidden;    margin: 0;    background-color: #F2F3F1;}/* ==========================   HERO / VIDEO BANNER   ========================== *//* Video background */.hero-video {    position: absolute;    inset: 0;              /* shorthand for top:0; right:0; bottom:0; left:0 */    width: 100%;    height: 100%;    object-fit: cover;    z-index: 1;}/* Text overlay */.hero-text {    position: absolute;    inset: 0;               /* full overlay */    z-index: 2;    display: flex;    flex-direction: column;    justify-content: center;  /* vertical centering */    align-items: center;      /* horizontal centering */    text-align: center;    padding: 0 1rem;}/* Heading that fades */.fade-text-container {    transition: opacity 1s ease-in-out;    text-transform: lowercase; /* all text lowercase */    opacity: 1;    font-size: 3rem;           /* adjust size */    font-weight: 300;    letter-spacing: 2px;    margin-bottom: 2rem;       /* space below heading for CTA */}/* CTA button stays static */.cta-button {    background-color: #4F5D4A;    color: #FFFFFF;    padding: 0.75rem 2.2rem;    border-radius: 4px;    text-decoration: none;    font-weight: 400;    transition: background-color 0.3s ease;}.cta-button:hover {    background-color: #3E4A3B;}/* Responsive */@media (max-width: 768px) {    nav.main-nav {        flex-direction: column;        align-items: flex-start;    }    nav.main-nav .nav-links {        flex-direction: column;        gap: 1rem;        margin-top: 0.75rem;    }    .fade-text-container {        font-size: 2.2rem; /* smaller on mobile */        margin-bottom: 1.5rem;    }}}/* ==========================   PORTFOLIO SECTION   ========================== */#portfolio {  padding: 4rem 2rem;  max-width: 1200px;   /* limits content width */  margin: 0 auto;      /* centers the section */}/* Section title */.section-title {  text-align: center;  font-size: 2rem;  font-weight: 700;  margin-top: 4rem;     /* breathing room above */  margin-bottom: 1.5rem; /* space below before intro */  color: #1F1F1F;}/* Optional intro text above the grid */.section-intro {  text-align: center;  font-size: 1.5rem;  font-weight: 400;  margin-bottom: 2.5rem; /* space between intro and grid */  color: #1F1F1F;  max-width: 800px;  margin-left: auto;  margin-right: auto;  line-height: 1.4;}/* Grid container */.portfolio-grid {  display: grid;  grid-template-columns: repeat(2, 1fr); /* 2 columns */  gap: 0; /* remove spacing between items */  width: 100%;}/* Each portfolio item */.portfolio-item {  position: relative;   /* for overlay */  overflow: hidden;  height: 1000px;       /* fixed tall height */  border-radius: 6px;}/* Images */.portfolio-item img {  width: 100%;  height: 100%;  object-fit: cover;  display: block;  cursor: pointer;  transition: transform 0.3s ease, box-shadow 0.3s ease;}/* Image hover effect */.portfolio-item img:hover {  transform: scale(1.02);  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);}/* Overlay */.portfolio-overlay {  position: absolute;  inset: 0; /* top:0; right:0; bottom:0; left:0 */  background-color: rgba(79,93,74,0.7); /* olive green */  opacity: 0;  display: flex;  justify-content: center;  align-items: center;  transition: opacity 0.3s ease;  pointer-events: none; /* allows clicking the image */}/* Show overlay on hover */.portfolio-item:hover .portfolio-overlay {  opacity: 1;}/* Overlay text */.portfolio-title {  color: #F2F3F1; /* light neutral */  font-size: 1.5rem;  font-weight: 700;  text-align: center;  padding: 0 1rem;  pointer-events: none; /* ensures clicks still open lightbox */}/* ==========================   RESPONSIVE   ========================== */@media (max-width: 768px) {  .portfolio-grid {    grid-template-columns: 1fr; /* single column on mobile */  }  .section-title {    font-size: 1.75rem;  }  .section-intro {    font-size: 1.35rem;  }  .portfolio-item {    height: 600px; /* reduce height on smaller screens */  }  .portfolio-title {    font-size: 1.25rem;  }}/* ==========================   ABOUT / POSITIONING   ========================== */#about {  padding: 6rem 2rem;  background-color: #ffffff;}.about-inner {  max-width: 720px;  margin: 0 auto;}.about-label {  display: block;  font-size: 0.75rem;  letter-spacing: 2px;  text-transform: lowercase;  color: #6f6f6f;  margin-bottom: 2rem;}.about-primary {  font-size: 1.6rem;  line-height: 1.5;  color: #1f1f1f;  margin-bottom: 1.75rem;}.about-secondary {  font-size: 1.1rem;  line-height: 1.6;  color: #4a4a4a;}
-0 commit commentsComments0 (0)Lock conversationCommentSubscribeYou're not receiving notifications from this thread.
+/* ==========================
+   GLOBAL RESET & BASE
+   ========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F2F3F1;
+    color: #1F1F1F;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    color: #1F1F1F;
+}
+
+
+/* ==========================
+   HEADER / NAVIGATION
+   ========================== */
+
+/* Kill all leftover Dopetrope spacing */
+#header {
+    margin: 0;
+    padding: 0;
+}
+
+#header::before,
+#header::after {
+    display: none;
+    content: none;
+}
+
+nav.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #F2F3F1;
+    position: relative;
+    z-index: 10;
+}
+
+/* Logo */
+nav.main-nav .logo {
+    margin: 0;
+}
+
+nav.main-nav .logo a {
+    font-size: 1.7rem;
+    font-weight: 700; /* BOLD name */
+    letter-spacing: 1px;
+    line-height: 1;
+    color: #1F1F1F;
+    text-decoration: none;
+}
+
+/* Navigation links */
+nav.main-nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav.main-nav .nav-links a {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #1F1F1F;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav.main-nav .nav-links a:hover {
+    color: #4F5D4A;
+}
+
+
+#banner {
+    position: relative;
+    height: 75vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #F2F3F1;
+}
+
+/* ==========================
+   HERO / VIDEO BANNER
+   ========================== */
+
+/* Video background */
+.hero-video {
+    position: absolute;
+    inset: 0;              /* shorthand for top:0; right:0; bottom:0; left:0 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Text overlay */
+.hero-text {
+    position: absolute;
+    inset: 0;               /* full overlay */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* vertical centering */
+    align-items: center;      /* horizontal centering */
+    text-align: center;
+    padding: 0 1rem;
+}
+
+/* Heading that fades */
+.fade-text-container {
+    transition: opacity 1s ease-in-out;
+    text-transform: lowercase; /* all text lowercase */
+    opacity: 1;
+    font-size: 3rem;           /* adjust size */
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;       /* space below heading for CTA */
+}
+
+/* CTA button stays static */
+.cta-button {
+    background-color: #4F5D4A;
+    color: #FFFFFF;
+    padding: 0.75rem 2.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #3E4A3B;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    nav.main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.main-nav .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 0.75rem;
+    }
+
+    .fade-text-container {
+        font-size: 2.2rem; /* smaller on mobile */
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+}/* ==========================
+/* ==========================
+   PORTFOLIO SECTION
+   ========================== */
+
+#portfolio {
+  padding: 6rem 0 0;
+  padding: 6rem 2rem 4rem; /* top padding for breathing room, bottom padding */
+  background-color: #ffffff;
+  max-width: 1200px;       /* center content */
+  margin: 0 auto;
+}
+
+/* Portfolio intro */
+.portfolio-intro {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+  margin: 0 auto 4rem; /* spacing below intro */
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.portfolio-label {
+@@ -3103,7 +3106,7 @@
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  color: #6f6f6f;
+  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-primary {
+@@ -3116,8 +3119,10 @@
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin-top: 1.5rem;
+  margin-top: 1rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid container */
+@@ -3132,21 +3137,27 @@
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  height: 1000px;
+  height: 1000px; /* fixed height for large screens */
+}
+
+/* Images */
+/* Portfolio images */
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay on hover */
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background-color: rgba(79, 93, 74, 0.7); /* olive green */
+  opacity: 0;
+  display: flex;
+@@ -3160,23 +3171,44 @@
+  opacity: 1;
+}
+
+/* Project title on overlay */
+.portfolio-title {
+  color: #f2f3f1;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Responsive */
+/* ==========================
+   RESPONSIVE
+   ========================== */
+@media (max-width: 1024px) {
+  #portfolio {
+    padding: 5rem 1.5rem 3rem;
+  }
+
+  .portfolio-primary {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-secondary {
+    font-size: 1.05rem;
+  }
+
+  .portfolio-title {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-item {
+    height: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-intro {
+    padding: 0 1rem;
+  }
+
+  .portfolio-primary {
+    font-size: 1.4rem;
+  }
+@@ -3194,39 +3226,40 @@
+  }
+}
+
+
+/* ==========================
+   ABOUT / POSITIONING
+   ========================== */
+
+#about {
+  padding: 6rem 2rem;
+  background-color: #ffffff;
+}
+
+.about-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  color: #6f6f6f;
+  margin-bottom: 2rem;
+}
+
+.about-primary {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #1f1f1f;
+  margin-bottom: 1.75rem;
+}
+
+.about-secondary {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+~
