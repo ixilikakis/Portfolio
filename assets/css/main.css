@@ -3159,46 +3159,54 @@ nav.main-nav .nav-links a:hover {
     height: 600px; /* reduce height on smaller screens */
   }
 }
-/* Ensure each item is positioned relative for overlay */
-.portfolio-item {
-  position: relative; /* keeps overlay in the correct place */
-  overflow: hidden;
-  height: 1000px; /* keep your fixed height */
+/* ==========================
+   PORTFOLIO SECTION
+   ========================== */
+#portfolio {
+  padding: 4rem 2rem;
+  max-width: 1200px;   /* limits content width */
+  margin: 0 auto;      /* centers the section */
 }
 
-/* Overlay that appears on hover */
-.portfolio-overlay {
-  position: absolute; /* position over the image */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(79,93,74,0.7); /* olive green with transparency */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0; /* hidden by default */
-  transition: opacity 0.3s ease;
-  pointer-events: none; /* allows clicks to go to the thumbnail link */
-}
-
-.portfolio-item:hover .portfolio-overlay {
-  opacity: 1;
-}
-
-.portfolio-title {
-  color: #F2F3F1; /* light neutral text */
-  font-size: 1.5rem;
-  font-weight: 700;
+.section-title {
   text-align: center;
-  padding: 0 1rem;
-  pointer-events: none; /* ensures clicks still activate lightbox */
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1F1F1F;
 }
 
-/* Keep images filling the container */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 0; /* removes spacing between items */
+  width: 100%;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  height: 1000px;       /* fixed tall height */
+}
+
+/* Images */
 .portfolio-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
+/* Overlay */
+.portfolio-overlay {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background-color: rgba(79,93,74,0.7); /* olive green */
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* allows clicking the image */
+}
+
