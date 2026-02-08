@@ -3082,36 +3082,43 @@ nav.main-nav .nav-links a:hover {
 
 
 }
-/* ==========================
+//* ==========================
    PORTFOLIO SECTION
    ========================== */
+
 #portfolio {
-  padding: 4rem 2rem;
-  max-width: 1200px;   /* limits content width */
-  margin: 0 auto;      /* centers the section */
+  padding: 6rem 0 0;
+  background-color: #ffffff;
 }
 
-/* Section title */
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-top: 4rem;     /* breathing room above */
-  margin-bottom: 1.5rem; /* space below before intro */
-  color: #1F1F1F;
+/* Portfolio intro */
+.portfolio-intro {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
 }
 
-/* Optional intro text above the grid */
-.section-intro {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 2.5rem; /* space between intro and grid */
-  color: #1F1F1F;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.4;
+.portfolio-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  color: #6f6f6f;
+  margin-bottom: 2rem;
+}
+
+.portfolio-primary {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #1f1f1f;
+}
+
+.portfolio-secondary {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin-top: 1.5rem;
+  max-width: 640px;
 }
 
 /* Grid container */
