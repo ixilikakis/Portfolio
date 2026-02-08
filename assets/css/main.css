@@ -3093,25 +3093,27 @@ nav.main-nav .nav-links a:hover {
   margin: 0 auto;      /* centers the section */
 }
 
-/* Section title above grid */
+/* Section title */
 .section-title {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-top: 4rem;     /* breathing room above */
+  margin-bottom: 1.5rem; /* space below before intro */
   color: #1F1F1F;
 }
 
-/* Optional intro text above grid */
+/* Optional intro text above the grid */
 .section-intro {
   text-align: center;
   font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
+  font-weight: 400;
+  margin-bottom: 2.5rem; /* space between intro and grid */
   color: #1F1F1F;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.4;
 }
 
 /* Grid container */
