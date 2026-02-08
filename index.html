@@ -471,20 +471,29 @@
   });
 </script>
 <script>
-const texts = document.querySelectorAll('.fade-text');
+const heroText = document.querySelector('.fade-text-container');
+const phrases = ["visual identity", "through design & strategy"];
 let current = 0;
 
 setInterval(() => {
-  texts[current].classList.remove('active');
-  current = (current + 1) % texts.length;
-  texts[current].classList.add('active');
-}, 5000); // 5 seconds per phrase
+  // Fade out
+  heroText.style.opacity = 0;
+
+  setTimeout(() => {
+    // Change text and fade in
+    current = (current + 1) % phrases.length;
+    heroText.textContent = phrases[current];
+    heroText.style.opacity = 1;
+  }, 1000); // matches 1s CSS transition
+}, 5000); // switch every 5 seconds
 </script>
+
 
 	
 	</body>
 
 </html>
+
 
 
 
