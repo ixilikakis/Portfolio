@@ -3088,12 +3088,13 @@ nav.main-nav .nav-links a:hover {
   margin: 0 auto;
 }
 
-/* Portfolio intro */
 .portfolio-intro {
   max-width: 720px;
-  margin: 0 auto 4rem; /* spacing below intro */
-  text-align: center;
-  padding: 0 1rem;
+  margin: 0 0 4rem 0;
+  padding: 0 2rem;
+  text-align: left;
+}
+
 }
 
 .portfolio-label {
