@@ -3077,8 +3077,7 @@ nav.main-nav .nav-links a:hover {
     .hero-text h1 {
         font-size: 2.2rem;
     }
-	/* ==========================
-   /* ==========================
+/* ==========================
    HERO TEXT FADE IN/OUT
    ========================== */
 .hero-text {
@@ -3088,21 +3087,18 @@ nav.main-nav .nav-links a:hover {
 @keyframes fadeInOut {
     0% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
     }
     45% {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(0.95);
     }
     55% {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(0.95);
     }
     100% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
     }
 }
+
 
 }
 /* ==========================
