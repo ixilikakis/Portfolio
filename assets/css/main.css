@@ -3081,20 +3081,23 @@ nav.main-nav .nav-links a:hover {
 }
 
 
-}/* ==========================
+/* ==========================
    PORTFOLIO SECTION
    ========================== */
 
 #portfolio {
-  padding: 6rem 0 0;
+  padding: 6rem 2rem 4rem; /* top padding for breathing room, bottom padding */
   background-color: #ffffff;
+  max-width: 1200px;       /* center content */
+  margin: 0 auto;
 }
 
 /* Portfolio intro */
 .portfolio-intro {
   max-width: 720px;
-  margin: 0 auto 4rem;
-  padding: 0 2rem;
+  margin: 0 auto 4rem; /* spacing below intro */
+  text-align: center;
+  padding: 0 1rem;
 }
 
 .portfolio-label {
@@ -3103,7 +3106,7 @@ nav.main-nav .nav-links a:hover {
   letter-spacing: 2px;
   text-transform: lowercase;
   color: #6f6f6f;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .portfolio-primary {
@@ -3116,8 +3119,10 @@ nav.main-nav .nav-links a:hover {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #4a4a4a;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Grid container */
@@ -3132,21 +3137,27 @@ nav.main-nav .nav-links a:hover {
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  height: 1000px;
+  height: 1000px; /* fixed height for large screens */
 }
 
-/* Images */
+/* Portfolio images */
 .portfolio-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Overlay on hover */
 .portfolio-overlay {
   position: absolute;
-  inset: 0;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
   background-color: rgba(79, 93, 74, 0.7); /* olive green */
   opacity: 0;
   display: flex;
@@ -3160,6 +3171,7 @@ nav.main-nav .nav-links a:hover {
   opacity: 1;
 }
 
+/* Project title on overlay */
 .portfolio-title {
   color: #f2f3f1;
   font-size: 1.3rem;
@@ -3167,14 +3179,34 @@ nav.main-nav .nav-links a:hover {
   padding: 0 1rem;
 }
 
-/* Responsive */
+/* ==========================
+   RESPONSIVE
+   ========================== */
+@media (max-width: 1024px) {
+  #portfolio {
+    padding: 5rem 1.5rem 3rem;
+  }
+
+  .portfolio-primary {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-secondary {
+    font-size: 1.05rem;
+  }
+
+  .portfolio-title {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-item {
+    height: 800px;
+  }
+}
+
 @media (max-width: 768px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
-  }
-
-  .portfolio-intro {
-    padding: 0 1rem;
   }
 
   .portfolio-primary {
@@ -3193,6 +3225,7 @@ nav.main-nav .nav-links a:hover {
     font-size: 1.1rem;
   }
 }
+
 
 /* ==========================
    ABOUT / POSITIONING
