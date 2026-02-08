@@ -3159,21 +3159,27 @@ nav.main-nav .nav-links a:hover {
     height: 600px; /* reduce height on smaller screens */
   }
 }
-/* Overlay that appears on hover */
+/* Ensure each item is positioned relative for overlay */
 .portfolio-item {
-  position: relative; /* Ensure overlay positions correctly */
-  overflow: hidden;   /* Keep overlay inside image */
+  position: relative; /* keeps overlay in the correct place */
+  overflow: hidden;
+  height: 1000px; /* keep your fixed height */
 }
 
+/* Overlay that appears on hover */
 .portfolio-overlay {
-  position: absolute;
-  inset: 0; /* top:0; left:0; right:0; bottom:0; */
+  position: absolute; /* position over the image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(79,93,74,0.7); /* olive green with transparency */
-  opacity: 0; /* hidden by default */
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0; /* hidden by default */
   transition: opacity 0.3s ease;
+  pointer-events: none; /* allows clicks to go to the thumbnail link */
 }
 
 .portfolio-item:hover .portfolio-overlay {
@@ -3185,5 +3191,14 @@ nav.main-nav .nav-links a:hover {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  padding: 0 1rem; /* prevents text from touching edges */
+  padding: 0 1rem;
+  pointer-events: none; /* ensures clicks still activate lightbox */
+}
+
+/* Keep images filling the container */
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
