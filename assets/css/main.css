@@ -2999,9 +2999,6 @@ nav.main-nav .nav-links a:hover {
 }
 
 
-//* ==========================
-   HERO / VIDEO BANNER
-   ========================== */
 #banner {
     position: relative;
     height: 75vh;
@@ -3026,7 +3023,7 @@ nav.main-nav .nav-links a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* true centering */
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -3036,19 +3033,17 @@ nav.main-nav .nav-links a:hover {
     padding: 0 1rem;
 }
 
+/* Only the heading fades */
 .hero-text h1 {
     font-size: 3rem;
     font-weight: 300;
     letter-spacing: 2px;
     margin-bottom: 2.5rem;
     color: #1F1F1F;
-
-    /* Fade animation applied only to the heading */
     animation: fadeInOut 6s ease-in-out infinite;
-    opacity: 1;
 }
 
-/* CTA button remains unaffected */
+/* CTA button stays static */
 .cta-button {
     background-color: #4F5D4A;
     color: #FFFFFF;
@@ -3063,21 +3058,13 @@ nav.main-nav .nav-links a:hover {
     background-color: #3E4A3B;
 }
 
-/* ==========================
-   FADE ANIMATION
-   ========================== */
+/* Fade animation */
 @keyframes fadeInOut {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
-/* ==========================
-   RESPONSIVE
-   ========================== */
+/* Responsive */
 @media (max-width: 768px) {
     nav.main-nav {
         flex-direction: column;
@@ -3094,6 +3081,7 @@ nav.main-nav .nav-links a:hover {
         font-size: 2.2rem;
     }
 }
+
 
 }
 /* ==========================
