@@ -3246,10 +3246,11 @@ nav.main-nav .nav-links a:hover {
   line-height: 1.6;
   color: #4a4a4a;
 }
-/* Services Section */
+/* Services Section with Background */
 #services {
   padding: 120px 20px 80px;
   text-align: center;
+  background-color: #f0f3f5; /* light neutral from your palette */
 }
 
 .services-inner {
@@ -3276,7 +3277,7 @@ nav.main-nav .nav-links a:hover {
 }
 
 .service-card {
-  height: 200px; /* adjust as needed */
+  height: 200px;
 }
 
 .card-inner {
@@ -3306,21 +3307,22 @@ nav.main-nav .nav-links a:hover {
 }
 
 .card-front {
-  background: #fff;
+  background: #ffffff; /* cards stay white */
 }
 
 .card-back {
-  background: #f5f5f5; /* subtle color change */
+  background: #dbe2e8; /* subtle secondary color from palette */
   transform: rotateY(180deg);
 }
 
 .service-title {
   font-size: 1.25rem;
   font-weight: 600;
+  color: #111; /* darker text for contrast */
 }
 
 .service-desc {
   font-size: 0.95rem;
-  color: #555;
+  color: #333;
   line-height: 1.5;
 }
