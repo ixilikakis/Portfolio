@@ -3319,46 +3319,33 @@ nav.main-nav .nav-links a:hover {
 
 /* Footer */
 #footer {
-    background-color: #4F5D4A; /* your chosen background color */
-    color: #fff;
-    padding: 4em 0; /* same spacing as About section */
-    position: relative;
-    z-index: 1;
+  background-color: #4F5D4A; /* your footer color */
+  color: #fff;
+  padding: 6em 2em; /* more vertical breathing room like About */
+  text-align: center;
 }
 
-/* Inner wrapper matches About section for alignment */
-#footer .about-inner {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-/* Label styling */
-#footer .about-label {
-    display: block;
-    font-size: 0.9em;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 1em;
-    color: #fff;
-}
-
-/* Primary paragraph */
-#footer .about-primary {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #fff;
-    margin-bottom: 2em; /* space between email and copyright */
-}
-
-/* Email link styling */
 #footer a {
-    color: #fff;
-    text-decoration: underline; /* “wired” look */
+  color: #fff;
+  text-decoration: underline;
 }
 
-/* Copyright text */
-#footer #footer-copyright {
-    font-size: 0.9em;
-    color: #fff;
+#footer a:hover {
+  color: #c5c4c4;
+}
+
+.footer-inner {
+  max-width: 900px; /* same width constraints as About */
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-size: 1.25em;
+  line-height: 1.8; /* gives vertical breathing room */
+  margin-bottom: 2em;
+}
+
+#footer-copyright {
+  font-size: 0.9em;
+  opacity: 0.8;
 }
