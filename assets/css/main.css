@@ -3259,29 +3259,26 @@ nav.main-nav .nav-links a:hover {
 }
 /* ==========================
    Services Section
-   3x2 layout, square cards, flipped, minimal style with background
+   Background image + overlay
    ========================== */
 
 #services {
     padding: 4rem 2rem;
     background-color: #F2F3F1;
-    background-image: url('assets/images/services-bg.jpg'); /* your JPEG */
+    background-image: url('../images/services-bg.jpg'); /* ✅ correct path */
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    position: relative; /* needed for overlay */
+    position: relative;
 }
 
-/* Subtle overlay to keep cards readable */
+/* Light overlay so cards stay readable */
 #services::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(242, 243, 241, 0.8); /* matches F2F3F1 at 80% opacity */
+    inset: 0;
+    background-color: rgba(242, 243, 241, 0.8);
     pointer-events: none;
     z-index: 0;
 }
@@ -3293,22 +3290,18 @@ nav.main-nav .nav-links a:hover {
 }
 
 #services h2 {
-    font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
     color: #1F1F1F;
     margin-bottom: 1rem;
 }
 
-/* Subtitle below heading */
 .services-subtitle {
-    font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
-    font-weight: 400;
     color: #6B6B6B;
     margin-bottom: 2rem;
 }
 
-/* Grid layout: 3 columns on desktop */
+/* Grid layout: 3x2 */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -3317,7 +3310,7 @@ nav.main-nav .nav-links a:hover {
     margin: 0 auto;
 }
 
-/* Card base */
+/* Card flip setup */
 .service-card {
     perspective: 1000px;
 }
@@ -3325,29 +3318,38 @@ nav.main-nav .nav-links a:hover {
 .service-card-inner {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1; /* square cards */
-    text-align: center;
-    transition: transform 0.6s;
+    aspect-ratio: 1 / 1;
     transform-style: preserve-3d;
+    transition: transform 0.6s;
 }
 
-/* Front and back of card */
-.card-front, .card-back {
+.service-card:hover .service-card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     backface-visibility: hidden;
     border-radius: 8px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
     padding: 1.5rem;
+    text-align: center;
 }
 
 .card-front {
-    background-color: #FFFFFF;
+    background: #FFFFFF;
     color: #1F1F1F;
+}
+
+.card-back {
+    background: #4F5D4A;
+    color: #F2F3F1;
+    transform: rotateY(180deg);
+    line-height: 1.4;
 }
 
 .service-title {
@@ -3355,21 +3357,7 @@ nav.main-nav .nav-links a:hover {
     font-size: 1.2rem;
 }
 
-.card-back {
-    background-color: #4F5D4A; /* olive green */
-    color: #F2F3F1;
-    transform: rotateY(180deg);
-    font-size: 1rem;
-    line-height: 1.4;
-    padding: 1.5rem;
-}
-
-/* Flip on hover */
-.service-card:hover .service-card-inner {
-    transform: rotateY(180deg);
-}
-
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 1100px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -3381,8 +3369,6 @@ nav.main-nav .nav-links a:hover {
         grid-template-columns: 1fr;
     }
 }
-
-
 
 /* ==========================
    Me Section (full-width, matches About section)
