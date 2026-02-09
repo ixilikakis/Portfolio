@@ -3317,8 +3317,77 @@ nav.main-nav .nav-links a:hover {
 
 .service-card-inner {
     position: relative;
+    width: /* ==========================
+   Services Section – Staggered 3x2 layout
+   ========================== */
+
+#services {
+    padding: 5rem 2rem;
+    background-color: #F2F3F1;
+    background-image: url('../images/services-bg.jpg'); /* correct path from CSS folder */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+}
+
+/* Overlay to keep cards readable */
+#services::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(242, 243, 241, 0.8);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure content sits above overlay */
+#services > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Section heading */
+#services h2 {
+    font-size: 2rem;
+    color: #1F1F1F;
+    margin-bottom: 1rem;
+}
+
+.services-subtitle {
+    font-size: 1.2rem;
+    color: #6B6B6B;
+    margin-bottom: 2rem;
+}
+
+/* Grid layout with stagger */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+/* Shift the second row (2 cards) to be centered */
+.services-grid .service-card:nth-child(4),
+.services-grid .service-card:nth-child(5) {
+    grid-column: 2 / span 1; /* centers the two cards beneath top row */
+}
+
+/* Card flip setup */
+.service-card {
+    perspective: 1000px;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    max-width: 280px; /* keeps cards from stretching too wide */
+}
+
+.service-card-inner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* square cards */
     transform-style: preserve-3d;
     transition: transform 0.6s;
 }
@@ -3327,6 +3396,7 @@ nav.main-nav .nav-links a:hover {
     transform: rotateY(180deg);
 }
 
+/* Front and back of card */
 .card-front,
 .card-back {
     position: absolute;
@@ -3334,33 +3404,41 @@ nav.main-nav .nav-links a:hover {
     backface-visibility: hidden;
     border-radius: 8px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start; /* left-justified content for back */
+    align-items: flex-start;
+    text-align: left;
     padding: 1.5rem;
-    text-align: center;
 }
 
 .card-front {
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     color: #1F1F1F;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .card-back {
-    background: #4F5D4A;
+    background-color: #4F5D4A;
     color: #F2F3F1;
     transform: rotateY(180deg);
-    line-height: 1.4;
+    line-height: 1.5;
+    padding: 1.5rem;
 }
 
-.service-title {
-    font-weight: 600;
-    font-size: 1.2rem;
+.card-back li {
+    margin-bottom: 0.5rem; /* spacing between bullets */
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 1100px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    /* second row will automatically wrap */
+    .services-grid .service-card:nth-child(4),
+    .services-grid .service-card:nth-child(5) {
+        grid-column: auto;
     }
 }
 
@@ -3368,7 +3446,11 @@ nav.main-nav .nav-links a:hover {
     .services-grid {
         grid-template-columns: 1fr;
     }
+    .services-grid .service-card {
+        max-width: none;
+    }
 }
+
 
 /* ==========================
    Me Section (full-width, matches About section)
