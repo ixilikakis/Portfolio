@@ -3263,9 +3263,9 @@ nav.main-nav .nav-links a:hover {
    ========================== */
 
 #services {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
     background-color: #F2F3F1;
-    background-image: url('../images/services-bg.jpg'); /* ✅ correct path */
+    background-image: url('../images/services-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -3301,93 +3301,33 @@ nav.main-nav .nav-links a:hover {
     margin-bottom: 2rem;
 }
 
-/* Grid layout: 3x2 */
+/* Grid layout: 3x2 staggered */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-/* Card flip setup */
-.service-card {
-    perspective: 1000px;
-}
-
-.service-card-inner {
-    position: relative;
-    width: /* ==========================
-   Services Section – Staggered 3x2 layout
-   ========================== */
-
-#services {
-    padding: 5rem 2rem;
-    background-color: #F2F3F1;
-    background-image: url('../images/services-bg.jpg'); /* correct path from CSS folder */
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    text-align: center;
-    position: relative;
-}
-
-/* Overlay to keep cards readable */
-#services::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(242, 243, 241, 0.8);
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* Ensure content sits above overlay */
-#services > * {
-    position: relative;
-    z-index: 1;
-}
-
-/* Section heading */
-#services h2 {
-    font-size: 2rem;
-    color: #1F1F1F;
-    margin-bottom: 1rem;
-}
-
-.services-subtitle {
-    font-size: 1.2rem;
-    color: #6B6B6B;
-    margin-bottom: 2rem;
-}
-
-/* Grid layout with stagger */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
     justify-items: center;
 }
 
-/* Shift the second row (2 cards) to be centered */
+/* Center bottom row (cards 4 & 5) */
 .services-grid .service-card:nth-child(4),
 .services-grid .service-card:nth-child(5) {
-    grid-column: 2 / span 1; /* centers the two cards beneath top row */
+    grid-column: 2 / span 1;
 }
 
 /* Card flip setup */
 .service-card {
     perspective: 1000px;
     width: 100%;
-    max-width: 280px; /* keeps cards from stretching too wide */
+    max-width: 280px;
 }
 
 .service-card-inner {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1; /* square cards */
+    aspect-ratio: 1 / 1;
     transform-style: preserve-3d;
     transition: transform 0.6s;
 }
@@ -3405,7 +3345,7 @@ nav.main-nav .nav-links a:hover {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* left-justified content for back */
+    justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
     padding: 1.5rem;
@@ -3427,7 +3367,7 @@ nav.main-nav .nav-links a:hover {
 }
 
 .card-back li {
-    margin-bottom: 0.5rem; /* spacing between bullets */
+    margin-bottom: 0.5rem;
 }
 
 /* Responsive adjustments */
@@ -3435,7 +3375,6 @@ nav.main-nav .nav-links a:hover {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    /* second row will automatically wrap */
     .services-grid .service-card:nth-child(4),
     .services-grid .service-card:nth-child(5) {
         grid-column: auto;
@@ -3450,6 +3389,7 @@ nav.main-nav .nav-links a:hover {
         max-width: none;
     }
 }
+
 
 
 /* ==========================
