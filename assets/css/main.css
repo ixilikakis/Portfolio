@@ -3345,7 +3345,28 @@ nav.main-nav .nav-links a:hover {
     font-size: 0.9rem;
     color: #e0e0e0;
 }
+/* Remove the background image overlay completely */
 #footer:before {
-	display: none;
+    content: none; /* removes the pseudo-element */
+}
+
+/* Footer background and text color */
+#footer {
+    background-color: #4F5D4A; /* your chosen color */
+    color: #fff; /* text color */
+    position: relative; /* keep relative for layout */
+    z-index: 1; /* make sure footer content is above anything else */
+    padding: 4em 0;
+}
+
+/* Links inside footer */
+#footer a {
+    color: #fff; /* match text */
+    text-decoration: none;
+}
+
+/* Headings inside footer */
+#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
+    color: #fff;
 }
 
