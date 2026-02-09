@@ -3319,8 +3319,8 @@ nav.main-nav .nav-links a:hover {
 }
 /* Footer */
 #footer {
-  background-color: #ffffff; /* white background */
-  color: #4F5D4A; /* your accent/dark green tone */
+  background-color: #4F5D4A; /* dark green background */
+  color: #ffffff; /* white text */
   padding: 60px 20px;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -3338,33 +3338,12 @@ nav.main-nav .nav-links a:hover {
 }
 
 .footer-email {
-  color: #4F5D4A; /* same as text or slightly darker */
+  color: #ffffff; /* white to match text */
   text-decoration: underline;
   font-weight: 600;
 }
 
-.footer-social {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.footer-social li a {
-  color: #4F5D4A;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-.footer-social li a:hover {
-  color: #000000; /* hover effect */
-}
-
 .footer-copy {
   font-size: 0.9rem;
-  color: #888888;
+  color: #dddddd; /* softer white for copyright */
 }
-
-
