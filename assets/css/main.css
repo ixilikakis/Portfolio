@@ -3108,22 +3108,21 @@ nav.main-nav .nav-links a:hover {
   margin-bottom: 1.5rem; /* space below before intro */
   color: #1F1F1F;
 }
-/* ==========================
-   PORTFOLIO INTRO SECTION
-   Mimics #about full-width styling
-   ========================== */
+/* Portfolio Intro / Text Section */
 #portfolio-intro {
-    background-color: #FFFFFF;
-    width: 100%;
-    padding: 4rem 2rem; /* adjust as needed */
+    background-color: #FFFFFF; /* full-width white background */
+    width: 100%;               /* ensures it spans entire page */
+    padding-top: 4rem;         /* spacing above text */
+    padding-bottom: 4rem;      /* spacing below text */
 }
 
-/* Center and constrain inner content */
 #portfolio-intro .about-inner {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px;           /* keeps text block constrained */
+    margin: 0 auto;             /* centers text */
+    padding-left: 2rem;         /* horizontal padding for smaller screens */
+    padding-right: 2rem;
+    line-height: 1.4;           /* matches About section text spacing */
 }
-
 
 
 /* Optional intro text above the grid */
