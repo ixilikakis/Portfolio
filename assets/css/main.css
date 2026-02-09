@@ -3468,3 +3468,24 @@ nav.main-nav .nav-links a:hover {
   opacity: 0.8;
 }
 
+/* FORCE footer copyright alignment */
+#footer #copyright {
+  max-width: 900px;
+  margin: 2em auto 0 auto;
+  text-align: left;
+}
+
+#footer #copyright ul.links {
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+
+#footer #copyright ul.links li {
+  display: block;
+  margin: 0;
+  text-align: left;
+}
+
