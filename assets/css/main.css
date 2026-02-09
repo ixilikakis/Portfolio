@@ -3412,17 +3412,35 @@ nav.main-nav .nav-links a:hover {
 }
 
 
-/* Footer */
+/* ==========================
+   Footer / Contact Section
+   ========================== */
+
 #footer {
   background-color: #4F5D4A;
-  color: #fff;
+  color: #FFFFFF;
   padding: 3em 0;
+  position: relative;
 }
 
+/* Match About section column */
+#footer .about-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Contact label */
 #footer .about-label {
   color: #FFFFFF;
 }
 
+/* Main footer text */
+#footer .about-primary {
+  color: #FFFFFF;
+}
+
+/* Email link */
 #footer a {
   color: #F2F3F1;
   text-decoration: underline;
@@ -3432,40 +3450,23 @@ nav.main-nav .nav-links a:hover {
   opacity: 0.85;
 }
 
-.footer-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.footer-text {
-  font-size: 1.25em;
-  line-height: 1.8;
-  margin-bottom: 2em;
-}
-
-#footer-copyright {
-  max-width: 900px;
-  margin-top: 1.5em;
-  margin: 0 auto;
-  text-align: left;
-}
-
-//* Footer copyright aligned to About column */
+/* Copyright block aligned to same column */
 #footer #copyright {
-  max-width: 900px;          /* SAME as .about-inner */
-  margin: 2em auto 0 auto;   /* centers the column */
-  padding: 0 2rem;           /* matches section side padding */
+  max-width: 900px;
+  margin: 2em auto 0 auto;
+  padding: 0 2rem;
 }
 
+/* Remove template list styling */
 #footer #copyright ul.links {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   text-align: left;
 }
 
 #footer #copyright ul.links li {
-  margin: 0;
   font-size: 0.9em;
   opacity: 0.8;
+  margin: 0;
 }
