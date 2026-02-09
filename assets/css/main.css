@@ -3257,6 +3257,7 @@ nav.main-nav .nav-links a:hover {
   line-height: 1.6;
   color: #4a4a4a;
 }
+
 /* ==========================
    Services Section
    Background image + overlay
@@ -3305,16 +3306,19 @@ nav.main-nav .nav-links a:hover {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    column-gap: 2rem;
+    row-gap: 2rem; /* added spacing between rows */
     max-width: 1200px;
     margin: 0 auto;
     justify-items: center;
 }
 
 /* Center bottom row (cards 4 & 5) */
-.services-grid .service-card:nth-child(4),
+.services-grid .service-card:nth-child(4) {
+    grid-column: 2; /* second column */
+}
 .services-grid .service-card:nth-child(5) {
-    grid-column: 2 / span 1;
+    grid-column: 3; /* third column */
 }
 
 /* Card flip setup */
@@ -3374,21 +3378,24 @@ nav.main-nav .nav-links a:hover {
 @media (max-width: 1100px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
     }
     .services-grid .service-card:nth-child(4),
     .services-grid .service-card:nth-child(5) {
-        grid-column: auto;
+        grid-column: auto; /* remove stagger on smaller screens */
     }
 }
 
 @media (max-width: 700px) {
     .services-grid {
         grid-template-columns: 1fr;
+        row-gap: 2rem;
     }
     .services-grid .service-card {
         max-width: none;
     }
 }
+
 
 
 
