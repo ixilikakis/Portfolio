@@ -3046,16 +3046,6 @@ nav.main-nav .nav-links a:hover {
     margin-bottom: 2rem;       /* space below heading for CTA */
 }
 
-/* CTA button stays static */
-.cta-button {
-    background-color: #4F5D4A;
-    color: #FFFFFF;
-    padding: 0.75rem 2.2rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 400;
-    transition: background-color 0.3s ease;
-}
 
 .cta-button:hover {
     background-color: #3E4A3B;
@@ -3118,11 +3108,19 @@ nav.main-nav .nav-links a:hover {
   margin-bottom: 1.5rem; /* space below before intro */
   color: #1F1F1F;
 }
-/* Portfolio Intro / Text Section */
+/* ==========================
+   PORTFOLIO INTRO TEXT SECTION
+   ========================== */
+
 .portfolio-text-section {
-    background-color: #FFFFFF; /* sets background to white */
-	width: 100%;
-    padding: 4rem 2rem;        /* optional: adds some space inside */
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.portfolio-text-section .about-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
 }
 
 
