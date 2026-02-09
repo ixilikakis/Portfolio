@@ -3345,3 +3345,7 @@ nav.main-nav .nav-links a:hover {
     font-size: 0.9rem;
     color: #e0e0e0;
 }
+#footer:before {
+	display: none;
+}
+
