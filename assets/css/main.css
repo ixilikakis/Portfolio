@@ -3316,3 +3316,115 @@ nav.main-nav .nav-links a:hover {
   font-size: 0.95rem;
   line-height: 1.4;
 }
+/* ==========================
+   CONTACT SECTION
+   ========================== */
+
+#contact {
+  background-color: #f2f3f1;
+  padding: 8rem 0;
+}
+
+.contact-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Label */
+.contact-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  color: #6f6f6f;
+  margin-bottom: 2rem;
+}
+
+/* Primary text */
+.contact-primary {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #1f1f1f;
+  margin-bottom: 1.5rem;
+}
+
+/* Secondary text */
+.contact-secondary {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin-bottom: 3rem;
+  max-width: 640px;
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Name + Email row */
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+/* Inputs & textarea */
+.contact-form input,
+.contact-form textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d0d2ce;
+  background-color: transparent;
+  color: #1f1f1f;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #8a8a8a;
+}
+
+/* Focus state */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4f5d4a;
+}
+
+/* Button */
+.contact-button {
+  align-self: flex-start;
+  margin-top: 1rem;
+  padding: 0.8rem 2.2rem;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  background-color: #4f5d4a;
+  color: #f2f3f1;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.contact-button:hover {
+  background-color: #3f4c3a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #contact {
+    padding: 6rem 0;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
