@@ -3307,18 +3307,17 @@ nav.main-nav .nav-links a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
-    row-gap: 2rem; /* added spacing between rows */
+    row-gap: 2rem; /* spacing between rows */
     max-width: 1200px;
     margin: 0 auto;
     justify-items: center;
 }
 
-/* Center bottom row (cards 4 & 5) */
-.services-grid .service-card:nth-child(4) {
-    grid-column: 2; /* second column */
-}
+/* Center bottom row cards as a group */
+.services-grid .service-card:nth-child(4),
 .services-grid .service-card:nth-child(5) {
-    grid-column: 3; /* third column */
+    grid-column: auto;
+    justify-self: center;
 }
 
 /* Card flip setup */
@@ -3382,7 +3381,7 @@ nav.main-nav .nav-links a:hover {
     }
     .services-grid .service-card:nth-child(4),
     .services-grid .service-card:nth-child(5) {
-        grid-column: auto; /* remove stagger on smaller screens */
+        justify-self: auto; /* remove centering override on smaller screens */
     }
 }
 
