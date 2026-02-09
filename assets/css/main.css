@@ -3319,26 +3319,29 @@ nav.main-nav .nav-links a:hover {
 }
 /* Footer */
 #footer {
-    background-color: #4F5D4A;
+    background-color: #4F5D4A !important; /* force background */
     color: #ffffff;
     padding: 80px 20px;
     font-family: 'Open Sans', sans-serif;
 }
 
-#footer .footer-inner p {
-    margin: 0 0 20px 0;
-    font-size: 1.1rem;
-    line-height: 1.6;
+#footer .footer-inner {
+    max-width: 1200px; /* match your About section width */
+    margin: 0 auto;
 }
 
-#footer .footer-inner .email {
-    font-size: 1.3rem;
-    font-weight: 600;
-    word-break: break-word;
+#footer .footer-text {
+    font-size: 1rem; /* consistent with body text */
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+#footer .footer-text a {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 #footer #copyright {
-    margin-top: 40px;
     font-size: 0.9rem;
     color: #e0e0e0;
 }
