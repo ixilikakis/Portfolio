@@ -3319,15 +3319,14 @@ nav.main-nav .nav-links a:hover {
 
 /* Footer */
 #footer {
-  background-color: #4F5D4A; /* your footer color */
+  background-color: #4F5D4A;
   color: #fff;
-  padding: 6em 2em; /* more vertical breathing room like About */
-  text-align: center;
+  padding: 6em 0; /* matches About section spacing */
 }
 
 #footer a {
-  color: #fff;
-  text-decoration: underline;
+  color: #fff; /* email link color */
+  text-decoration: underline; /* optional for clarity */
 }
 
 #footer a:hover {
