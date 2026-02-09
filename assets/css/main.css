@@ -3301,19 +3301,20 @@ nav.main-nav .nav-links a:hover {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 2.5rem; /* horizontal spacing between cards */
     max-width: 1200px;
     margin: 0 auto;
     justify-items: center;
 }
 
-/* Bottom row flex */
+/* Bottom row flex (staggered) */
 .services-bottom-row {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem; /* spacing between top and bottom row */
+    gap: 2.5rem;   /* match the grid gap */
+    margin-top: 2.5rem; /* match the vertical spacing to the gap */
 }
+
 
 /* Card flip setup */
 .service-card {
@@ -3350,11 +3351,17 @@ nav.main-nav .nav-links a:hover {
 }
 
 .card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center */
+    align-items: center;     /* horizontal center */
+    text-align: center;      /* centers the text itself */
     background-color: #FFFFFF;
     color: #1F1F1F;
     font-size: 1.25rem;
     font-weight: 600;
 }
+
 
 .card-back {
     background-color: #4F5D4A;
