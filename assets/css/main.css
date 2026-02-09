@@ -3283,26 +3283,48 @@ nav.main-nav .nav-links a:hover {
     max-width: 1200px;
     margin: 0 auto;
 }
+/* ==========================
+   Services Section
+   3x2 layout, square cards, flipped, minimal style
+   ========================== */
+
+#services {
+    padding: 4rem 2rem;
+    background-color: #F2F3F1;
+    text-align: center;
+}
+
+#services h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: #1F1F1F;
+    margin-bottom: 3rem;
+}
+
+/* Grid layout: 3 columns on desktop */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 /* Card base */
 .service-card {
-    perspective: 1000px; /* enables 3D flip */
+    perspective: 1000px;
 }
 
 .service-card-inner {
     position: relative;
     width: 100%;
-    min-height: 200px;
+    aspect-ratio: 1 / 1; /* square cards */
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
 
-.service-card:hover .service-card-inner {
-    transform: rotateY(180deg);
-}
-
-/* Front of card */
+/* Front and back of card */
 .card-front, .card-back {
     position: absolute;
     width: 100%;
@@ -3310,11 +3332,10 @@ nav.main-nav .nav-links a:hover {
     backface-visibility: hidden;
     border-radius: 8px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .card-front {
@@ -3322,17 +3343,11 @@ nav.main-nav .nav-links a:hover {
     color: #1F1F1F;
 }
 
-.service-icon {
-    font-size: 2rem; /* placeholder icon size */
-    margin-bottom: 0.5rem;
-}
-
 .service-title {
     font-weight: 600;
     font-size: 1.2rem;
 }
 
-/* Back of card */
 .card-back {
     background-color: #4F5D4A; /* olive green */
     color: #F2F3F1;
@@ -3342,12 +3357,24 @@ nav.main-nav .nav-links a:hover {
     padding: 1.5rem;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* Flip on hover */
+.service-card:hover .service-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
     .services-grid {
-        grid-template-columns: 1fr; /* collapse to 1 column on tablets/mobile */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+
+@media (max-width: 700px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* ==========================
    Me Section (full-width, matches About section)
