@@ -3121,6 +3121,7 @@ nav.main-nav .nav-links a:hover {
 /* Portfolio Intro / Text Section */
 .portfolio-text-section {
     background-color: #FFFFFF; /* sets background to white */
+	width: 100%;
     padding: 4rem 2rem;        /* optional: adds some space inside */
 }
 
