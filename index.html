@@ -253,29 +253,56 @@
 <!-- Contact Section -->
 <section id="contact">
   <div class="contact-inner">
+
     <span class="contact-label">contact</span>
 
     <p class="contact-primary">
-      Let’s work together.
+      Let’s work together
     </p>
 
     <p class="contact-secondary">
-      If you’re interested in collaborating, commissioning work, or just starting a conversation,
-      reach out and I’ll get back to you.
+      If you’re interested in collaborating or have a project in mind,
+      send a message and I’ll get back to you.
     </p>
 
-    <form class="contact-form">
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/YOUR_FORM_ID"
+      method="POST"
+    >
+
       <div class="form-row">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
+        <input
+          type="text"
+          name="name"
+          placeholder="name"
+          required
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="email"
+          required
+        />
       </div>
 
-      <textarea name="message" placeholder="Message" rows="5" required></textarea>
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="tell me about your project"
+        required
+      ></textarea>
 
-      <button type="submit" class="contact-button">Send message</button>
+      <button type="submit" class="contact-button">
+        send message
+      </button>
+
     </form>
+
   </div>
 </section>
+
 
 
 
@@ -451,6 +478,7 @@ setInterval(() => {
 	</body>
 
 </html>
+
 
 
 
