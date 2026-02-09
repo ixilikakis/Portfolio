@@ -3258,6 +3258,10 @@ nav.main-nav .nav-links a:hover {
   color: #4a4a4a;
 }
 
+/* ==========================
+   Services Section
+   Background image + overlay
+   ========================== */
 
 #services {
     padding: 5rem 2rem;
@@ -3300,12 +3304,14 @@ nav.main-nav .nav-links a:hover {
 /* Top row grid */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem; /* horizontal spacing between cards */
+    grid-template-columns: repeat(3, max-content); /* column width = card width */
+    justify-content: center; /* centers the whole row in the container */
+    column-gap: 2.5rem;     /* matches the bottom row flex gap */
+    row-gap: 2.5rem;        /* vertical spacing to bottom row */
     max-width: 1200px;
     margin: 0 auto;
-    justify-items: center;
 }
+
 
 /* Bottom row flex (staggered) */
 .services-bottom-row {
