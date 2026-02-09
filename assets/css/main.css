@@ -3329,28 +3329,28 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ==========================
-   Me Section (mirrors About section)
+   Me Section (full-width, matches About section)
    ========================== */
 #me {
-    background-color: #FFFFFF;  /* full-width white */
+    background-color: #FFFFFF;  /* full-width white background */
     width: 100%;
-    padding-top: 4rem;
+    padding-top: 4rem;          /* same spacing as About section */
     padding-bottom: 4rem;
 }
 
 #me .about-inner {
-    max-width: 800px;  /* same as About / Portfolio Intro */
+    max-width: 800px;           /* constrained like About */
     margin: 0 auto;
     padding-left: 2rem;
     padding-right: 2rem;
-    line-height: 1.4;   /* matches About section */
+    line-height: 1.4;
 }
 
 #me .about-label,
 #me .about-primary,
 #me .about-secondary {
     font-family: 'Open Sans', sans-serif;
-    color: #1F1F1F;    /* primary text color */
+    color: #1F1F1F;             /* matches About section text */
 }
 
 
