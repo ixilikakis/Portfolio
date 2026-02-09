@@ -3118,6 +3118,12 @@ nav.main-nav .nav-links a:hover {
   margin-bottom: 1.5rem; /* space below before intro */
   color: #1F1F1F;
 }
+/* Portfolio Intro / Text Section */
+.portfolio-text-section {
+    background-color: #FFFFFF; /* sets background to white */
+    padding: 4rem 2rem;        /* optional: adds some space inside */
+}
+
 
 /* Optional intro text above the grid */
 .section-intro {
