@@ -3258,9 +3258,9 @@ nav.main-nav .nav-links a:hover {
   color: #4a4a4a;
 }
 
+
 /* ==========================
    Services Section
-   Background image + overlay
    ========================== */
 
 #services {
@@ -3274,7 +3274,7 @@ nav.main-nav .nav-links a:hover {
     position: relative;
 }
 
-/* Light overlay */
+/* Overlay */
 #services::before {
     content: "";
     position: absolute;
@@ -3298,35 +3298,24 @@ nav.main-nav .nav-links a:hover {
 .services-subtitle {
     font-size: 1.2rem;
     color: #6B6B6B;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
-/* Top row grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, max-content); /* column width = card width */
-    justify-content: center; /* centers the whole row in the container */
-    column-gap: 2.5rem;     /* matches the bottom row flex gap */
-    row-gap: 2.5rem;        /* vertical spacing to bottom row */
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-/* Bottom row flex (staggered) */
-.services-bottom-row {
+/* Rows */
+.services-row {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;   /* match the grid gap */
-    margin-top: 2.5rem; /* match the vertical spacing to the gap */
+    gap: 2.5rem;
 }
 
+.services-row-bottom {
+    margin-top: 2.5rem;
+}
 
-/* Card flip setup */
+/* Cards */
 .service-card {
     perspective: 1000px;
-    width: 100%;
-    max-width: 280px;
+    width: 280px;
 }
 
 .service-card-inner {
@@ -3341,81 +3330,56 @@ nav.main-nav .nav-links a:hover {
     transform: rotateY(180deg);
 }
 
-/* Front and back */
+/* Front & Back */
 .card-front,
 .card-back {
     position: absolute;
     inset: 0;
     backface-visibility: hidden;
     border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
     padding: 1.5rem;
 }
 
+/* Front: centered text */
 .card-front {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* vertical center */
-    align-items: center;     /* horizontal center */
-    text-align: center;      /* centers the text itself */
     background-color: #FFFFFF;
     color: #1F1F1F;
     font-size: 1.25rem;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-
+/* Back: left-aligned content */
 .card-back {
     background-color: #4F5D4A;
     color: #F2F3F1;
     transform: rotateY(180deg);
-    line-height: 1.5;
-    padding: 1.5rem;
+}
+
+.card-back ul {
+    margin: 0;
+    padding-left: 1.1rem;
 }
 
 .card-back li {
     margin-bottom: 0.5rem;
+    line-height: 1.4;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1100px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    .services-bottom-row {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        margin-top: 2rem;
+/* Responsive */
+@media (max-width: 900px) {
+    .services-row {
+        flex-wrap: wrap;
     }
 }
 
-@media (max-width: 700px) {
-    .services-grid,
-    .services-bottom-row {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+@media (max-width: 600px) {
     .service-card {
-        max-width: none;
-    }
-}
-
-}
-
-@media (max-width: 700px) {
-    .services-grid,
-    .services-bottom-row {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .service-card {
-        max-width: none;
+        width: 100%;
+        max-width: 320px;
     }
 }
 
