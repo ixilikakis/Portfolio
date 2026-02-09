@@ -3317,46 +3317,26 @@ nav.main-nav .nav-links a:hover {
   line-height: 1.4;
 }
 }
-/* Footer Styles */
+/* Footer */
 #footer {
     background-color: #4F5D4A;
     color: #ffffff;
-    padding: 60px 20px;
-    text-align: center;
+    padding: 80px 20px;
     font-family: 'Open Sans', sans-serif;
 }
 
-#footer p {
-    font-size: 1rem;
+#footer .footer-inner p {
+    margin: 0 0 20px 0;
+    font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 20px;
-    color: #ffffff;
 }
 
-#footer a {
-    color: #ffffff;
-    text-decoration: none;
+#footer .footer-inner .email {
+    font-size: 1.3rem;
     font-weight: 600;
-}
-
-#footer a:hover {
-    text-decoration: underline;
-}
-
-/* Hide social icons for now */
-#footer .social {
-    display: none;
-}
-
-/* Email Styling */
-#footer .email {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #ffffff;
     word-break: break-word;
 }
 
-/* Footer copyright text */
 #footer #copyright {
     margin-top: 40px;
     font-size: 0.9rem;
