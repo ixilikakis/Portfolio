@@ -3258,11 +3258,6 @@ nav.main-nav .nav-links a:hover {
   color: #4a4a4a;
 }
 
-/* ==========================
-   Services Section
-   Background image + overlay
-   ========================== */
-
 #services {
     padding: 5rem 2rem;
     background-color: #F2F3F1;
@@ -3274,7 +3269,7 @@ nav.main-nav .nav-links a:hover {
     position: relative;
 }
 
-/* Light overlay so cards stay readable */
+/* Light overlay */
 #services::before {
     content: "";
     position: absolute;
@@ -3284,7 +3279,6 @@ nav.main-nav .nav-links a:hover {
     z-index: 0;
 }
 
-/* Ensure content sits above overlay */
 #services > * {
     position: relative;
     z-index: 1;
@@ -3302,22 +3296,22 @@ nav.main-nav .nav-links a:hover {
     margin-bottom: 2rem;
 }
 
-/* Grid layout: 3x2 staggered */
+/* Top row grid */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
-    row-gap: 2rem; /* spacing between rows */
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     justify-items: center;
 }
 
-/* Center bottom row cards as a group */
-.services-grid .service-card:nth-child(4),
-.services-grid .service-card:nth-child(5) {
-    grid-column: auto;
-    justify-self: center;
+/* Bottom row flex */
+.services-bottom-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem; /* spacing between top and bottom row */
 }
 
 /* Card flip setup */
@@ -3339,7 +3333,7 @@ nav.main-nav .nav-links a:hover {
     transform: rotateY(180deg);
 }
 
-/* Front and back of card */
+/* Front and back */
 .card-front,
 .card-back {
     position: absolute;
@@ -3377,20 +3371,23 @@ nav.main-nav .nav-links a:hover {
 @media (max-width: 1100px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 2rem;
+        gap: 2rem;
     }
-    .services-grid .service-card:nth-child(4),
-    .services-grid .service-card:nth-child(5) {
-        justify-self: auto; /* remove centering override on smaller screens */
+    .services-bottom-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
     }
 }
 
 @media (max-width: 700px) {
-    .services-grid {
+    .services-grid,
+    .services-bottom-row {
         grid-template-columns: 1fr;
-        row-gap: 2rem;
+        gap: 2rem;
     }
-    .services-grid .service-card {
+    .service-card {
         max-width: none;
     }
 }
