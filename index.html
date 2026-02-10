@@ -301,6 +301,11 @@
   </div>
 </section>
 
+		<button id="scroll-carrot" aria-label="Scroll to previous section">
+  ^
+</button>
+
+
 
 
 
@@ -314,6 +319,58 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+	<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const carrot = document.getElementById("scroll-carrot");
+
+    const sections = [
+        document.getElementById("header"),
+        document.getElementById("portfolio"),
+        document.getElementById("services"),
+        document.getElementById("footer")
+    ];
+
+    let currentIndex = 0;
+
+    function isCompletelyOffScreen(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.bottom <= 0;
+    }
+
+    function updateCurrentSection() {
+        // Navigation still visible → hide carrot
+        if (!isCompletelyOffScreen(sections[0])) {
+            carrot.classList.remove("visible");
+            currentIndex = 0;
+            return;
+        }
+
+        carrot.classList.add("visible");
+
+        // Determine current section based on complete disappearance
+        for (let i = sections.length - 1; i > 0; i--) {
+            if (isCompletelyOffScreen(sections[i - 1])) {
+                currentIndex = i;
+                break;
+            }
+        }
+    }
+
+    carrot.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            sections[currentIndex - 1].scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    });
+
+    window.addEventListener("scroll", updateCurrentSection);
+    window.addEventListener("resize", updateCurrentSection);
+
+    updateCurrentSection();
+});
+</script>
+
 <!-- GLightbox JS -->
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script>
@@ -344,6 +401,7 @@ setInterval(() => {
 	</body>
 
 </html>
+
 
 
 
