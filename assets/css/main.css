@@ -2840,6 +2840,45 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ==========================
+   SCROLL CARROT (MOBILE ONLY)
+   ========================== */
+
+#scroll-carrot {
+    position: fixed;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 999;
+}
+
+#scroll-carrot.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Disable entirely on desktop */
+@media (min-width: 769px) {
+    #scroll-carrot {
+        display: none;
+    }
+}
+
+
+/* ==========================
    HERO / VIDEO BANNER
    ========================== */
 
