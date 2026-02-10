@@ -2840,51 +2840,55 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ==========================
-   MOBILE NAV LINKS - SIDE BY SIDE
+   MOBILE NAV - SIDE BY SIDE WITH SEPARATORS
    ========================== */
 @media (max-width: 768px) {
 
-    /* Main nav wrapper adjustments for mobile */
+    /* Main nav wrapper */
     nav.main-nav {
-        flex-direction: column; /* keep logo on top, links below */
-        align-items: flex-start; /* keep everything left-aligned */
+        flex-direction: column;     /* stack logo on top, links below */
+        align-items: flex-start;    /* left-aligned */
+        padding: 1rem 2rem;         /* keep same padding */
     }
 
     /* Logo spacing */
     nav.main-nav .logo {
-        margin-bottom: 0.75rem; /* space between name and links */
+        margin-bottom: 0.75rem;     /* space between logo and links */
     }
 
     /* Nav links container */
     nav.main-nav .nav-links {
-        flex-direction: row;      /* horizontal row */
-        gap: 0.75rem;             /* space between links */
-        flex-wrap: wrap;          /* wrap on narrow screens */
+        flex-direction: row;        /* horizontal links */
+        flex-wrap: wrap;            /* wrap if needed */
+        gap: 0.75rem;               /* spacing between links */
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
 
-    /* Each link */
+    /* Each link with inline-flex for proper alignment */
     nav.main-nav .nav-links li {
         display: inline-flex;
         align-items: center;
-        font-size: 0.9rem;       /* slightly smaller than logo */
-        font-weight: 300;        /* light weight */
+        font-size: 0.95rem;
+        font-weight: 600;
     }
 
-    /* Separator */
+    /* Add separator between links, except last */
     nav.main-nav .nav-links li:not(:last-child)::after {
-        content: "|";            /* vertical bar separator */
+        content: "|";
         margin-left: 0.5rem;
-        color: rgba(255, 255, 255, 0.5); /* subtle */
-        font-weight: 300;
+        color: rgba(31, 31, 31, 0.5); /* subtle separator */
+        font-weight: 400;
     }
 
-    /* Optional tap feedback for links */
+    /* Tap / active feedback */
     nav.main-nav .nav-links a {
         transition: opacity 0.15s ease;
     }
 
     nav.main-nav .nav-links a:active {
-        opacity: 0.6;            /* subtle tap feedback */
+        opacity: 0.6;
     }
 }
 
