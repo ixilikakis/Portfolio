@@ -2540,209 +2540,204 @@ input, select, textarea {
 
 
 /* Small */
+@media screen and (max-width: 736px) {
 
-	@media screen and (max-width: 736px) {
+    /* Basic */
+    body, input, textarea, select {
+        font-size: 11pt;
+    }
 
-		/* Basic */
+    h2, h3, h4, h5, h6 {
+        font-size: 1.25em;
+    }
 
-			body, input, textarea, select {
-				font-size: 11pt;
-			}
+    /* Buttons */
+    input[type="button"].large,
+    input[type="submit"].large,
+    input[type="reset"].large,
+    button.large,
+    .button.large {
+        font-size: 1.1em;
+        padding: 0.65em 1.5em;
+    }
 
-			h2, h3, h4, h5, h6 {
-				font-size: 1.25em;
-			}
+    /* Actions */
+    ul.actions li {
+        margin: 1em 0 0 0;
+        display: block;
+    }
 
-		/* Button */
+    ul.actions li .button {
+        width: 100%;
+    }
 
-			input[type="button"].large,
-			input[type="submit"].large,
-			input[type="reset"].large,
-			button.large,
-			.button.large {
-				font-size: 1.1em;
-				padding: 0.65em 1.5em 0.65em 1.5em;
-			}
+    ul.actions li:first-child {
+        margin-top: 0;
+    }
 
-		/* Actions */
+    /* Section/Article */
+    section, article {
+        margin-bottom: 20px;
+    }
 
-			ul.actions li {
-				margin: 1em 0 0 0;
-				display: block;
-			}
+    header {
+        margin: 0 0 1em 0;
+    }
 
-				ul.actions li .button {
-					width: 100%;
-				}
+    footer {
+        margin: 2em 0 0 0;
+    }
 
-				ul.actions li:first-child {
-					margin-top: 0;
-				}
+    /* Box */
+    .box {
+        padding: 25px 15px 20px 15px;
+    }
 
-		/* Section/Article */
+    .box .image.featured {
+        left: 15px;
+        top: 15px;
+        margin: -40px 0 40px -30px;
+    }
 
-			section, article {
-				margin-bottom: 20px;
-			}
+    .box.post header {
+        padding-top: 0;
+        margin: 0 0 1em 0;
+    }
 
-			header {
-				margin: 0 0 1em 0;
-			}
+    .box.post h2 {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
 
-			footer {
-				margin: 2em 0 0 0;
-			}
+    .box.post header > p {
+        margin-top: 0;
+        font-size: 1em;
+    }
 
-		/* Box */
+    /* Divided */
+    ul.divided li {
+        padding: 0.5em 0;
+    }
 
-			.box {
-				padding: 25px 15px 20px 15px;
-			}
+    /* Contact */
+    ul.contact li {
+        padding: 0.8em 0 0.8em 7em;
+    }
 
-				.box .image.featured {
-					left: 15px;
-					top: 15px;
-					margin: -40px 0 40px -30px;
-				}
+    ul.contact li h3 {
+        top: 0.8em;
+    }
 
-				.box.post header {
-					padding-top: 0;
-					margin: 0 0 1em 0;
-				}
+    /* Dates */
+    ul.dates li {
+        padding-left: 6em;
+    }
 
-				.box.post h2 {
-					font-size: 1.5em;
-					line-height: 1.5em;
-				}
+    ul.dates h3 {
+        margin: 0 0 0.5em 0;
+    }
 
-				.box.post header > p {
-					margin-top: 0;
-					font-size: 1em;
-				}
+    /* Links */
+    ul.links li {
+        display: block;
+        padding: 0.25em 0 0 0;
+        margin: 0.25em 0 0 0;
+        border-left: 0;
+    }
 
-		/* Divided */
+    ul.links li:first-child {
+        padding-top: 0;
+        margin-top: 0;
+    }
 
-			ul.divided li {
-				padding: 0.5em 0 0.5em 0;
-			}
+    /* Social */
+    ul.social li {
+        margin: 0 0.5em 0.75em 0;
+    }
 
-		/* Contact */
+    /* Icons */
+    .icon.featured {
+        width: 8em;
+        margin: 0 0 3em 0;
+    }
 
-			ul.contact li {
-				padding: 0.8em 0 0.8em 7em;
-			}
+    .icon.featured:after {
+        border-left: solid 4em transparent;
+        border-right: solid 4em transparent;
+    }
 
-				ul.contact li h3 {
-					top: 0.8em;
-				}
+    /* Header */
+    #header {
+        text-align: center;
+        padding: 2em 0;
+    }
 
-		/* Dates */
+    #header h1 {
+        color: #252122;
+        font-weight: 900;
+        font-size: 1.75em;
+        letter-spacing: -0.035em;
+    }
 
-			ul.dates li {
-				padding-left: 6em;
-			}
+    /* Show main nav on mobile, hide hamburger */
+    #nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-			ul.dates h3 {
-				margin: 0 0 0.5em 0;
-			}
+    #titleBar,
+    #navPanel {
+        display: none !important;
+    }
 
-		/* Links */
+    /* Intro */
+    #intro {
+        padding: 2em 0 0 0;
+    }
 
-			ul.links li {
-				display: block;
-				padding: 0.25em 0 0 0;
-				margin: 0.25em 0 0 0;
-				border-left: 0;
-			}
+    #intro section {
+        padding: 40px 0 0 0;
+        margin: 20px 0 0 0;
+    }
 
-				ul.links li:first-child {
-					padding-top: 0;
-					margin-top: 0;
-				}
+    #intro h2 {
+        font-size: 1.25em;
+    }
 
-		/* Social */
+    /* Banner */
+    #banner {
+        padding: 6em 0;
+        margin: 2em 0 0 0;
+    }
 
-			ul.social li {
-				margin: 0 0.5em 0.75em 0;
-			}
+    #banner header {
+        padding: 1.5em 1em;
+        display: block;
+        border-radius: 0;
+    }
 
-		/* Icons */
+    #banner header h2 {
+        font-size: 1.5em;
+        line-height: 1.5em;
+        margin: 0 0 0.25em 0;
+    }
 
-			.icon.featured {
-				width: 8em;
-				margin: 0 0 3em 0;
-			}
+    #banner header p {
+        font-size: 1.2em;
+    }
 
-				.icon.featured:after {
-					border-left: solid 4em transparent;
-					border-right: solid 4em transparent;
-				}
+    /* Main */
+    #main {
+        padding: 20px 0;
+    }
 
-		/* Header */
+    /* Footer */
+    #footer {
+        padding: 40px 0 20px 0;
+    }
+}
 
-			#header {
-				text-align: center;
-				padding: 2em 0;
-			}
-
-				#header h1 {
-					color: #252122;
-					font-weight: 900;
-					font-size: 1.75em;
-					letter-spacing: -0.035em;
-				}
-
-		/* Intro */
-
-			#intro {
-				padding: 2em 0 0 0;
-			}
-
-				#intro section {
-					padding: 40px 0 0 0;
-					margin: 20px 0 0 0;
-				}
-
-				#intro h2 {
-					font-size: 1.25em;
-				}
-
-		/* Banner */
-
-			#banner {
-				padding: 6em 0;
-				margin: 2em 0 0 0;
-			}
-
-				#banner header {
-					padding: 1.5em 1em 1.5em 1em;
-					display: block;
-					border-radius: 0;
-				}
-
-					#banner header h2 {
-						font-size: 1.5em;
-						line-height: 1.5em;
-						margin: 0 0 0.25em 0;
-					}
-
-					#banner header p {
-						font-size: 1.2em;
-					}
-
-		/* Main */
-
-			#main {
-				padding: 20px 0;
-			}
-
-		/* Footer */
-
-			#footer {
-				padding: 40px 0 20px 0;
-			}
-
-	}
 /* ==========================
    GLOBAL RESET & BASE
    ========================== */
