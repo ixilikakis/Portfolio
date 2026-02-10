@@ -2844,29 +2844,36 @@ nav.main-nav .nav-links a:hover {
    ========================== */
 @media (max-width: 768px) {
 
-    /* Main nav wrapper */
+    /* Stack logo on top, links below, left-aligned */
     nav.main-nav {
-        flex-direction: column;     /* stack logo on top, links below */
-        align-items: flex-start;    /* left-aligned */
-        padding: 1rem 2rem;         /* keep same padding */
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 1rem 2rem; 
+    }
+
+    /* Override header centering from template */
+    #header {
+        text-align: left !important;
     }
 
     /* Logo spacing */
     nav.main-nav .logo {
-        margin-bottom: 0.75rem;     /* space between logo and links */
+        margin-bottom: 0.75rem;
     }
 
-    /* Nav links container */
+    /* Links row */
     nav.main-nav .nav-links {
-        flex-direction: row;        /* horizontal links */
-        flex-wrap: wrap;            /* wrap if needed */
-        gap: 0.75rem;               /* spacing between links */
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 0.75rem !important;
+        justify-content: flex-start !important;
         padding: 0;
         margin: 0;
         list-style: none;
     }
 
-    /* Each link with inline-flex for proper alignment */
+    /* Each link */
     nav.main-nav .nav-links li {
         display: inline-flex;
         align-items: center;
@@ -2874,11 +2881,11 @@ nav.main-nav .nav-links a:hover {
         font-weight: 600;
     }
 
-    /* Add separator between links, except last */
+    /* Separator between links, except last */
     nav.main-nav .nav-links li:not(:last-child)::after {
         content: "|";
         margin-left: 0.5rem;
-        color: rgba(31, 31, 31, 0.5); /* subtle separator */
+        color: rgba(31, 31, 31, 0.5);
         font-weight: 400;
     }
 
