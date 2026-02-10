@@ -2840,6 +2840,56 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ==========================
+   MOBILE NAV LINKS - SIDE BY SIDE
+   ========================== */
+@media (max-width: 768px) {
+
+    /* Main nav wrapper adjustments for mobile */
+    nav.main-nav {
+        flex-direction: column; /* keep logo on top, links below */
+        align-items: flex-start; /* keep everything left-aligned */
+    }
+
+    /* Logo spacing */
+    nav.main-nav .logo {
+        margin-bottom: 0.75rem; /* space between name and links */
+    }
+
+    /* Nav links container */
+    nav.main-nav .nav-links {
+        flex-direction: row;      /* horizontal row */
+        gap: 0.75rem;             /* space between links */
+        flex-wrap: wrap;          /* wrap on narrow screens */
+    }
+
+    /* Each link */
+    nav.main-nav .nav-links li {
+        display: inline-flex;
+        align-items: center;
+        font-size: 0.9rem;       /* slightly smaller than logo */
+        font-weight: 300;        /* light weight */
+    }
+
+    /* Separator */
+    nav.main-nav .nav-links li:not(:last-child)::after {
+        content: "|";            /* vertical bar separator */
+        margin-left: 0.5rem;
+        color: rgba(255, 255, 255, 0.5); /* subtle */
+        font-weight: 300;
+    }
+
+    /* Optional tap feedback for links */
+    nav.main-nav .nav-links a {
+        transition: opacity 0.15s ease;
+    }
+
+    nav.main-nav .nav-links a:active {
+        opacity: 0.6;            /* subtle tap feedback */
+    }
+}
+
+
+/* ==========================
    MOBILE SCROLL CARROT
    ========================== */
 
