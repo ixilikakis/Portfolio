@@ -2879,7 +2879,7 @@ nav.main-nav .nav-links a:hover {
         align-items: center;
         font-size: 5.05rem;              /* slightly larger */
         font-weight: 200;                /* lighter weight */
-        letter-spacing: 3.5px;           /* more spacing between letters */
+        letter-spacing: 2px;           /* more spacing between letters */
         line-height: 1.2;
     }
 
