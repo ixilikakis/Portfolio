@@ -2866,7 +2866,7 @@ nav.main-nav .nav-links a:hover {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap;
-        gap: 1rem !important;        /* more spacing between links */
+        gap: 1.25rem !important;        /* more spacing between links */
         padding: 0;
         margin: 0;
         list-style: none;
@@ -2879,7 +2879,7 @@ nav.main-nav .nav-links a:hover {
         align-items: center;
         font-size: 5.05rem;              /* slightly larger */
         font-weight: 200;                /* lighter weight */
-        letter-spacing: 2px;           /* more spacing between letters */
+        letter-spacing: 1.5px;           /* more spacing between letters */
         line-height: 1.2;
     }
 
