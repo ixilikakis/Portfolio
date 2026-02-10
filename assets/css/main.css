@@ -2847,20 +2847,20 @@ nav.main-nav .nav-links a:hover {
     position: fixed;
     bottom: 1.25rem;
     left: 1.25rem;
-    width: 44px;                /* true circle size */
-    height: 44px;               /* true circle size */
-    border-radius: 50%;          /* perfect circle */
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    background: rgba(0, 0, 0, 0.4);
+    width: 44px;                     /* true circle */
+    height: 44px;                    /* true circle */
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.35);  /* muted but readable */
     color: #fff;
-    font-size: 0;                /* remove old caret space */
+    font-size: 0;                     /* removes old caret space */
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.1s ease, background 0.1s ease;
     z-index: 999;
 }
 
@@ -2870,9 +2870,16 @@ nav.main-nav .nav-links a:hover {
 }
 
 #scroll-carrot svg {
-    display: block;            /* prevents distortion inside flex */
-    width: 16px;               /* arrow size */
+    display: block;       /* ensures proper alignment in flex */
+    width: 16px;          /* arrow size */
     height: 16px;
+}
+
+/* Hover / touch feedback */
+#scroll-carrot:hover,
+#scroll-carrot:active {
+    background: rgba(0, 0, 0, 0.5); /* slightly darker on press */
+    transform: scale(1.05);          /* subtle scaling */
 }
 
 /* Disable entirely on desktop */
@@ -2881,6 +2888,7 @@ nav.main-nav .nav-links a:hover {
         display: none;
     }
 }
+
 
 
 
