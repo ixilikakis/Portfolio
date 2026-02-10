@@ -2840,7 +2840,7 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ==========================
-   MOBILE NAV - POLISHED VERSION
+   MOBILE NAV - POLISHED VERSION (NO SEPARATORS)
    ========================== */
 @media (max-width: 768px) {
 
@@ -2858,7 +2858,7 @@ nav.main-nav .nav-links a:hover {
 
     /* Logo spacing */
     nav.main-nav .logo {
-        margin-bottom: 0.85rem; /* slightly larger gap for better hierarchy */
+        margin-bottom: 0.85rem; /* spacing between logo and links */
     }
 
     /* Links row */
@@ -2866,7 +2866,7 @@ nav.main-nav .nav-links a:hover {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap;
-        gap: 0.65rem !important;       /* slightly tighter than before */
+        gap: 1.25rem !important;        /* more spacing between links */
         padding: 0;
         margin: 0;
         list-style: none;
@@ -2877,36 +2877,33 @@ nav.main-nav .nav-links a:hover {
     nav.main-nav .nav-links li {
         display: inline-flex;
         align-items: center;
-        font-size: 0.95rem;
-        font-weight: 500;             /* slightly lighter for elegance */
+        font-size: 1.05rem;              /* slightly larger */
+        font-weight: 400;                /* lighter weight */
+        letter-spacing: 1.5px;           /* more spacing between letters */
         line-height: 1.2;
     }
 
-    /* Separator between links */
-    nav.main-nav .nav-links li:not(:last-child)::after {
-        content: "|";
-        margin-left: 0.45rem;          /* proportional spacing */
-        color: rgba(31, 31, 31, 0.45); /* subtle, light separator */
-        font-weight: 400;
-    }
-
-    /* Link tap / active feedback */
+    /* Link style */
     nav.main-nav .nav-links a {
+        color: #6B6B6B;                  /* brand color */
+        text-decoration: none;
         transition: opacity 0.15s ease, transform 0.1s ease;
     }
 
+    /* Tap / active feedback */
     nav.main-nav .nav-links a:active {
-        opacity: 0.65;                 /* subtle feedback */
-        transform: translateY(1px);    /* tiny downward shift for tactile feel */
+        opacity: 0.65;
+        transform: translateY(1px);
     }
 
-    /* Optional: ensure wrap works cleanly on very narrow screens */
+    /* Responsive tweak for very narrow screens */
     @media (max-width: 360px) {
         nav.main-nav .nav-links {
-            gap: 0.5rem;
+            gap: 1rem;
         }
     }
 }
+
 
 
 
