@@ -2876,7 +2876,7 @@ nav.main-nav .nav-links a:hover {
     /* Each link */
     nav.main-nav .nav-links li {
         display: inline-flex;
-        align-items: left;
+        align-items: center;
         font-size: 5.05rem;              /* slightly larger */
         font-weight: 200;                /* lighter weight */
         letter-spacing: 2px;           /* more spacing between letters */
