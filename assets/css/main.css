@@ -2476,15 +2476,16 @@ input, select, textarea {
         padding: 3.5em 0 3em 0;
     }
 
-    /* Nav: always visible, hide off-canvas */
+    /* Main nav always visible */
     #nav {
-        display: flex !important; /* force it visible */
-        flex-wrap: wrap; /* optional for responsiveness */
+        display: flex !important;
+        flex-wrap: wrap;
     }
 
+    /* Hide hamburger & off-canvas nav */
     #titleBar,
     #navPanel {
-        display: none !important; /* hide hamburger & off-canvas nav */
+        display: none !important;
     }
 
     /* Intro section adjustments */
@@ -2531,7 +2532,7 @@ input, select, textarea {
         display: block;
     }
 
-    /* Remove any leftover transforms from navPanel visibility */
+    /* Remove leftover transforms */
     #page-wrapper {
         transform: none !important;
     }
@@ -2539,10 +2540,10 @@ input, select, textarea {
 }
 
 
-/* Small */
+/* Small / Hide hamburger, keep main nav visible */
 @media screen and (max-width: 736px) {
 
-    /* Basic */
+    /* Basic font sizes */
     body, input, textarea, select {
         font-size: 11pt;
     }
@@ -2575,7 +2576,7 @@ input, select, textarea {
         margin-top: 0;
     }
 
-    /* Section/Article */
+    /* Section/Article spacing */
     section, article {
         margin-bottom: 20px;
     }
@@ -2588,7 +2589,7 @@ input, select, textarea {
         margin: 2em 0 0 0;
     }
 
-    /* Box */
+    /* Box spacing */
     .box {
         padding: 25px 15px 20px 15px;
     }
@@ -2614,12 +2615,11 @@ input, select, textarea {
         font-size: 1em;
     }
 
-    /* Divided */
+    /* Lists */
     ul.divided li {
         padding: 0.5em 0;
     }
 
-    /* Contact */
     ul.contact li {
         padding: 0.8em 0 0.8em 7em;
     }
@@ -2628,7 +2628,6 @@ input, select, textarea {
         top: 0.8em;
     }
 
-    /* Dates */
     ul.dates li {
         padding-left: 6em;
     }
@@ -2637,7 +2636,6 @@ input, select, textarea {
         margin: 0 0 0.5em 0;
     }
 
-    /* Links */
     ul.links li {
         display: block;
         padding: 0.25em 0 0 0;
@@ -2650,12 +2648,10 @@ input, select, textarea {
         margin-top: 0;
     }
 
-    /* Social */
     ul.social li {
         margin: 0 0.5em 0.75em 0;
     }
 
-    /* Icons */
     .icon.featured {
         width: 8em;
         margin: 0 0 3em 0;
@@ -2679,7 +2675,7 @@ input, select, textarea {
         letter-spacing: -0.035em;
     }
 
-    /* Show main nav on mobile, hide hamburger */
+    /* Main nav always visible, hide hamburger */
     #nav {
         display: flex;
         flex-direction: column;
@@ -2727,16 +2723,18 @@ input, select, textarea {
         font-size: 1.2em;
     }
 
-    /* Main */
+    /* Main content padding */
     #main {
         padding: 20px 0;
     }
 
-    /* Footer */
+    /* Footer padding */
     #footer {
         padding: 40px 0 20px 0;
     }
+
 }
+
 
 /* ==========================
    GLOBAL RESET & BASE
