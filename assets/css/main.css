@@ -2840,21 +2840,20 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ==========================
-   SCROLL CARROT (MOBILE ONLY)
+   MOBILE SCROLL CARROT
    ========================== */
 
 #scroll-carrot {
     position: fixed;
     bottom: 1.25rem;
     left: 1.25rem;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
+    width: 44px;                /* true circle size */
+    height: 44px;               /* true circle size */
+    border-radius: 50%;          /* perfect circle */
     border: 1px solid rgba(255, 255, 255, 0.6);
     background: rgba(0, 0, 0, 0.4);
     color: #fff;
-    font-size: 1.2rem;
-    line-height: 1;
+    font-size: 0;                /* remove old caret space */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2870,12 +2869,19 @@ nav.main-nav .nav-links a:hover {
     pointer-events: auto;
 }
 
+#scroll-carrot svg {
+    display: block;            /* prevents distortion inside flex */
+    width: 16px;               /* arrow size */
+    height: 16px;
+}
+
 /* Disable entirely on desktop */
 @media (min-width: 769px) {
     #scroll-carrot {
         display: none;
     }
 }
+
 
 
 /* ==========================
