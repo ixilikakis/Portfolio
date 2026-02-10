@@ -3293,9 +3293,9 @@ nav.main-nav .nav-links a:hover {
     padding: 1.5rem;
 }
 
-/* Front: centered text */
+/* Front: centered text with updated background */
 .card-front {
-    background-color: #FFFFFF;
+    background-color: #F2F3F1;
     color: #1F1F1F;
     font-size: 1.25rem;
     font-weight: 600;
@@ -3305,16 +3305,21 @@ nav.main-nav .nav-links a:hover {
     text-align: center;
 }
 
-/* Back: left-aligned content */
+/* Back: vertically centered content */
 .card-back {
     background-color: #4F5D4A;
     color: #F2F3F1;
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
 }
 
 .card-back ul {
-    margin: 0;
-    padding-left: 1.1rem;
+    margin: 0 auto;       /* center block horizontally */
+    padding-left: 1.1rem; /* keep bullets left-aligned */
+    max-width: 90%;
 }
 
 .card-back li {
@@ -3333,10 +3338,9 @@ nav.main-nav .nav-links a:hover {
     .service-card {
         width: 100%;
         max-width: 320px;
+        margin: 0 auto; /* center stacked cards */
     }
 }
-
-
 
 
 /* ==========================
