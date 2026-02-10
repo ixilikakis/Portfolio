@@ -2899,7 +2899,7 @@ nav.main-nav .nav-links a:hover {
     .fade-text-container {
         font-size: 2.2rem;        /* existing size */
         margin-bottom: 1.5rem;    /* existing spacing below container */
-        line-height: 1.8;          /* added to space out stacked lines */
+        line-height: 1.7;          /* added to space out stacked lines */
     }
 	
 }
