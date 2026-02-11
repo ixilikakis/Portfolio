@@ -3077,6 +3077,67 @@ nav.main-nav .nav-links a:hover {
     line-height: 1.4;           /* matches About section text spacing */
 }
 
+#featured-work {
+  padding: 5rem 2rem;
+  background-color: #F2F3F1;
+}
+
+.featured-project {
+  display: flex;
+  flex-direction: column; /* stacked on mobile */
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.featured-project .project-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1F1F1F;
+  margin-bottom: 0.5rem;
+}
+
+.featured-project .project-info .project-type {
+  font-size: 1rem;
+  color: #6B6B6B;
+  margin-bottom: 1rem;
+}
+
+.featured-project .project-info .project-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1F1F1F;
+}
+
+.featured-project .project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Desktop breakpoint: side-by-side layout */
+@media (min-width: 900px) {
+  .featured-project {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  /* Alternate image/info sides for visual rhythm */
+  .featured-project:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .featured-project .project-info {
+    flex: 1;
+  }
+
+  .featured-project .project-image {
+    flex: 1;
+  }
+}
+
+
 
 /* Optional intro text above the grid */
 .section-intro {
