@@ -3283,6 +3283,17 @@ nav.main-nav .nav-links a:hover {
     transform: rotateY(180deg);
 }
 
+/* Front & Back */
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+
 /* Front */
 .card-front {
     background: linear-gradient(135deg, #758071 0%, #6B7566 100%);
