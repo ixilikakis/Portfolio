@@ -3293,9 +3293,9 @@ nav.main-nav .nav-links a:hover {
     padding: 1.5rem;
 }
 
-/* Front: centered text with updated background */
+/* Front: centered text */
 .card-front {
-    background-color: #F2F3F1;
+    background-color: #FFFFFF;
     color: #1F1F1F;
     font-size: 1.25rem;
     font-weight: 600;
@@ -3305,21 +3305,16 @@ nav.main-nav .nav-links a:hover {
     text-align: center;
 }
 
-/* Back: vertically centered content */
+/* Back: left-aligned content */
 .card-back {
     background-color: #4F5D4A;
     color: #F2F3F1;
     transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1.5rem;
 }
 
 .card-back ul {
-    margin: 0 auto;       /* center block horizontally */
-    padding-left: 1.1rem; /* keep bullets left-aligned */
-    max-width: 90%;
+    margin: 0;
+    padding-left: 1.1rem;
 }
 
 .card-back li {
