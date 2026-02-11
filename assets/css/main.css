@@ -3296,7 +3296,7 @@ nav.main-nav .nav-links a:hover {
 
 /* Front */
 .card-front {
-    background-color: #A7AEA4;
+    background-color: #A7AEA4; /* Flat neutral */
     color: #F2F3F1;
     font-size: 1.35rem;
     font-weight: 500;
@@ -3309,8 +3309,18 @@ nav.main-nav .nav-links a:hover {
 
     border-radius: 8px;
 
-    /* Modern subtle shadow for depth */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Outline instead of gradient */
+    border: 2px solid #8F958A; /* slightly darker for subtle definition */
+
+    /* Hover effect */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover .card-front {
+    background-color: #929985; /* slightly darker shade on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* subtle lift */
+}
+
 }
 
 /* Back */
