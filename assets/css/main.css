@@ -3329,23 +3329,20 @@ nav.main-nav .nav-links a:hover {
 
     display: flex;
     align-items: center;      /* vertical center */
-    justify-content: center;  /* horizontal center */
+    justify-content: center;  /* horizontal center of inner content */
     text-align: left;         /* keep text left aligned */
 
     border-radius: 8px;
 }
 
-/* Back list */
+/* Back list container */
 .card-back ul {
     margin: 0;
     padding-left: 1.2rem;
     max-width: 85%;
+    width: 100%;              /* allow flex centering to center the whole block */
 }
 
-.card-back li {
-    margin-bottom: 0.6rem;
-    line-height: 1.5;
-}
 
 
 /* Responsive */
