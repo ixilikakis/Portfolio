@@ -3283,44 +3283,48 @@ nav.main-nav .nav-links a:hover {
     transform: rotateY(180deg);
 }
 
-/* Front & Back */
-.card-front,
-.card-back {
-    position: absolute;
-    inset: 0;
-    backface-visibility: hidden;
-    border-radius: 8px;
-    padding: 1.5rem;
-}
-
-/* Front: centered text */
+/* Front */
 .card-front {
-    background-color: #FFFFFF;
-    color: #1F1F1F;
-    font-size: 1.25rem;
-    font-weight: 600;
+    background: linear-gradient(135deg, #758071 0%, #6B7566 100%);
+    color: #F2F3F1;
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+
+    border-radius: 8px;
 }
 
-/* Back: left-aligned content */
+/* Back */
 .card-back {
     background-color: #4F5D4A;
     color: #F2F3F1;
     transform: rotateY(180deg);
+
+    display: flex;
+    align-items: center;      /* vertical center */
+    justify-content: center;  /* horizontal center */
+    text-align: left;         /* keep text left aligned */
+
+    border-radius: 8px;
 }
 
+/* Back list */
 .card-back ul {
     margin: 0;
-    padding-left: 1.1rem;
+    padding-left: 1.2rem;
+    max-width: 85%;
 }
 
 .card-back li {
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
 }
+
 
 /* Responsive */
 @media (max-width: 900px) {
