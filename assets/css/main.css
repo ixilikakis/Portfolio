@@ -3053,8 +3053,81 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ==========================
+   Portfolio Intro Text
+   ========================== */
+#portfolio-intro {
+  background-color: #FFFFFF;
+  width: 100%;
+  padding: 4rem 2rem;
+}
+.portfolio-text-section {
+  padding-top: 80px;    /* space from the hero video */
+  padding-bottom: 60px; /* space before the grid */
+  max-width: 1200px;    /* keeps it aligned with About section */
+  margin: 0 auto;       /* center it horizontally */
+
+#portfolio-intro .about-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  line-height: 1.4;
+}
+
+.portfolio-text-section .about-label {
+#portfolio-intro .about-label {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #6B6B6B;
+}
+
+.portfolio-text-section .about-primary,
+.portfolio-text-section .about-secondary {
+#portfolio-intro .about-primary,
+#portfolio-intro .about-secondary {
+  margin-bottom: 20px;
+}
+
+
+}
+/* ==========================
+   PORTFOLIO SECTION
+   ========================== */
+#portfolio {
+  padding: 4rem 2rem;
+  max-width: 1200px;   /* limits content width */
+  margin: 0 auto;      /* centers the section */
+}
+
+/* Section title */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 4rem;     /* breathing room above */
+  margin-bottom: 1.5rem; /* space below before intro */
+  color: #1F1F1F;
+}
+/* Portfolio Intro / Text Section */
+#portfolio-intro {
+    background-color: #FFFFFF; /* full-width white background */
+    width: 100%;               /* ensures it spans entire page */
+    padding-top: 4rem;         /* spacing above text */
+    padding-bottom: 4rem;      /* spacing below text */
+}
+
+#portfolio-intro .about-inner {
+    max-width: 800px;           /* keeps text block constrained */
+    margin: 0 auto;             /* centers text */
+    padding-left: 2rem;         /* horizontal padding for smaller screens */
+    padding-right: 2rem;
+    line-height: 1.4;           /* matches About section text spacing */
+}
+
+/* ==========================
    Featured Work Section
    ========================== */
+
 #featured-work {
   padding: 5rem 2rem;
   background-color: #F2F3F1;
@@ -3063,13 +3136,11 @@ nav.main-nav .nav-links a:hover {
 }
 
 .featured-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1F1F1F;
-  text-align: center;
+@@ -3094,15 +3070,15 @@
   margin-bottom: 3rem;
 }
 
+/* Featured Project */
 /* Each Featured Project */
 .featured-project {
   display: flex;
@@ -3078,100 +3149,25 @@ nav.main-nav .nav-links a:hover {
   margin-bottom: 4rem;
 }
 
+.project-info h3 {
 .featured-project .project-info h3 {
   font-size: 1.5rem;
   font-weight: 700;
   color: #1F1F1F;
-  margin-bottom: 0.5rem;
-}
-
-.project-type {
-  font-size: 1rem;
-  color: #6B6B6B;
-  margin-bottom: 1rem;
-}
-
-.project-pain,
-.project-solution {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #1F1F1F;
-  margin-bottom: 1rem;
-}
-
-.project-cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #1F1F1F;
-  color: #F2F3F1;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.project-cta:hover {
-  background-color: #4F5D4A;
-}
-
-/* Project Images */
-.project-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-/* Supporting Images Horizontal Scroll */
-.project-supporting {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scrollbar-width: thin;
-}
-
-.project-supporting img {
-  flex: 0 0 auto;
-  width: 150px;
-  height: 100px;
-  border-radius: 6px;
-  object-fit: cover;
-}
-
-/* Desktop Layout */
-@media (min-width: 900px) {
-  .featured-project {
-    flex-direction: row;
-    align-items: center;
-    gap: 4rem;
-  }
-
-  /* Alternate image/info sides for rhythm */
-  .featured-project:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-
-  .project-info {
-    flex: 1;
-  }
-
-  .project-image {
-    flex: 1;
-  }
-
-  .project-supporting img {
-    width: 200px;
-    height: 130px;
+@@ -3191,106 +3167,37 @@
   }
 }
 
+
+
+
+/* Optional intro text above the grid */
 /* Optional intro text above the section */
 .section-intro {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 400;
+  margin-bottom: 2.5rem; /* space between intro and grid */
   margin-bottom: 2.5rem;
   color: #1F1F1F;
   max-width: 800px;
@@ -3180,18 +3176,90 @@ nav.main-nav .nav-links a:hover {
   line-height: 1.4;
 }
 
+/* Grid container */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 0; /* remove spacing between items */
+  width: 100%;
+}
+
+/* Each portfolio item */
+.portfolio-item {
+  position: relative;   /* for overlay */
+  overflow: hidden;
+  height: 1000px;       /* fixed tall height */
+  border-radius: 6px;
+}
+
+/* Images */
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image hover effect */
+.portfolio-item img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay */
+.portfolio-overlay {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background-color: rgba(79,93,74,0.7); /* olive green */
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* allows clicking the image */
+}
+
+/* Show overlay on hover */
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* Overlay text */
+.portfolio-title {
+  color: #F2F3F1; /* light neutral */
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 1rem;
+  pointer-events: none; /* ensures clicks still open lightbox */
+}
+
 /* ==========================
    RESPONSIVE
    ========================== */
 @media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* single column on mobile */
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
   .section-intro {
     font-size: 1.35rem;
   }
 
+  .portfolio-item {
+    height: 600px; /* reduce height on smaller screens */
   .featured-project .project-info h3 {
     font-size: 1.35rem;
   }
 
+  .portfolio-title {
+    font-size: 1.25rem;
   .project-supporting img {
     width: 120px;
     height: 80px;
