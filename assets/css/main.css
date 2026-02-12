@@ -3024,73 +3024,6 @@ nav.main-nav .nav-links a:hover {
     }
 	
 /* ==========================
-   Portfolio Intro Text
-   ========================== */
-#portfolio-intro {
-  background-color: #FFFFFF;
-  width: 100%;
-  padding: 4rem 2rem;
-}
-
-#portfolio-intro .about-inner {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  line-height: 1.4;
-}
-
-#portfolio-intro .about-label {
-  display: block;
-  margin-bottom: 20px;
-  font-weight: 600;
-  color: #6B6B6B;
-}
-
-#portfolio-intro .about-primary,
-#portfolio-intro .about-secondary {
-  margin-bottom: 20px;
-  color: #1F1F1F;
-}
-
-/* ==========================
-   Portfolio Intro Text
-   ========================== */
-#portfolio-intro {
-  background-color: #FFFFFF;
-  width: 100%;
-  padding: 4rem 2rem;
-}
-.portfolio-text-section {
-  padding-top: 80px;    /* space from the hero video */
-  padding-bottom: 60px; /* space before the grid */
-  max-width: 1200px;    /* keeps it aligned with About section */
-  margin: 0 auto;       /* center it horizontally */
-
-#portfolio-intro .about-inner {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  line-height: 1.4;
-}
-
-.portfolio-text-section .about-label {
-#portfolio-intro .about-label {
-  display: block;
-  margin-bottom: 20px;
-  font-weight: 600;
-  color: #6B6B6B;
-}
-
-.portfolio-text-section .about-primary,
-.portfolio-text-section .about-secondary {
-#portfolio-intro .about-primary,
-#portfolio-intro .about-secondary {
-  margin-bottom: 20px;
-}
-
-
-}
-/* ==========================
    PORTFOLIO SECTION
    ========================== */
 #portfolio {
@@ -3127,13 +3060,10 @@ nav.main-nav .nav-links a:hover {
 /* ===============================
    FEATURED WORK SECTION
 ================================= */
-/* ==========================
-   Featured Work Section
-   ========================== */
 
 #featured-work {
-  padding: 100px 8%;
   padding: 5rem 2rem;
+  padding: 100px 8%;
   background-color: #F2F3F1;
 }
 
@@ -3143,25 +3073,26 @@ nav.main-nav .nav-links a:hover {
 }
 
 .section-title {
-.featured-title {
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 1px;
-  font-weight: 700;
   color: #1F1F1F;
-  text-align: center;
-  margin-bottom: 3rem;
 }
 
 /* Project Wrapper */
-/* Featured Project */
 .featured-project {
   display: flex;
+  flex-direction: column; /* stacked on mobile */
+  gap: 2rem;
+  margin-bottom: 4rem;
   align-items: flex-start;
   gap: 60px;
   margin-bottom: 120px;
 }
 
+.featured-project .project-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
 /* Reverse layout for second project */
 .featured-project.reverse {
   flex-direction: row-reverse;
@@ -3170,40 +3101,37 @@ nav.main-nav .nav-links a:hover {
 /* Text Column */
 .project-info {
   flex: 1;
-  flex-direction: column; /* stacked on mobile */
-  gap: 2rem;
-  margin-bottom: 4rem;
 }
 
 .project-info h3 {
   font-size: 1.4rem;
   font-weight: 600;
-  font-size: 1.5rem;
-  font-weight: 700;
   color: #1F1F1F;
-  margin-bottom: 10px;
   margin-bottom: 0.5rem;
+  margin-bottom: 10px;
 }
 
+.featured-project .project-info .project-type {
+  font-size: 1rem;
 .project-type {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-size: 1rem;
   color: #6B6B6B;
-  margin-bottom: 20px;
   margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
+.featured-project .project-info .project-description {
 .project-description {
-.project-pain,
-.project-solution {
   font-size: 1rem;
+  line-height: 1.5;
   line-height: 1.6;
   color: #1F1F1F;
   margin-bottom: 20px;
 }
 
+.featured-project .project-image img {
 .project-process {
   margin-bottom: 20px;
   padding-left: 18px;
@@ -3212,66 +3140,44 @@ nav.main-nav .nav-links a:hover {
 .project-process li {
   margin-bottom: 8px;
   font-size: 0.95rem;
-  line-height: 1.5;
   color: #1F1F1F;
-  margin-bottom: 1rem;
 }
 
 .project-outcome {
   font-style: italic;
   opacity: 0.8;
   font-size: 0.95rem;
-.project-cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #1F1F1F;
-  color: #F2F3F1;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
 }
 
 /* Image Column */
 .project-images {
   flex: 1.2;
-.project-cta:hover {
-  background-color: #4F5D4A;
 }
 
 .project-images img {
-/* Project Images */
-.project-image img {
   width: 100%;
-  display: block;
-  border-radius: 10px;
   height: auto;
   border-radius: 8px;
+  display: block;
+  border-radius: 10px;
   object-fit: cover;
-  margin-bottom: 1rem;
 }
 
+/* Desktop breakpoint: side-by-side layout */
+@media (min-width: 900px) {
+  .featured-project {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
 /* Two smaller images below hero */
 .image-row {
-/* Supporting Images Horizontal Scroll */
-.project-supporting {
   display: flex;
   gap: 20px;
   margin-top: 20px;
-  gap: 1rem;
-  overflow-x: auto;
-  scrollbar-width: thin;
 }
 
 .image-row img {
   width: 50%;
-.project-supporting img {
-  flex: 0 0 auto;
-  width: 150px;
-  height: 100px;
-  border-radius: 6px;
-  object-fit: cover;
 }
 
 /* ===============================
@@ -3279,39 +3185,29 @@ nav.main-nav .nav-links a:hover {
 ================================= */
 
 @media (max-width: 900px) {
-/* Desktop Layout */
-@media (min-width: 900px) {
-  .featured-project {
-    flex-direction: row;
-    align-items: center;
-    gap: 4rem;
-  }
 
   .featured-project,
   .featured-project.reverse {
     flex-direction: column;
-  /* Alternate image/info sides for rhythm */
+  }
+
+  /* Alternate image/info sides for visual rhythm */
   .featured-project:nth-child(even) {
     flex-direction: row-reverse;
-  }
-
   .image-row {
     flex-direction: column;
-  .project-info {
-    flex: 1;
   }
 
+  .featured-project .project-info {
+    flex: 1;
   .image-row img {
     width: 100%;
-  .project-image {
-    flex: 1;
   }
 
+  .featured-project .project-image {
+    flex: 1;
   #featured-work {
     padding: 80px 6%;
-  .project-supporting img {
-    width: 200px;
-    height: 130px;
   }
 }
 
@@ -3414,7 +3310,7 @@ nav.main-nav .nav-links a:hover {
   .portfolio-title {
     font-size: 1.25rem;
   }
-
+}
 /* ==========================
    ABOUT / POSITIONING
    ========================== */
