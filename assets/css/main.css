@@ -3082,7 +3082,6 @@ nav.main-nav .nav-links a:hover {
 ================================= */
 
 #featured-work {
-  padding: 5rem 2rem;
   padding: 100px 8%;
   background-color: #F2F3F1;
 }
@@ -3102,17 +3101,11 @@ nav.main-nav .nav-links a:hover {
 /* Project Wrapper */
 .featured-project {
   display: flex;
-  flex-direction: column; /* stacked on mobile */
-  gap: 2rem;
-  margin-bottom: 4rem;
   align-items: flex-start;
   gap: 60px;
   margin-bottom: 120px;
 }
 
-.featured-project .project-info h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
 /* Reverse layout for second project */
 .featured-project.reverse {
   flex-direction: row-reverse;
@@ -3127,31 +3120,24 @@ nav.main-nav .nav-links a:hover {
   font-size: 1.4rem;
   font-weight: 600;
   color: #1F1F1F;
-  margin-bottom: 0.5rem;
   margin-bottom: 10px;
 }
 
-.featured-project .project-info .project-type {
-  font-size: 1rem;
 .project-type {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: #6B6B6B;
-  margin-bottom: 1rem;
   margin-bottom: 20px;
 }
 
-.featured-project .project-info .project-description {
 .project-description {
   font-size: 1rem;
-  line-height: 1.5;
   line-height: 1.6;
   color: #1F1F1F;
   margin-bottom: 20px;
 }
 
-.featured-project .project-image img {
 .project-process {
   margin-bottom: 20px;
   padding-left: 18px;
@@ -3176,19 +3162,11 @@ nav.main-nav .nav-links a:hover {
 
 .project-images img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
   display: block;
   border-radius: 10px;
   object-fit: cover;
 }
 
-/* Desktop breakpoint: side-by-side layout */
-@media (min-width: 900px) {
-  .featured-project {
-    flex-direction: row;
-    align-items: center;
-    gap: 4rem;
 /* Two smaller images below hero */
 .image-row {
   display: flex;
@@ -3211,21 +3189,14 @@ nav.main-nav .nav-links a:hover {
     flex-direction: column;
   }
 
-  /* Alternate image/info sides for visual rhythm */
-  .featured-project:nth-child(even) {
-    flex-direction: row-reverse;
   .image-row {
     flex-direction: column;
   }
 
-  .featured-project .project-info {
-    flex: 1;
   .image-row img {
     width: 100%;
   }
 
-  .featured-project .project-image {
-    flex: 1;
   #featured-work {
     padding: 80px 6%;
   }
