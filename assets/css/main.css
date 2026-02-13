@@ -3572,3 +3572,9 @@ nav.main-nav .nav-links a:hover {
   opacity: 0.8;
   margin: 0;
 }
+
+/* TEMP: Hide old portfolio grid */
+.portfolio-grid {
+  display: none;
+}
+
