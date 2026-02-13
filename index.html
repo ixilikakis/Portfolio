@@ -543,11 +543,26 @@ setInterval(() => {
 }, 5000); // switch every 5 seconds
 </script>
 
+	<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll('.accordion-item');
+
+  items.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    header.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+});
+</script>
+
+
 
 
 	</body>
 
 </html>
+
 
 
 
