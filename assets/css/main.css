@@ -3457,10 +3457,10 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* Override Dopetrope hover for accordion buttons */
-.accordion-btn:hover {
-  background-color: #4F5D4A;  /* CTA color */
-  color: #F2F3F1;             /* light text on CTA */
-  border-color: #4F5D4A;      /* ensure border matches */
+#services .accordion-btn:hover {
+  background-color: #4F5D4A;
+  color: #F2F3F1 !important;
+  border-color: #4F5D4A;
 }
 
 /* Optional: change the + / - icon color on hover */
