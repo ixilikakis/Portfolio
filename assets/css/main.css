@@ -3339,7 +3339,7 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ===============================
-   SERVICES / ACCORDION SECTION
+   SERVICES / ACCORDION SECTION FIXED
 ================================= */
 
 #services {
@@ -3357,31 +3357,9 @@ nav.main-nav .nav-links a:hover {
   margin-bottom: 3rem;
 }
 
-/* Accordion Wrapper */
-.accordion-wrapper {
-  display: flex;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-
-/* Left description column */
-.accordion-description {
-  flex: 1;
-  text-align: left;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #1F1F1F;
-}
-
-/* Right accordion column */
-.accordion-column {
-  flex: 1.2;
-}
-
-/* Accordion item */
+/* Accordion Item */
 .accordion-item {
   border-bottom: 1px solid rgba(0,0,0,0.1); /* thin separator */
-  margin-bottom: 10px;
 }
 
 /* Accordion header / toggle button */
@@ -3390,29 +3368,27 @@ nav.main-nav .nav-links a:hover {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  padding: 1rem 1.2rem;
-  background-color: transparent;
+  background: transparent;
   border: none;
   font-size: 1rem;
   font-weight: 600;
   color: #1F1F1F;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 1rem 0;
 }
 
-/* Hover / active state */
+/* Hover and active states */
 .accordion-toggle:hover,
 .accordion-toggle.active {
-  background-color: #4F5D4A; /* CTA deep olive */
-  color: #F2F3F1;
+  color: #4F5D4A; /* CTA deep olive */
 }
 
-/* +/- Icon Circle */
+/* +/- Icon on right side */
 .accordion-toggle .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border: 2px solid #4F5D4A;
   border-radius: 50%;
   font-weight: bold;
@@ -3425,39 +3401,29 @@ nav.main-nav .nav-links a:hover {
   color: #F2F3F1;
 }
 
-/* Accordion panel content */
+/* Accordion content */
 .accordion-panel {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
-  text-align: left;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
+  text-align: left;
   color: #1F1F1F;
 }
 
 /* Lists inside panels */
 .accordion-panel ul {
-  padding-left: 1.2rem; /* aligns bullets */
-  margin-bottom: 1rem;
+  padding-left: 1.2rem;
+  margin: 0.5rem 0;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 900px) {
-  .accordion-wrapper {
-    flex-direction: column;
-  }
-
-  .accordion-description,
-  .accordion-column {
-    flex: 1 1 100%;
-  }
-
   .accordion-toggle {
     font-size: 0.95rem;
-    padding: 0.8rem 1rem;
   }
 
   .accordion-toggle .icon {
@@ -3465,6 +3431,7 @@ nav.main-nav .nav-links a:hover {
     height: 24px;
   }
 }
+
 
 
 /* ===============================
