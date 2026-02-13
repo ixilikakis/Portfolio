@@ -3339,7 +3339,7 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ===============================
-   SERVICES / ACCORDION SECTION FIXED
+   SERVICES / ACCORDION SECTION
 ================================= */
 
 #services {
@@ -3357,12 +3357,36 @@ nav.main-nav .nav-links a:hover {
   margin-bottom: 3rem;
 }
 
-/* Accordion Item */
+/* Accordion Container */
+.services-container {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Left side text (description) */
+.services-text {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1F1F1F;
+}
+
+/* Right side accordion */
+.services-accordion {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Each accordion item */
 .accordion-item {
   border-bottom: 1px solid rgba(0,0,0,0.1); /* thin separator */
 }
 
-/* Accordion header / toggle button */
+/* Accordion toggle button */
 .accordion-toggle {
   display: flex;
   justify-content: space-between;
@@ -3374,15 +3398,17 @@ nav.main-nav .nav-links a:hover {
   font-weight: 600;
   color: #1F1F1F;
   padding: 1rem 0;
+  width: 100%;
+  transition: color 0.3s ease;
 }
 
-/* Hover and active states */
+/* Hover and active text color */
 .accordion-toggle:hover,
 .accordion-toggle.active {
   color: #4F5D4A; /* CTA deep olive */
 }
 
-/* +/- Icon on right side */
+/* +/- icon */
 .accordion-toggle .icon {
   display: flex;
   align-items: center;
@@ -3392,20 +3418,21 @@ nav.main-nav .nav-links a:hover {
   border: 2px solid #4F5D4A;
   border-radius: 50%;
   font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-/* Active icon background */
+/* Active icon background when open */
 .accordion-toggle.active .icon {
   background-color: #4F5D4A;
   color: #F2F3F1;
+  transform: rotate(180deg); /* optional, flips + to - */
 }
 
-/* Accordion content */
+/* Accordion panel (hidden by default) */
 .accordion-panel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease, padding 0.3s ease;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-size: 0.95rem;
@@ -3420,8 +3447,19 @@ nav.main-nav .nav-links a:hover {
   margin: 0.5rem 0;
 }
 
-/* Responsive */
+/* ===============================
+   RESPONSIVE
+================================= */
 @media (max-width: 900px) {
+  .services-container {
+    flex-direction: column;
+  }
+
+  .services-accordion,
+  .services-text {
+    min-width: 100%;
+  }
+
   .accordion-toggle {
     font-size: 0.95rem;
   }
@@ -3432,34 +3470,6 @@ nav.main-nav .nav-links a:hover {
   }
 }
 
-
-
-/* ===============================
-   RESPONSIVE
-================================= */
-@media (max-width: 900px) {
-  .services-container {
-    flex-direction: column;
-  }
-
-  .services-accordion, .services-text {
-    min-width: 100%;
-  }
-}
-
-/* Override Dopetrope hover for accordion buttons */
-.accordion-btn:hover {
-  background-color: #4F5D4A;  /* CTA color */
-  color: #F2F3F1;             /* light text on CTA */
-  border-color: #4F5D4A;      /* ensure border matches */
-}
-
-/* Optional: change the + / - icon color on hover */
-.accordion-btn:hover .accordion-icon {
-  background-color: #F2F3F1;  /* invert for contrast */
-  color: #4F5D4A;
-  border-color: #4F5D4A;
-}
 
 
 
