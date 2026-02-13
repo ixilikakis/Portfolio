@@ -3469,6 +3469,11 @@ nav.main-nav .nav-links a:hover {
 }
 
 
+/* Force accordion dropdown text left inside Services */
+#services ul,
+#services li {
+  text-align: left;
+}
 
 
 
