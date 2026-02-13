@@ -3338,6 +3338,67 @@ nav.main-nav .nav-links a:hover {
   color: #4a4a4a;
 }
 
+#services {
+  padding: 5rem 2rem;
+  background-color: #F2F3F1;
+}
+
+.services-subtitle {
+  font-size: 1.2rem;
+  color: #6B6B6B;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Accordion styles */
+.accordion {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.accordion-item + .accordion-item {
+  margin-top: 1rem;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+  background-color: #e7e9e5;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 6px 6px;
+  padding: 0 1.5rem;
+}
+
+.accordion-content ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px; /* adjust depending on content length */
+  padding: 1rem 1.5rem;
+}
+
 
 /* ==========================
    Services Section
