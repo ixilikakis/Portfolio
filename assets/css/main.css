@@ -3350,54 +3350,85 @@ nav.main-nav .nav-links a:hover {
   text-align: center;
 }
 
-/* Accordion styles */
-.accordion {
-  max-width: 900px;
-  margin: 0 auto;
+#services-accordion {
+  padding: 5rem 8%;
+  background-color: transparent; /* transparent background */
 }
 
-.accordion-item + .accordion-item {
-  margin-top: 1rem;
+.services-container {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
 }
 
-.accordion-header {
+/* Left Text */
+.services-text {
+  flex: 1;
+  min-width: 280px;
+  color: #1F1F1F;
+}
+
+.services-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.services-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Right Accordion */
+.services-accordion {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Accordion Item */
+.accordion-item {
+  border-bottom: 1px solid rgba(31,31,31,0.2); /* thin transparent line */
+}
+
+.accordion-btn {
   width: 100%;
-  text-align: left;
-  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  text-align: right; /* buttons on right */
+  padding: 1rem 0;
   font-size: 1rem;
   font-weight: 600;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  color: #1F1F1F;
+  transition: color 0.3s ease;
 }
 
-.accordion-header:hover {
-  background-color: #e7e9e5;
+.accordion-btn:hover {
+  color: #4F5D4A;
 }
 
+/* Hidden content */
 .accordion-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  background-color: #fff;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  border-radius: 0 0 6px 6px;
-  padding: 0 1.5rem;
+  padding-left: 0;
 }
 
 .accordion-content ul {
-  margin: 1rem 0;
+  margin: 0;
   padding-left: 1.2rem;
+  list-style-type: disc;
 }
 
-.accordion-item.active .accordion-content {
-  max-height: 500px; /* adjust depending on content length */
-  padding: 1rem 1.5rem;
+.accordion-content li {
+  margin-bottom: 0.5rem;
 }
+
+/* Expand active item */
+.accordion-item.active .accordion-content {
+  max-height: 500px; /* enough to show content */
+}
+
 
 
 /* ==========================
