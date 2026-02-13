@@ -569,14 +569,20 @@ setInterval(() => {
 </script>
 
 	<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll('.accordion-item');
+document.querySelectorAll('.accordion-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const content = btn.nextElementSibling;
 
-  items.forEach(item => {
-    const header = item.querySelector('.accordion-header');
-    header.addEventListener('click', () => {
-      item.classList.toggle('active');
-    });
+    // Toggle active class
+    item.classList.toggle('active');
+
+    // Expand/collapse content
+    if (item.classList.contains('active')) {
+      content.style.maxHeight = content.scrollHeight + 'px';
+    } else {
+      content.style.maxHeight = null;
+    }
   });
 });
 </script>
@@ -584,9 +590,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
 	</body>
 
 </html>
+
 
 
 
