@@ -3339,112 +3339,96 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ===============================
-   SERVICES / ACCORDION SECTION
+   SERVICES / ACCORDION
 ================================= */
 
 #services {
-  padding: 5rem 8%;
+  padding: 80px 8%;
   background-color: #F2F3F1;
 }
 
-/* Section Title */
-#services h2 {
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: #1F1F1F;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-/* Accordion Container */
 .services-container {
   display: flex;
-  gap: 4rem;
-  align-items: flex-start;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
-/* Left side text (description) */
+/* Left column: text */
 .services-text {
   flex: 1;
   min-width: 280px;
-  text-align: left;
+}
+
+.section-label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: #6B6B6B;
+  margin-bottom: 20px;
+}
+
+.services-description {
   font-size: 1rem;
   line-height: 1.6;
   color: #1F1F1F;
 }
 
-/* Right side accordion */
+/* Right column: accordion */
 .services-accordion {
-  flex: 1;
+  flex: 1.2;
   min-width: 280px;
 }
 
-/* Each accordion item */
+/* Accordion item */
 .accordion-item {
-  border-bottom: 1px solid rgba(0,0,0,0.1); /* thin separator */
+  border-bottom: 1px solid rgba(31,31,31,0.1);
 }
 
-/* Accordion toggle button */
-.accordion-toggle {
+.accordion-btn {
+  width: 100%;
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: transparent;
+  border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  background: transparent;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1F1F1F;
-  padding: 1rem 0;
-  width: 100%;
-  transition: color 0.3s ease;
 }
 
-/* Hover and active text color */
-.accordion-toggle:hover,
-.accordion-toggle.active {
-  color: #4F5D4A; /* CTA deep olive */
-}
-
-/* +/- icon */
-.accordion-toggle .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border: 2px solid #4F5D4A;
+.accordion-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #1F1F1F;
   border-radius: 50%;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  line-height: 22px;
+  transition: transform 0.3s ease;
 }
 
-/* Active icon background when open */
-.accordion-toggle.active .icon {
-  background-color: #4F5D4A;
-  color: #F2F3F1;
-  transform: rotate(180deg); /* optional, flips + to - */
-}
-
-/* Accordion panel (hidden by default) */
-.accordion-panel {
+.accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  text-align: left;
-  color: #1F1F1F;
+  transition: max-height 0.35s ease;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-/* Lists inside panels */
-.accordion-panel ul {
-  padding-left: 1.2rem;
-  margin: 0.5rem 0;
+.accordion-content ul {
+  margin: 10px 0 20px 0;
+  padding-left: 20px;
+  color: #1F1F1F;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Rotate + icon when open */
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
 }
 
 /* ===============================
@@ -3455,19 +3439,23 @@ nav.main-nav .nav-links a:hover {
     flex-direction: column;
   }
 
-  .services-accordion,
-  .services-text {
+  .services-accordion, .services-text {
     min-width: 100%;
   }
+}
 
-  .accordion-toggle {
-    font-size: 0.95rem;
-  }
+/* Override Dopetrope hover for accordion buttons */
+.accordion-btn:hover {
+  background-color: #4F5D4A;  /* CTA color */
+  color: #F2F3F1;             /* light text on CTA */
+  border-color: #4F5D4A;      /* ensure border matches */
+}
 
-  .accordion-toggle .icon {
-    width: 24px;
-    height: 24px;
-  }
+/* Optional: change the + / - icon color on hover */
+.accordion-btn:hover .accordion-icon {
+  background-color: #F2F3F1;  /* invert for contrast */
+  color: #4F5D4A;
+  border-color: #4F5D4A;
 }
 
 
