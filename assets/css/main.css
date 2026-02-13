@@ -3573,8 +3573,9 @@ nav.main-nav .nav-links a:hover {
   margin: 0;
 }
 
-/* TEMP: Hide old portfolio grid */
-.portfolio-grid {
+/* Hide only the last two items in the portfolio grid */
+#portfolio .portfolio-item:nth-last-child(-n+2) {
   display: none;
 }
+
 
