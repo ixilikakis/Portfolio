@@ -3399,16 +3399,15 @@ nav.main-nav .nav-links a:hover {
   cursor: pointer;
 }
 
-/* Default accordion button text color */
-.accordion-btn {
-  color: #4F5D4A;
-  transition: color 0.3s ease, background-color 0.3s ease;
+/* Force default accordion button color */
+#services .accordion-btn {
+  color: #4F5D4A !important;
 }
 
-/* When accordion is open (active state) */
-.accordion-item.active .accordion-btn {
+/* Open state */
+#services .accordion-item.active .accordion-btn {
   background-color: #4F5D4A;
-  color: #F2F3F1;
+  color: #F2F3F1 !important;
 }
 
 
