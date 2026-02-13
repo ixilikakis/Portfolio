@@ -3457,6 +3457,17 @@ nav.main-nav .nav-links a:hover {
   color: #4F5D4A;
   border-color: #4F5D4A;
 }
+/* Accordion panel text alignment */
+.accordion-panel {
+  text-align: left; /* left justify all text */
+}
+
+/* Lists inside the panel */
+.accordion-panel ul {
+  padding-left: 1.5rem; /* ensure bullets and text stay aligned */
+  margin: 0.5rem 0;
+}
+
 
 
 
