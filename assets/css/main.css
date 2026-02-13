@@ -3625,9 +3625,12 @@ nav.main-nav .nav-links a:hover {
         margin: 0 auto; /* center stacked cards */
     }
 }
+
+/* Hide old services cards */
 #old-services {
   display: none;
 }
+
 
 
 
