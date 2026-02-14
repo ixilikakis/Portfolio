@@ -3487,6 +3487,18 @@ nav.main-nav .nav-links a:hover {
   text-align: left;
 }
 
+/* Force hard corners only on hover + active */
+#services .accordion-btn:hover,
+#services .accordion-item.active .accordion-btn {
+  border-radius: 0 !important;
+}
+
+/* Also remove rounding from the icon when active or hover */
+#services .accordion-btn:hover .accordion-icon,
+#services .accordion-item.active .accordion-icon {
+  border-radius: 0 !important;
+}
+
 
 
 
