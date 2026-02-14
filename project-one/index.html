@@ -9,19 +9,72 @@
     <link rel="stylesheet" href="assets/css/main.css?v=1" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+    <!-- Optional: project-specific global styles -->
+    <style>
+        /* Ensure project-page header looks like homepage header */
+        body.project-page #header {
+            background: #fff;
+            padding: 2rem 8%;
+        }
+        body.project-page .main-nav .logo a {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: #1F1F1F;
+            text-decoration: none;
+        }
+        body.project-page .main-nav .nav-links li a.cta-button {
+            font-weight: 600;
+            color: #4F5D4A;
+            text-decoration: none;
+            border: 1px solid #4F5D4A;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+        body.project-page .main-nav .nav-links li a.cta-button:hover {
+            background-color: #4F5D4A;
+            color: #F2F3F1;
+        }
+
+        /* Hero section spacing */
+        .project-hero {
+            padding: 8rem 8% 4rem;
+            text-align: center;
+        }
+        .project-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .project-hero p {
+            font-size: 1rem;
+            color: #6B6B6B;
+        }
+
+        /* Project sections */
+        .project-section {
+            padding: 4rem 8%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .project-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .project-section p {
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+    </style>
 </head>
-<body class="homepage is-preload">
+<body class="project-page is-preload">
     <div id="page-wrapper">
 
-        <!-- Minimal Header for Project One -->
+        <!-- Header -->
         <section id="header">
             <nav class="main-nav">
-                <!-- Logo left -->
                 <h1 class="logo">
                     <a href="/index.html">YIANNIS XILIKAKIS</a>
                 </h1>
-
-                <!-- Minimal nav on the right -->
                 <ul class="nav-links">
                     <li><a href="/index.html" class="cta-button">Back to Home</a></li>
                 </ul>
@@ -34,25 +87,28 @@
             <p>Brand Identity · 2025 · Creative Direction</p>
         </section>
 
-        <!-- Other project sections -->
+        <!-- Project Sections -->
         <section class="project-section">
             <h2>Overview</h2>
             <p>
                 Brief description of the project. What it is, who it’s for, and what the core challenge was.
             </p>
         </section>
+
         <section class="project-section">
             <h2>Strategy</h2>
             <p>
                 Explain your thinking. Positioning, audience, constraints, concept development.
             </p>
         </section>
+
         <section class="project-section">
             <h2>Execution</h2>
             <p>
                 Describe visual system, typography, grid logic, photography direction, etc.
             </p>
         </section>
+
         <section class="project-section">
             <h2>Outcome</h2>
             <p>
