@@ -3587,34 +3587,32 @@ nav.main-nav .nav-links a:hover {
   display: none;
 }
 
-/* Featured Project CTA — Premium Text + Arrow */
 .featured-project .cta-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;               /* space between text and arrow */
+  gap: 0.3rem;
   margin-top: 1.5rem;
   font-weight: 600;
   font-size: 1rem;
-  color: #4F5D4A;             /* CTA green */
+  color: #4F5D4A;        /* CTA green */
   text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .featured-project .cta-button::after {
-  content: '→';               /* arrow character */
+  content: '→';
   display: inline-block;
-  transition: transform 0.3s ease, color 0.3s ease;
-  transform: translateX(0);
-}
-
-.featured-project .cta-button:hover {
-  color: #1F1F1F;             /* subtle dark shift on hover */
+  margin-left: 0.3rem;
+  transition: transform 0.3s ease;
 }
 
 .featured-project .cta-button:hover::after {
-  transform: translateX(5px); /* arrow slides slightly */
-  color: #1F1F1F;
+  transform: translateX(5px);  /* subtle arrow movement */
+}
+
+.featured-project .cta-button:hover {
+  border-color: #4F5D4A;       /* animated underline */
 }
 
 
