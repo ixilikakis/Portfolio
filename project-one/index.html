@@ -10,30 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
-    <!-- Optional: project-specific global styles -->
+    <!-- Optional project-specific styles -->
     <style>
-        /* Ensure project-page header looks like homepage header */
-        body.project-page #header {
-            background: #fff;
-            padding: 2rem 8%;
-        }
-        body.project-page .main-nav .logo a {
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-            color: #1F1F1F;
-            text-decoration: none;
-        }
-        body.project-page .main-nav .nav-links li a.cta-button {
-            font-weight: 600;
-            color: #4F5D4A;
-            text-decoration: none;
-            border: 1px solid #4F5D4A;
-            padding: 0.5rem 1rem;
-            transition: all 0.3s ease;
-        }
-        body.project-page .main-nav .nav-links li a.cta-button:hover {
-            background-color: #4F5D4A;
-            color: #F2F3F1;
+        /* Force Open Sans on project page elements */
+        body.project-page, 
+        body.project-page h1, 
+        body.project-page h2, 
+        body.project-page p, 
+        body.project-page a {
+            font-family: 'Open Sans', sans-serif;
         }
 
         /* Hero section spacing */
@@ -66,15 +51,18 @@
         }
     </style>
 </head>
-<body class="project-page is-preload">
+<body class="homepage project-page is-preload">
     <div id="page-wrapper">
 
         <!-- Header -->
         <section id="header">
             <nav class="main-nav">
+                <!-- Logo left -->
                 <h1 class="logo">
                     <a href="/index.html">YIANNIS XILIKAKIS</a>
                 </h1>
+
+                <!-- Minimal nav on the right -->
                 <ul class="nav-links">
                     <li><a href="/index.html" class="cta-button">Back to Home</a></li>
                 </ul>
