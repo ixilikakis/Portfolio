@@ -3587,37 +3587,25 @@ nav.main-nav .nav-links a:hover {
   display: none;
 }
 
+/* Featured Project CTA — Sharp Minimal Rectangle */
 .featured-project .cta-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  margin-top: 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #4F5D4A;       /* keep text green always */
-  text-decoration: none;
-  border-bottom: none;   /* no underline at all */
-  background: none;      /* no background */
-  transition: transform 0.3s ease;
-}
-
-.featured-project .cta-button::after {
-  content: '→';
   display: inline-block;
-  margin-left: 0.3rem;
-  transition: transform 0.3s ease;
+  margin-top: 1.75rem;
+  padding: 0.65rem 1.4rem;
+  border: 1.5px solid #4F5D4A;
+  background-color: transparent;
+  color: #4F5D4A;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.04em;   /* slight refinement */
+  text-transform: uppercase; /* optional, remove if too strong */
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.featured-project .cta-button:hover::after {
-  transform: translateX(5px);  /* only the arrow moves */
+.featured-project .cta-button:hover {
+  background-color: #4F5D4A;
+  color: #F2F3F1;
 }
-
-/* Remove any browser text selection highlight */
-.featured-project .cta-button:focus,
-.featured-project .cta-button:active {
-  outline: none;
-}
-
 
 
 
