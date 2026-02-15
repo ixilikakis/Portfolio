@@ -1,53 +1,179 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Two — Yiannix</title>
-  <link rel="stylesheet" href="/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Palaiologue — Contemporary Greek-Inspired Womenswear</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css?v=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+    <style>
+        /* Dark mode colors and fonts */
+        body.project-page {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #1F1F1F; /* dark background */
+            color: #F2F3F1; /* light text */
+        }
+        #header .logo a, #header .nav-links a {
+            font-family: 'Open Sans', sans-serif;
+            color: #F2F3F1;
+        }
+        .cta-button {
+            background-color: #4F5D4A; /* deep olive */
+            color: #F2F3F1;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 0;
+        }
+
+        /* Hero */
+        .project-hero {
+            width: 100%;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            background-color: #1F1F1F;
+        }
+        .project-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .project-hero p {
+            font-size: 1rem;
+            color: #6B6B6B; /* muted secondary text */
+            margin-bottom: 2rem;
+        }
+        .project-hero img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Project sections */
+        .project-section {
+            padding: 4rem 8%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .project-section.alternate-bg {
+            background-color: #2A2A2A; /* slightly lighter dark for contrast */
+        }
+        .project-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .project-section p {
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Image grids */
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .image-grid img {
+            flex: 1 1 calc(50% - 0.5rem);
+            object-fit: cover;
+            height: 250px;
+            background: #333; /* placeholder gray for dark mode */
+        }
+
+        /* Captions */
+        .caption {
+            font-size: 0.9rem;
+            color: #6B6B6B;
+            margin-bottom: 3rem;
+        }
+    </style>
 </head>
-<body>
+<body class="homepage project-page is-preload">
+    <div id="page-wrapper">
 
-  <!-- Hero Section -->
-  <section class="project-hero">
-    <h1>Project Two — Palaiologue</h1>
-    <p>Brand Identity · 2025 · Creative Direction</p>
-    <a href="#project-details" class="cta-button">Inside the Project</a>
-  </section>
+        <!-- Header -->
+        <section id="header">
+            <nav class="main-nav">
+                <h1 class="logo"><a href="/index.html">YIANNIS XILIKAKIS</a></h1>
+                <ul class="nav-links">
+                    <li><a href="/index.html" class="cta-button">Back to Home</a></li>
+                </ul>
+            </nav>
+        </section>
 
-  <!-- Project Details -->
-  <section id="project-details" class="project-section">
-    <h2>Overview</h2>
-    <p>
-      Placeholder: Palaiologue is a conceptual brand style guide for an anti fast fashion womenswear brand inspired by traditional Greek patterns, interpreted in a contemporary visual language.
-    </p>
-  </section>
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <h1>Palaiologue</h1>
+            <p>Contemporary Greek-Inspired Womenswear · Brand Identity & Styleguide</p>
+            <img src="placeholders/hero-placeholder.jpg" alt="Hero Placeholder">
+        </section>
 
-  <section class="project-section">
-    <h2>Strategy</h2>
-    <p>
-      Placeholder: Explain the thinking behind the brand. Decisions about typography, color, pattern, and overall system.
-    </p>
-  </section>
+        <!-- Overview -->
+        <section class="project-section">
+            <h2>Overview</h2>
+            <p>
+                Palaiologue crafts timeless, high-quality womenswear that draws on traditional Greek patterns 
+                and aesthetics, reimagined for a modern audience. The project included brand identity, 
+                styleguide creation, lifestyle photography, and print collateral.
+            </p>
+        </section>
 
-  <section class="project-section">
-    <h2>Execution</h2>
-    <p>
-      Placeholder: Visual system implementation. Style guide elements, identity components, photography direction, and layout logic.
-    </p>
-  </section>
+        <!-- Brand Styleguide -->
+        <section class="project-section alternate-bg">
+            <h2>Brand Styleguide</h2>
+            <div class="image-grid">
+                <img src="placeholders/styleguide1.jpg" alt="Styleguide Page 1">
+                <img src="placeholders/styleguide2.jpg" alt="Styleguide Page 2">
+                <img src="placeholders/styleguide3.jpg" alt="Styleguide Page 3">
+                <img src="placeholders/styleguide4.jpg" alt="Styleguide Page 4">
+            </div>
+            <p class="caption">Typography, Color Palette, and Pattern System</p>
+        </section>
 
-  <section class="project-section">
-    <h2>Outcome</h2>
-    <p>
-      Placeholder: The final brand system is cohesive, culturally informed, and designed for longevity over trend.
-    </p>
-  </section>
+        <!-- Lifestyle Photography -->
+        <section class="project-section">
+            <h2>Lifestyle Photography</h2>
+            <img src="placeholders/lifestyle1.jpg" alt="Lifestyle Placeholder" class="project-image">
+            <div class="image-grid">
+                <img src="placeholders/lifestyle2.jpg" alt="Lifestyle 2">
+                <img src="placeholders/lifestyle3.jpg" alt="Lifestyle 3">
+            </div>
+            <p class="caption">Lifestyle Direction · Environmental & Contextual Shots</p>
+        </section>
 
-  <!-- Optional: Back to Home -->
-  <section class="project-section">
-    <a href="/index.html" class="cta-button">Back to Home</a>
-  </section>
+        <!-- Print Collateral -->
+        <section class="project-section alternate-bg">
+            <h2>Print Collateral</h2>
+            <div class="image-grid">
+                <img src="placeholders/print1.jpg" alt="Print Collateral 1">
+                <img src="placeholders/print2.jpg" alt="Print Collateral 2">
+                <img src="placeholders/print3.jpg" alt="Print Collateral 3">
+            </div>
+            <p class="caption">Business Cards, Lookbooks, and Promotional Material</p>
+        </section>
 
+        <!-- Outcome -->
+        <section class="project-section">
+            <h2>Outcome</h2>
+            <img src="placeholders/outcome.jpg" alt="Outcome Placeholder" class="project-image">
+            <p>
+                A cohesive visual identity was created to communicate the brand’s modern take on traditional Greek style, 
+                supporting the launch of the brand and all creative deliverables.
+            </p>
+        </section>
+
+    </div> <!-- End page-wrapper -->
+
+    <!-- JS Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
