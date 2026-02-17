@@ -3765,6 +3765,16 @@ body.project-page #page-wrapper {
         text-align: center;
     }
 }
+.project-row {
+    margin-bottom: 2rem; /* space between image rows */
+}
+.project-row img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px; /* soft rounded corners */
+}
+
 
 
 
