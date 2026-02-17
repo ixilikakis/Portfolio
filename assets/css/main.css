@@ -3774,6 +3774,21 @@ body.project-page #page-wrapper {
     display: block;
     border-radius: 6px; /* soft rounded corners */
 }
+.project-row img {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.project-row img.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-row img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
 
 
 
