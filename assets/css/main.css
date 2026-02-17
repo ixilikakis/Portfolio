@@ -3790,6 +3790,35 @@ body.project-page #page-wrapper {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
+/* --- Project Image Enhancements --- */
+
+.project-row {
+    margin-bottom: 2.5rem;
+}
+
+.project-row img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Fade-in state */
+.project-row img.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Subtle premium hover */
+@media screen and (min-width: 737px) {
+    .project-row img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+}
 
 
 
