@@ -3620,75 +3620,114 @@ nav.main-nav .nav-links a:hover {
 
 /* ==========================
    PROJECT PAGE OVERRIDES
+   Clean Version
    ========================== */
 
-/* Containers */
+
+/* --------------------------------
+   Container Control
+-------------------------------- */
+
 body.project-page #page-wrapper {
-    max-width: 1200px; /* Dopetrope container width */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem; /* horizontal padding */
+    padding: 0 2rem;
 }
 
-/* Hero Section */
+
+/* --------------------------------
+   Hero Section
+-------------------------------- */
+
 .project-hero {
     width: 100%;
     padding: 6rem 0 4rem;
     text-align: center;
 }
+
 .project-hero h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
+
 .project-hero p {
     font-size: 1rem;
     color: #6B6B6B;
     margin-bottom: 2rem;
 }
+
 .project-hero img {
     width: 100%;
     height: auto;
-    object-fit: cover;
     display: block;
 }
 
-/* Project sections */
+
+/* --------------------------------
+   Section Structure
+-------------------------------- */
+
 .project-section {
     padding: 4rem 0;
 }
+
 .project-section.alternate-bg {
     background-color: #2A2A2A;
 }
+
 .project-section h2 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
 }
+
 .project-section p {
     line-height: 1.6;
     font-size: 1rem;
 }
 
-/* Image Grids */
-.image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
+
+/* --------------------------------
+   Image Rows (Dopetrope Grid Friendly)
+-------------------------------- */
+
+.project-row {
+    margin-bottom: 2.5rem;
 }
-.image-grid img {
-    flex: 1 1 calc(50% - 0.5rem);
-    object-fit: cover;
+
+.project-row .image.fit img {
+    width: 100%;
     height: auto;
+    display: block;
     border-radius: 6px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Captions */
+
+/* Desktop hover only */
+@media screen and (min-width: 737px) {
+    .project-row .image.fit img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+}
+
+
+/* --------------------------------
+   Caption Styling
+-------------------------------- */
+
+.about-secondary,
 .caption {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #6B6B6B;
-    margin-bottom: 3rem;
+    margin-top: 1rem;
 }
 
-/* CTA Buttons */
+
+/* --------------------------------
+   CTA Button
+-------------------------------- */
+
 .cta-button {
     background-color: #4F5D4A;
     color: #F2F3F1;
@@ -3699,13 +3738,16 @@ body.project-page #page-wrapper {
     display: inline-block;
     transition: background-color 0.25s ease;
 }
+
 .cta-button:hover {
     background-color: #3E4A3B;
 }
 
+
 /* ==========================
    MOBILE RESPONSIVE
    ========================== */
+
 @media (max-width: 768px) {
 
     body.project-page #page-wrapper {
@@ -3715,23 +3757,21 @@ body.project-page #page-wrapper {
     .project-hero h1 {
         font-size: 2rem;
     }
+
     .project-hero p {
         font-size: 0.95rem;
     }
 
     .project-section h2 {
         font-size: 1.5rem;
-    }
-    .project-section p {
-        font-size: 0.95rem;
+        text-align: center;
     }
 
-    .image-grid {
-        flex-direction: column;
-    }
-    .image-grid img {
-        flex: 1 1 100%;
-        height: auto;
+    .project-section p,
+    .about-secondary,
+    .caption {
+        font-size: 0.95rem;
+        text-align: center;
     }
 
     .cta-button {
@@ -3739,87 +3779,3 @@ body.project-page #page-wrapper {
         text-align: center;
     }
 }
-@media (max-width: 768px) {
-    .image-grid {
-        flex-direction: column;
-        gap: 1rem; /* keep spacing consistent */
-    }
-
-    .image-grid img {
-        flex: 1 1 100%; /* full width */
-        width: 100%;    /* enforce full container width */
-        height: auto;   /* auto height */
-        max-width: 100%; /* ensure no overflow */
-        object-fit: cover; /* optional: maintains aspect ratio if container shrinks */
-    }
-
-    /* Center captions and text */
-    .project-section h2 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .project-section p,
-    .caption {
-        font-size: 0.95rem;
-        text-align: center;
-    }
-}
-.project-row {
-    margin-bottom: 2rem; /* space between image rows */
-}
-.project-row img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px; /* soft rounded corners */
-}
-.project-row img {
-    transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.project-row img.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.project-row img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* --- Project Image Enhancements --- */
-
-.project-row {
-    margin-bottom: 2.5rem;
-}
-
-.project-row img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
-    transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.5s ease;
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-/* Fade-in state */
-.project-row img.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Subtle premium hover */
-@media screen and (min-width: 737px) {
-    .project-row img:hover {
-        transform: scale(1.02);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    }
-}
-
-
-
-
