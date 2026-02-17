@@ -1,176 +1,201 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>Evergreen Cases — Leather Crossbody Camera Bag</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Evergreen Cases — Leather Crossbody Camera Bag</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=1" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css?v=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
-    <style>
-        /* Dark mode colors and fonts */
-        body.project-page {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #1F1F1F; /* dark background */
-            color: #F2F3F1; /* light text */
-        }
-        #header .logo a, #header .nav-links a {
-            font-family: 'Open Sans', sans-serif;
-            color: #F2F3F1;
-        }
-        .cta-button {
-            background-color: #4F5D4A; /* deep olive */
-            color: #F2F3F1;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 0;
-        }
+  <style>
+    /* Project Page Overrides */
+    body.project-page {
+      background-color: #1F1F1F;
+      color: #F2F3F1;
+    }
+    #header .logo a, #header .nav-links a {
+      color: #F2F3F1;
+    }
+    .cta-button {
+      background-color: #4F5D4A;
+      color: #F2F3F1;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 0;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    .cta-button:hover { background-color: #6B6B6B; }
 
-        /* Hero */
-        .project-hero {
-            width: 100%;
-            padding: 6rem 0 4rem;
-            text-align: center;
-            background-color: #1F1F1F;
-        }
-        .project-hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .project-hero p {
-            font-size: 1rem;
-            color: #6B6B6B; /* muted secondary text */
-            margin-bottom: 2rem;
-        }
-        .project-hero img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            display: block;
-        }
+    /* Hero */
+    #banner.project-hero {
+      text-align: center;
+      padding: 6rem 0 4rem;
+      background-color: #1F1F1F;
+    }
+    #banner.project-hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    #banner.project-hero p {
+      font-size: 1rem;
+      color: #6B6B6B;
+      margin-bottom: 2rem;
+    }
+    #banner.project-hero img {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+      margin: 0 auto;
+    }
 
-        /* Project sections */
-        .project-section {
-            padding: 4rem 8%;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .project-section.alternate-bg {
-            background-color: #2A2A2A; /* slightly lighter dark for contrast */
-        }
-        .project-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .project-section p {
-            line-height: 1.6;
-            font-size: 1rem;
-        }
+    /* Project sections */
+    .major.project-section {
+      max-width: 900px;
+      margin: 0 auto 4rem;
+      padding: 4rem 2rem;
+    }
+    .major.project-section.alternate-bg {
+      background-color: #2A2A2A;
+    }
+    .major.project-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .major.project-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
 
-        /* Image grids */
-        .image-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        .image-grid img {
-            flex: 1 1 calc(50% - 0.5rem);
-            object-fit: cover;
-            height: 250px;
-            background: #333; /* placeholder gray for dark mode */
-        }
+    /* Image grids */
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .image-grid img {
+      flex: 1 1 calc(50% - 0.5rem);
+      height: 250px;
+      object-fit: cover;
+      border-radius: 6px;
+      background: #333;
+    }
 
-        /* Captions */
-        .caption {
-            font-size: 0.9rem;
-            color: #6B6B6B;
-            margin-bottom: 3rem;
-        }
-    </style>
+    .caption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6B6B6B;
+      margin-bottom: 3rem;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .image-grid img { flex: 1 1 100%; height: 200px; }
+      #banner.project-hero h2 { font-size: 2rem; }
+      .major.project-section h2 { font-size: 1.25rem; }
+    }
+  </style>
 </head>
-<body class="homepage project-page is-preload">
-    <div id="page-wrapper">
 
-        <!-- Header -->
-        <section id="header">
-            <nav class="main-nav">
-                <h1 class="logo"><a href="/index.html">YIANNIS XILIKAKIS</a></h1>
-                <ul class="nav-links">
-                    <li><a href="/index.html" class="cta-button">Back to Home</a></li>
-                </ul>
-            </nav>
-        </section>
+<body class="project-page is-preload">
+  <div id="page-wrapper">
 
-        <!-- Hero Section -->
-        <section class="project-hero">
-            <h1>Evergreen Cases</h1>
-            <p>Leather Crossbody Camera Bag · Launch Content</p>
-            <img src="images/hero.jpg" alt="Hero Image">
-        </section>
+    <!-- Header -->
+    <section id="header">
+      <nav id="nav" class="main-nav">
+        <h1 class="logo"><a href="/index.html">YIANNIS XILIKAKIS</a></h1>
+        <ul class="nav-links">
+          <li><a href="/index.html" class="cta-button">Back to Home</a></li>
+        </ul>
+      </nav>
+    </section>
 
-        <!-- Overview -->
-        <section class="project-section">
-            <h2>Overview</h2>
-            <p>
-                Evergreen Cases introduced a leather crossbody camera bag designed to bridge utility and refinement. 
-                The goal was to create launch content that positioned the product as both everyday essential and elevated accessory.
-            </p>
-        </section>
+    <!-- Hero / Banner -->
+    <section id="banner" class="project-hero">
+      <header>
+        <h2>Evergreen Cases</h2>
+        <p>Leather Crossbody Camera Bag · Launch Content</p>
+      </header>
+      <img src="images/hero.jpg" alt="Evergreen Cases Leather Crossbody Camera Bag">
+    </section>
 
-        <!-- Product Photography -->
-        <section class="project-section alternate-bg">
-            <h2>Product Photography</h2>
-            <img src="images/product-studio1.jpg" alt="Product Studio" class="project-image">
-            <div class="image-grid">
-                <img src="images/product-detail1.jpg" alt="Product Detail 1">
-                <img src="images/product-detail2.jpg" alt="Product Detail 2">
-                <img src="images/product-detail3.jpg" alt="Product Detail 3">
-                <img src="images/product-detail4.jpg" alt="Product Detail 4">
-            </div>
-            <p class="caption">Studio Photography · Material & Detail Focus</p>
-        </section>
+    <!-- Overview -->
+    <section id="intro" class="major project-section">
+      <header>
+        <h2>Overview</h2>
+      </header>
+      <p>
+        Evergreen Cases introduced a leather crossbody camera bag designed to bridge utility and refinement. 
+        The goal was to create launch content positioning the product as both an everyday essential and an elevated accessory.
+      </p>
+    </section>
 
-        <!-- Lifestyle Photography -->
-        <section class="project-section">
-            <h2>Lifestyle Photography</h2>
-            <img src="images/lifestyle1.jpg" alt="Lifestyle" class="project-image">
-            <div class="image-grid">
-                <img src="images/lifestyle2.jpg" alt="Lifestyle 2">
-                <img src="images/lifestyle3.jpg" alt="Lifestyle 3">
-            </div>
-            <p class="caption">Lifestyle Direction · Environmental & Contextual Shots</p>
-        </section>
+    <!-- Product Photography -->
+    <section id="main" class="major project-section alternate-bg">
+      <header>
+        <h2>Product Photography</h2>
+      </header>
+      <img src="images/product-studio1.jpg" alt="Product Studio Shot">
+      <div class="image-grid">
+        <img src="images/product-detail1.jpg" alt="Product Detail 1">
+        <img src="images/product-detail2.jpg" alt="Product Detail 2">
+        <img src="images/product-detail3.jpg" alt="Product Detail 3">
+        <img src="images/product-detail4.jpg" alt="Product Detail 4">
+      </div>
+      <p class="caption">Studio Photography · Material & Detail Focus</p>
+    </section>
 
-        <!-- Typography & Campaign -->
-        <section class="project-section alternate-bg">
-            <h2>Typography & Campaign</h2>
-            <img src="placeholders/typography1.jpg" alt="Typography Placeholder" class="project-image">
-            <img src="placeholders/email1.jpg" alt="Email Campaign Placeholder" class="project-image">
-            <p class="caption">Typography System · Email & Marketing Campaigns</p>
-        </section>
+    <!-- Lifestyle Photography -->
+    <section id="intro" class="major project-section">
+      <header>
+        <h2>Lifestyle Photography</h2>
+      </header>
+      <img src="images/lifestyle1.jpg" alt="Lifestyle Image 1">
+      <div class="image-grid">
+        <img src="placeholders/lifestyle2.jpg" alt="Lifestyle Image 2">
+        <img src="placeholders/lifestyle3.jpg" alt="Lifestyle Image 3">
+      </div>
+      <p class="caption">Lifestyle Direction · Environmental & Contextual Shots</p>
+    </section>
 
-        <!-- Outcome -->
-        <section class="project-section">
-            <h2>Outcome</h2>
-            <img src="placeholders/outcome.jpg" alt="Outcome Placeholder" class="project-image">
-            <p>
-                A cohesive visual ecosystem was created to position the product as both practical and premium, 
-                supporting launch campaigns and marketing efforts.
-            </p>
-        </section>
+    <!-- Typography & Campaign -->
+    <section id="main" class="major project-section alternate-bg">
+      <header>
+        <h2>Typography & Campaign</h2>
+      </header>
+      <div class="image-grid">
+        <img src="placeholders/typography1.jpg" alt="Typography System">
+        <img src="placeholders/email1.jpg" alt="Email Campaign">
+      </div>
+      <p class="caption">Typography System · Email & Marketing Campaigns</p>
+    </section>
 
-    </div> <!-- End page-wrapper -->
+    <!-- Outcome -->
+    <section id="intro" class="major project-section">
+      <header>
+        <h2>Outcome</h2>
+      </header>
+      <img src="placeholders/outcome.jpg" alt="Project Outcome">
+      <p>
+        A cohesive visual ecosystem was created to position the product as both practical and premium, 
+        supporting launch campaigns and marketing efforts.
+      </p>
+    </section>
 
-    <!-- JS Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+  </div><!-- page-wrapper -->
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
