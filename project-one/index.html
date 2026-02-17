@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Evergreen Cases — Leather Crossbody Camera Bag</title>
 
 <!-- CSS -->
@@ -11,139 +11,26 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
 <style>
-/* Project Page Dark Mode */
 body.project-page {
     font-family: 'Open Sans', sans-serif;
     background-color: #1F1F1F;
     color: #F2F3F1;
 }
-
-#header .logo a,
-#header .nav-links a {
+#header .logo a, #header .nav-links a {
     color: #F2F3F1;
 }
-
-/* CTA Button */
-.cta-button {
-    background-color: #4F5D4A;
-    color: #F2F3F1;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 0;
-}
-
-/* Containers (Dopetrope style) */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-/* Hero Section */
 .project-hero {
-    width: 100%;
     padding: 6rem 0 4rem;
     text-align: center;
-    background-color: #1F1F1F;
 }
-
-.project-hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.project-hero p {
-    font-size: 1rem;
-    color: #6B6B6B;
-    margin-bottom: 2rem;
-}
-
 .project-hero img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    display: block;
-}
-
-/* Project Sections */
-.project-section {
-    width: 100%;
-    padding: 4rem 0;
-}
-
-.project-section.alternate-bg {
-    background-color: #2A2A2A;
-}
-
-.project-section h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-    text-align: left;
-}
-
-.project-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* Image Grids */
-.image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.image-grid img {
-    flex: 1 1 calc(50% - 0.5rem);
-    object-fit: cover;
-    height: 250px;
-    background: #333;
-}
-
-/* Single Images */
-.project-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1.5rem;
-    object-fit: cover;
-}
-
-/* Captions */
-.caption {
-    font-size: 0.9rem;
-    color: #6B6B6B;
-    margin-bottom: 3rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .image-grid {
-        flex-direction: column;
-    }
-
-    .image-grid img {
-        flex: 1 1 100%;
-        height: auto;
-    }
-
-    .project-section h2 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .project-section p,
-    .caption {
-        font-size: 0.95rem;
-        text-align: center;
-    }
 }
 </style>
 </head>
 <body class="project-page">
-
 <div id="page-wrapper">
 
     <!-- Header -->
@@ -156,7 +43,7 @@ body.project-page {
         </nav>
     </section>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="project-hero">
         <div class="container">
             <h1>Evergreen Cases</h1>
@@ -166,74 +53,94 @@ body.project-page {
     </section>
 
     <!-- Overview -->
-    <section class="project-section">
-        <div class="container">
+    <section class="container major">
+        <header class="major">
             <h2>Overview</h2>
-            <p>
-                Evergreen Cases introduced a leather crossbody camera bag designed to bridge utility and refinement. 
-                The goal was to create launch content that positioned the product as both everyday essential and elevated accessory.
-            </p>
-        </div>
+        </header>
+        <p>
+            Evergreen Cases introduced a leather crossbody camera bag designed to bridge utility and refinement. 
+            The goal was to create launch content that positioned the product as both everyday essential and elevated accessory.
+        </p>
     </section>
 
     <!-- Product Photography -->
-    <section class="project-section alternate-bg">
-        <div class="container">
+    <section class="container">
+        <header class="major">
             <h2>Product Photography</h2>
-            <img src="images/product-studio1.jpg" alt="Product Studio" class="project-image">
-            <div class="image-grid">
-                <img src="images/product-detail1.jpg" alt="Product Detail 1">
-                <img src="images/product-detail2.jpg" alt="Product Detail 2">
-                <img src="images/product-detail3.jpg" alt="Product Detail 3">
-                <img src="images/product-detail4.jpg" alt="Product Detail 4">
+        </header>
+
+        <div class="row">
+            <div class="6u 12u$(medium)">
+                <img src="images/product-studio1.jpg" alt="Product Studio">
             </div>
-            <p class="caption">Studio Photography · Material & Detail Focus</p>
+            <div class="6u 12u$(medium)">
+                <div class="row">
+                    <div class="6u 12u$(small)">
+                        <img src="images/product-detail1.jpg" alt="Detail 1">
+                    </div>
+                    <div class="6u 12u$(small)">
+                        <img src="images/product-detail2.jpg" alt="Detail 2">
+                    </div>
+                    <div class="6u 12u$(small)">
+                        <img src="images/product-detail3.jpg" alt="Detail 3">
+                    </div>
+                    <div class="6u 12u$(small)">
+                        <img src="images/product-detail4.jpg" alt="Detail 4">
+                    </div>
+                </div>
+            </div>
         </div>
+        <p class="about-secondary">Studio Photography · Material & Detail Focus</p>
     </section>
 
     <!-- Lifestyle Photography -->
-    <section class="project-section">
-        <div class="container">
+    <section class="container major">
+        <header class="major">
             <h2>Lifestyle Photography</h2>
-            <img src="images/lifestyle1.jpg" alt="Lifestyle" class="project-image">
-            <div class="image-grid">
-                <img src="images/lifestyle2.jpg" alt="Lifestyle 2">
-                <img src="images/lifestyle3.jpg" alt="Lifestyle 3">
+        </header>
+        <div class="row">
+            <div class="6u 12u$(medium)">
+                <img src="images/lifestyle1.jpg" alt="Lifestyle 1">
             </div>
-            <p class="caption">Lifestyle Direction · Environmental & Contextual Shots</p>
+            <div class="6u 12u$(medium)">
+                <img src="placeholders/lifestyle2.jpg" alt="Lifestyle 2">
+            </div>
+            <div class="6u 12u$(medium)">
+                <img src="placeholders/lifestyle3.jpg" alt="Lifestyle 3">
+            </div>
         </div>
+        <p class="about-secondary">Lifestyle Direction · Environmental & Contextual Shots</p>
     </section>
 
     <!-- Typography & Campaign -->
-    <section class="project-section alternate-bg">
-        <div class="container">
+    <section class="container">
+        <header class="major">
             <h2>Typography & Campaign</h2>
-            <img src="placeholders/typography1.jpg" alt="Typography Placeholder" class="project-image">
-            <img src="placeholders/email1.jpg" alt="Email Campaign Placeholder" class="project-image">
-            <p class="caption">Typography System · Email & Marketing Campaigns</p>
+        </header>
+        <div class="row">
+            <div class="6u 12u$(medium)">
+                <img src="placeholders/typography1.jpg" alt="Typography">
+            </div>
+            <div class="6u 12u$(medium)">
+                <img src="placeholders/email1.jpg" alt="Email Campaign">
+            </div>
         </div>
+        <p class="about-secondary">Typography System · Email & Marketing Campaigns</p>
     </section>
 
     <!-- Outcome -->
-    <section class="project-section">
-        <div class="container">
+    <section class="container major">
+        <header class="major">
             <h2>Outcome</h2>
-            <img src="placeholders/outcome.jpg" alt="Outcome Placeholder" class="project-image">
-            <p>
-                A cohesive visual ecosystem was created to position the product as both practical and premium, 
-                supporting launch campaigns and marketing efforts.
-            </p>
-        </div>
+        </header>
+        <img src="placeholders/outcome.jpg" alt="Outcome" style="width:100%; height:auto;">
+        <p class="about-secondary">
+            A cohesive visual ecosystem was created to position the product as both practical and premium, 
+            supporting launch campaigns and marketing efforts.
+        </p>
     </section>
 
 </div> <!-- End page-wrapper -->
-
-<!-- JS Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-
 </body>
 </html>
+
