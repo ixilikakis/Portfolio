@@ -3739,6 +3739,32 @@ body.project-page #page-wrapper {
         text-align: center;
     }
 }
+@media (max-width: 768px) {
+    .image-grid {
+        flex-direction: column;
+        gap: 1rem; /* keep spacing consistent */
+    }
+
+    .image-grid img {
+        flex: 1 1 100%; /* full width */
+        width: 100%;    /* enforce full container width */
+        height: auto;   /* auto height */
+        max-width: 100%; /* ensure no overflow */
+        object-fit: cover; /* optional: maintains aspect ratio if container shrinks */
+    }
+
+    /* Center captions and text */
+    .project-section h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .project-section p,
+    .caption {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+}
 
 
 
