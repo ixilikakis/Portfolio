@@ -195,6 +195,21 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const imgs = document.querySelectorAll('.project-row img');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  imgs.forEach(img => observer.observe(img));
+});
+</script>
+
 
 </body>
 </html>
