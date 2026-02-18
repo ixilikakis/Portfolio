@@ -3693,6 +3693,25 @@ body.project-page #page-wrapper {
     }
 
 }
+/* Limit overall content width */
+.project-section.container,
+.project-hero.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Make image grids not span edge-to-edge */
+.project-row {
+    max-width: 1000px;
+    margin: 0 auto 3rem auto;
+}
+
+/* Optional: make large single images narrower */
+.project-row .12u {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 
 
 /* Mobile */
