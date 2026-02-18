@@ -3779,3 +3779,18 @@ body.project-page #page-wrapper {
         text-align: center;
     }
 }
+/* Reduce image dominance on larger screens */
+@media screen and (min-width: 980px) {
+
+    .project-row .12u {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .project-row .6u {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+}
+
