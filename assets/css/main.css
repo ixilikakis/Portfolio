@@ -3778,17 +3778,11 @@ body.project-page #page-wrapper {
         width: 100%;
         text-align: center;
     }
-}
-/* Reduce image dominance on larger screens */
+/* Constrain image width on larger screens */
 @media screen and (min-width: 980px) {
 
-    .project-row .12u {
+    .project-row .image.fit {
         max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .project-row .6u {
-        max-width: 450px;
         margin: 0 auto;
     }
 
