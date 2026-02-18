@@ -3717,3 +3717,13 @@ body.project-page #page-wrapper {
     }
 
 }
+
+@media screen and (min-width: 980px) {
+
+    .project-inner {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+}
+
