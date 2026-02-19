@@ -3022,7 +3022,7 @@ nav.main-nav .nav-links a:hover {
         margin-bottom: 1.5rem;    /* existing spacing below container */
         line-height: 1.7;          /* added to space out stacked lines */
     }
-	
+
 }
 .portfolio-text-section {
   padding-top: 80px;    /* space from the hero video */
@@ -3615,10 +3615,14 @@ nav.main-nav .nav-links a:hover {
   color: #F2F3F1;
 }
 
+/* ================================
+   PROJECT PAGE GRID FIX
+================================ */
 //* ===============================
    PROJECT PAGE
 ================================= */
 
+body.project-page .project-row {
 /* Container for project grid */
 .project-section.container {
     max-width: 1000px;
@@ -3629,16 +3633,22 @@ nav.main-nav .nav-links a:hover {
 /* Project row wrapper */
 .project-row {
     display: grid;
+    grid-template-columns: 1fr; /* default single column */
+    gap: 1rem;
     grid-template-columns: 1fr;
     gap: 3rem;
     margin-bottom: 3rem;
 }
 
+body.project-page .project-row .column.full {
+    grid-column: 1 / -1; /* full-width images */
 /* Each column / part of project */
 .project-row .column.full {
     width: 100%;
 }
 
+body.project-page .project-row .column.half {
+    grid-column: span 1; /* half images will span one column */
 /* Images fill column */
 .project-row .column.full img {
     width: 100%;
@@ -3649,12 +3659,20 @@ nav.main-nav .nav-links a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Two per row on larger screens */
+@media screen and (min-width: 769px) {
+    body.project-page .project-row {
+        grid-template-columns: repeat(2, 1fr); /* two per row */
+    }
 /* Hover effect for images */
 .project-row .column.full img:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
+    body.project-page .project-row .column.full {
+        grid-column: 1 / -1; /* full width overrides two-column layout */
+    }
 /* Text below each project part */
 .project-text {
     margin-top: 1.5rem;
@@ -3684,12 +3702,22 @@ nav.main-nav .nav-links a:hover {
     position: relative;
 }
 
+/* Images fill their column */
+body.project-page .project-row .column img {
 #banner img {
     width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
     height: 100%;
     object-fit: cover;
 }
 
+/* Container max width */
+.project-section.container,
+.project-hero.container {
+    max-width: 1000px;
+    margin: 0 auto;
 /* Hero text overlay */
 .hero-text {
     position: absolute;
