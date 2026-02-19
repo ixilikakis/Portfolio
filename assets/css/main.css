@@ -3644,6 +3644,28 @@ nav.main-nav .nav-links a:hover {
     max-width: calc(50% - 0.5rem);
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.project-grid img {
+    width: 100%;
+    display: block;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.project-grid img {
+    width: 100%;
+    display: block;
+}
+
+
 /* Image behavior */
 .project-row .column img {
     width: 100%;
