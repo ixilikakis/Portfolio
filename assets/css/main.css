@@ -3616,113 +3616,46 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ================================
-   PROJECT IMAGE GRID
+   PROJECT PAGE GRID FIX
 ================================ */
 
-/* Layout container */
-.project-row {
-    display: flex;
-    flex-wrap: wrap;
+body.project-page .project-row {
+    display: grid;
+    grid-template-columns: 1fr; /* default single column */
     gap: 1rem;
     margin-bottom: 3rem;
 }
 
-/* All columns */
-.project-row .column {
-    box-sizing: border-box;
+body.project-page .project-row .column.full {
+    grid-column: 1 / -1; /* full-width images */
 }
 
-/* Full width images */
-.project-row .column.full {
-    flex: 1 1 100%;
-    max-width: 100%;
+body.project-page .project-row .column.half {
+    grid-column: span 1; /* half images will span one column */
 }
 
-/* Two per row */
-.project-row .column.half {
-    flex: 1 1 calc(50% - 0.5rem);
-    max-width: calc(50% - 0.5rem);
+/* Two per row on larger screens */
+@media screen and (min-width: 769px) {
+    body.project-page .project-row {
+        grid-template-columns: repeat(2, 1fr); /* two per row */
+    }
+
+    body.project-page .project-row .column.full {
+        grid-column: 1 / -1; /* full width overrides two-column layout */
+    }
 }
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-.project-grid img {
-    width: 100%;
-    display: block;
-}
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-.project-grid img {
-    width: 100%;
-    display: block;
-}
-
-
-/* Image behavior */
-.project-row .column img {
+/* Images fill their column */
+body.project-page .project-row .column img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 6px;
 }
 
+/* Container max width */
 .project-section.container,
 .project-hero.container {
     max-width: 1000px;
     margin: 0 auto;
 }
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.col-12, .col-6 {
-    padding: 0;
-}
-
-.image.fit img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Mobile stack */
-@media screen and (max-width: 768px) {
-    .project-row {
-        flex-direction: column;
-    }
-
-    .project-row .column {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-}
-body.project-page .project-row {
-    display: grid !important;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
-body.project-page .project-row .column.full {
-    grid-column: 1 / -1;
-}
-
-@media screen and (min-width: 769px) {
-    body.project-page .project-row {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    body.project-page .project-row .column.full {
-        grid-column: 1 / -1;
-    }
-}
-
