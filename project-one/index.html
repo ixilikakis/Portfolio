@@ -3,107 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Page | Your Studio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Project Page</title>
+  <link rel="stylesheet" href="path/to/your/global.css">
+  <style>
+    /* Project page specific grid styling */
+    #project-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    /* First image full width */
+    #project-grid .project-hero {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Two half-width images */
+    #project-grid .project-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    #project-grid .project-row img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Text sections between images */
+    .project-text {
+      max-width: 800px;
+      margin: 2rem auto;
+      line-height: 1.5;
+      color: #1F1F1F;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      #project-grid .project-row {
+        grid-template-columns: 1fr;
+      }
+
+      #project-grid .project-row img {
+        height: 300px;
+      }
+
+      #project-grid .project-hero {
+        height: 400px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- ==========================
-       HEADER / NAV
-  ========================== -->
+  <!-- HEADER / NAV -->
   <header id="header">
     <nav class="main-nav">
       <div class="logo">
-        <a href="index.html">Your Studio</a>
+        <a href="/">Your Logo</a>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ==========================
-       HERO / PROJECT BANNER
-  ========================== -->
-  <section id="banner">
-    <div class="hero-video">
-      <!-- Optional video background -->
-      <img src="images/project-hero.jpg" alt="Project Hero" />
-    </div>
-    <div class="hero-text">
-      <div class="fade-text-container">
-        <h1>Project Title</h1>
-      </div>
-      <p class="project-subtitle">Short tagline or project summary</p>
-    </div>
+  <!-- HERO IMAGE -->
+  <section id="project-hero-section">
+    <img src="path/to/hero-image.jpg" alt="Project Hero" class="project-hero">
   </section>
 
-  <!-- ==========================
-       PROJECT GRID
-  ========================== -->
-  <section id="project-page" class="project-section container">
+  <!-- PROJECT GRID -->
+  <section id="project-grid">
+    <!-- Text before first image -->
+    <div class="project-text">
+      <p>Introduction text about the project or context.</p>
+    </div>
 
-    <!-- Project Grid / Four Parts -->
+    <!-- First full-width image -->
+    <img src="path/to/image1.jpg" alt="Project Full Width" class="project-hero">
+
+    <!-- Text before next row -->
+    <div class="project-text">
+      <p>Text describing product photography or next section.</p>
+    </div>
+
+    <!-- Two half-width images -->
     <div class="project-row">
+      <img src="path/to/image2.jpg" alt="Project Half 1">
+      <img src="path/to/image3.jpg" alt="Project Half 2">
+    </div>
 
-      <!-- Product Photography -->
-      <div class="column full">
-        <img src="images/project-product.jpg" alt="Product Photography">
-        <div class="project-text">
-          <h3>Product Photography</h3>
-          <p>Description of the product photography work. Lighting, setup, style, etc.</p>
-        </div>
-      </div>
+    <!-- Text before next row -->
+    <div class="project-text">
+      <p>Text describing lifestyle or typography section.</p>
+    </div>
 
-      <!-- Lifestyle -->
-      <div class="column full">
-        <img src="images/project-lifestyle.jpg" alt="Lifestyle">
-        <div class="project-text">
-          <h3>Lifestyle</h3>
-          <p>Description of lifestyle photography. Context, story, environment, etc.</p>
-        </div>
-      </div>
+    <!-- Next two half-width images (if needed) -->
+    <div class="project-row">
+      <img src="path/to/image4.jpg" alt="Project Half 3">
+      <img src="path/to/image5.jpg" alt="Project Half 4">
+    </div>
 
-      <!-- Typography -->
-      <div class="column full">
-        <img src="images/project-typography.jpg" alt="Typography">
-        <div class="project-text">
-          <h3>Typography</h3>
-          <p>Description of typography and type treatments. Fonts, hierarchy, usage, etc.</p>
-        </div>
-      </div>
-
-      <!-- Outcome -->
-      <div class="column full">
-        <img src="images/project-outcome.jpg" alt="Project Outcome">
-        <div class="project-text">
-          <h3>Outcome</h3>
-          <p>Summary of the results, impact, and client feedback. Wrap-up of the project.</p>
-        </div>
-      </div>
-
+    <!-- Text for outcome -->
+    <div class="project-text">
+      <p>Outcome, results, or final notes on the project.</p>
     </div>
   </section>
 
-  <!-- ==========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
   <footer id="footer">
     <div class="about-inner">
-      <span class="about-label">Contact</span>
-      <p class="about-primary">Email: <a href="mailto:hello@yourstudio.com">hello@yourstudio.com</a></p>
-      <p class="about-secondary">Address / other contact info if needed</p>
-    </div>
-    <div id="copyright">
-      <ul class="links">
-        <li>&copy; 2026 Your Studio. All rights reserved.</li>
-      </ul>
+      <p class="about-primary">Contact info or footer content here.</p>
     </div>
   </footer>
-
 </body>
 </html>
