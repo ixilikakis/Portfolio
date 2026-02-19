@@ -3663,3 +3663,23 @@ nav.main-nav .nav-links a:hover {
         max-width: 100%;
     }
 }
+body.project-page .project-row {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+body.project-page .project-row .column.full {
+    grid-column: 1 / -1;
+}
+
+@media screen and (min-width: 769px) {
+    body.project-page .project-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    body.project-page .project-row .column.full {
+        grid-column: 1 / -1;
+    }
+}
+
