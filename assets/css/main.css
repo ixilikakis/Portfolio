@@ -3652,6 +3652,13 @@ nav.main-nav .nav-links a:hover {
     border-radius: 6px;
 }
 
+.project-section.container,
+.project-hero.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
 /* Mobile stack */
 @media screen and (max-width: 768px) {
     .project-row {
