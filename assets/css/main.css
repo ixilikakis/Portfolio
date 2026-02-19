@@ -3594,7 +3594,6 @@ nav.main-nav .nav-links a:hover {
   margin: 0;
 }
 
-/* Hide only the last two items in the portfolio grid */ 
 
 /* Featured Project CTA — Sharp Minimal Rectangle */
 .featured-project .cta-button {
@@ -3614,4 +3613,12 @@ nav.main-nav .nav-links a:hover {
   background-color: #4F5D4A;
   color: #F2F3F1;
 }
+
+/* ===============================
+   HIDE LAST TWO PORTFOLIO ITEMS
+================================= */
+.portfolio-grid .portfolio-item:nth-last-child(-n+2) {
+    display: none;
+}
+
 
