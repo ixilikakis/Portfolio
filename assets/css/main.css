@@ -3680,6 +3680,20 @@ nav.main-nav .nav-links a:hover {
     margin: 0 auto;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-12, .col-6 {
+    padding: 0;
+}
+
+.image.fit img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 /* Mobile stack */
 @media screen and (max-width: 768px) {
