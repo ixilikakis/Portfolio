@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Evergreen Cases — Leather Crossbody Camera Bag</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css?v=1" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
     <style>
         body.project-page {
@@ -15,8 +17,7 @@
             color: #F2F3F1;
         }
 
-        #header .logo a,
-        #header .nav-links a {
+        #header .logo a, #header .nav-links a {
             color: #F2F3F1;
         }
 
@@ -26,13 +27,7 @@
             padding: 0.5rem 1rem;
             text-decoration: none;
             font-weight: 600;
-        }
-
-        /* Constrain layout width */
-        .project-section.container,
-        .project-hero.container {
-            max-width: 1100px;
-            margin: 0 auto;
+            border-radius: 0;
         }
 
         .project-hero {
@@ -61,14 +56,9 @@
             padding: 4rem 0;
         }
 
-        .project-row {
-            max-width: 1000px;
-            margin: 0 auto 3rem auto;
-        }
-
-        .project-row .12u {
-            max-width: 900px;
-            margin: 0 auto;
+        .project-section header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .about-secondary {
@@ -76,144 +66,215 @@
             color: #6B6B6B;
             margin-top: 1rem;
         }
+
+        /* Section text */
+        .section-text {
+            font-size: 1rem;
+            color: #F2F3F1;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Constrain images for desktop */
+        .project-row .image.fit {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Hover effect */
+        .project-row .image.fit img {
+            border-radius: 6px;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+        @media screen and (min-width: 737px) {
+            .project-row .image.fit img:hover {
+                transform: scale(1.02);
+                box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .project-section header h2 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            .section-text,
+            .about-secondary {
+                font-size: 0.95rem;
+                text-align: center;
+            }
+        }
     </style>
 </head>
-
 <body class="project-page">
+
 <div id="page-wrapper">
 
-<!-- Header -->
-<section id="header">
-    <nav class="main-nav container">
-        <h1 class="logo"><a href="/index.html">YIANNIS XILIKAKIS</a></h1>
-        <ul class="nav-links">
-            <li><a href="/index.html" class="cta-button">Back to Home</a></li>
-        </ul>
-    </nav>
-</section>
+    <!-- Header -->
+    <section id="header">
+        <nav class="main-nav container">
+            <h1 class="logo"><a href="/index.html">YIANNIS XILIKAKIS</a></h1>
+            <ul class="nav-links">
+                <li><a href="/index.html" class="cta-button">Back to Home</a></li>
+            </ul>
+        </nav>
+    </section>
 
-<!-- Hero -->
-<section class="project-hero container">
-    <h1>Evergreen Cases</h1>
-    <p>Leather Crossbody Camera Bag · Launch Content</p>
-    <img src="images/hero.jpg" alt="Hero Image">
-</section>
+    <!-- Hero Section -->
+    <section class="project-hero container">
+        <h1>Evergreen Cases</h1>
+        <p>Leather Crossbody Camera Bag · Launch Content</p>
+        <img src="images/hero.jpg" alt="Hero Image">
+        <p class="section-text">
+            Evergreen Cases, a growing brand known for durable hardshell cases, expanded into premium photography accessories with the launch of a leather crossbody camera bag. The challenge was to balance everyday utility with professional presentation, avoiding the overly athletic aesthetic of most small camera bags.
+        </p>
+    </section>
 
-<!-- Product Photography -->
-<section class="project-section container">
-    <header class="major">
-        <h2>Product Photography</h2>
-    </header>
+    <!-- Product Photography -->
+    <section class="project-section container">
+        <header class="major">
+            <h2>Product Photography</h2>
+        </header>
+        <p class="section-text">
+            Studio photography focused on material quality and structural details. Lighting and composition emphasized craftsmanship while maintaining a neutral, premium tone for online marketplaces and launch content.
+        </p>
 
-    <div class="row project-row">
-        <div class="12u">
-            <span class="image fit">
-                <img src="images/product-studio1.jpg" alt="">
-            </span>
+        <div class="row project-row">
+            <div class="12u">
+                <span class="image fit">
+                    <img src="images/product-studio1.jpg" alt="Product Studio">
+                </span>
+            </div>
         </div>
-    </div>
 
-    <div class="row project-row">
-        <div class="6u 12u$(medium)">
-            <span class="image fit">
-                <img src="images/product-detail1.jpg" alt="">
-            </span>
+        <div class="row project-row">
+            <div class="6u 12u$(medium)">
+                <span class="image fit">
+                    <img src="images/product-detail1.jpg" alt="Product Detail 1">
+                </span>
+            </div>
+            <div class="6u 12u$(medium)">
+                <span class="image fit">
+                    <img src="images/product-detail2.jpg" alt="Product Detail 2">
+                </span>
+            </div>
+            <div class="6u 12u$(medium)">
+                <span class="image fit">
+                    <img src="images/product-detail3.jpg" alt="Product Detail 3">
+                </span>
+            </div>
+            <div class="6u 12u$(medium)">
+                <span class="image fit">
+                    <img src="images/product-detail4.jpg" alt="Product Detail 4">
+                </span>
+            </div>
         </div>
-        <div class="6u 12u$(medium)">
-            <span class="image fit">
-                <img src="images/product-detail2.jpg" alt="">
-            </span>
+
+        <p class="about-secondary">
+            Studio Photography · Material & Detail Focus
+        </p>
+    </section>
+
+    <!-- Lifestyle Photography -->
+    <section class="project-section container">
+        <header class="major">
+            <h2>Lifestyle Photography</h2>
+        </header>
+        <p class="section-text">
+            Lifestyle imagery positioned the bag in contemporary everyday settings, balancing professional utility with casual refinement. Warm tones and natural environments reinforced a premium approachable feeling.
+        </p>
+
+        <div class="row project-row">
+            <div class="12u">
+                <span class="image fit">
+                    <img src="images/lifestyle1.jpg" alt="Lifestyle">
+                </span>
+            </div>
         </div>
-        <div class="6u 12u$(medium)">
-            <span class="image fit">
-                <img src="images/product-detail3.jpg" alt="">
-            </span>
+
+        <div class="row project-row">
+            <div class="6u 12u$(medium)">
+                <span class="image fit">
+                    <img src="images/lifestyle2.jpg" alt="Lifestyle 2">
+                </span>
+            </div>
+            <div class="6u 12u$(medium)">
+                <span class="image fit">
+                    <img src="images/lifestyle3.jpg" alt="Lifestyle 3">
+                </span>
+            </div>
         </div>
-        <div class="6u 12u$(medium)">
-            <span class="image fit">
-                <img src="images/product-detail4.jpg" alt="">
-            </span>
+
+        <p class="about-secondary">
+            Lifestyle Direction · Environmental & Contextual Shots
+        </p>
+    </section>
+
+    <!-- Typography & Campaign -->
+    <section class="project-section container">
+        <header class="major">
+            <h2>Typography & Campaign</h2>
+        </header>
+        <p class="section-text">
+            A restrained typographic system and controlled language tone ensured consistency across launch touchpoints. Email campaigns and web assets maintained the premium, cohesive visual identity.
+        </p>
+
+        <div class="row project-row">
+            <div class="6u 12u$(medium)">
+                <span class="image fit">
+                    <img src="images/typography1.jpg" alt="Typography">
+                </span>
+            </div>
+            <div class="6u 12u$(medium)">
+                <span class="image fit">
+                    <img src="images/email1.jpg" alt="Email Campaign">
+                </span>
+            </div>
         </div>
-    </div>
-</section>
 
-<!-- Lifestyle Photography -->
-<section class="project-section container">
-    <header class="major">
-        <h2>Lifestyle Photography</h2>
-    </header>
+        <p class="about-secondary">Typography System · Email & Marketing Campaigns</p>
+    </section>
 
-    <div class="row project-row">
-        <div class="12u">
-            <span class="image fit">
-                <img src="images/lifestyle1.jpg" alt="">
-            </span>
+    <!-- Outcome -->
+    <section class="project-section container">
+        <header class="major">
+            <h2>Outcome</h2>
+        </header>
+        <p class="section-text">
+            The visual system matured to simplify production while increasing clarity. Established guidelines created consistency across expanding marketing needs, reinforcing the brand’s premium positioning.
+        </p>
+
+        <div class="row project-row">
+            <div class="12u">
+                <span class="image fit">
+                    <img src="placeholders/outcome.jpg" alt="Outcome">
+                </span>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="row project-row">
-        <div class="6u 12u$(medium)">
-            <span class="image fit">
-                <img src="images/lifestyle2.jpg" alt="">
-            </span>
-        </div>
-        <div class="6u 12u$(medium)">
-            <span class="image fit">
-                <img src="images/lifestyle3.jpg" alt="">
-            </span>
-        </div>
-    </div>
-
-    <p class="about-secondary">
-        Lifestyle Direction · Environmental & Contextual Shots
-    </p>
-</section>
-
-<!-- Typography & Campaign -->
-<section class="project-section container">
-    <header class="major">
-        <h2>Typography & Campaign</h2>
-    </header>
-
-    <div class="row project-row">
-        <div class="6u 12u$(medium)">
-            <img src="images/typography1.jpg" alt="">
-        </div>
-        <div class="6u 12u$(medium)">
-            <img src="images/email1.jpg" alt="">
-        </div>
-    </div>
-
-    <p class="about-secondary">
-        Typography System · Email & Marketing Campaigns
-    </p>
-</section>
-
-<!-- Outcome -->
-<section class="project-section container">
-    <header class="major">
-        <h2>Outcome</h2>
-    </header>
-
-    <div class="row project-row">
-        <div class="12u">
-            <img src="placeholders/outcome.jpg" alt="">
-        </div>
-    </div>
-
-    <p>
-        A cohesive visual ecosystem was created to position the product as both practical and premium,
-        supporting launch campaigns and marketing efforts.
-    </p>
-</section>
-
-</div>
+</div> <!-- end page-wrapper -->
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const imgs = document.querySelectorAll('.project-row img');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  imgs.forEach(img => observer.observe(img));
+});
+</script>
 
 </body>
 </html>
