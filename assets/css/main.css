@@ -3653,6 +3653,10 @@ body.project-page #page-wrapper {
 .project-row {
     gap: 2rem;
 }
+.project-row img {
+    border-radius: 2px;
+}
+
 
 
 
