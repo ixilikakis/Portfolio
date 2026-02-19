@@ -3706,6 +3706,23 @@ body.project-page #page-wrapper {
 /* --------------------------------
    Image Rows & Grid
 -------------------------------- */
+
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.project-row .image.fit {
+  flex: 1 1 calc(50% - 1rem); /* two per row, minus gap */
+  max-width: calc(50% - 1rem);
+}
+
+.project-row .image.fit:first-child {
+  flex: 1 1 100%;   /* first image full width */
+  max-width: 100%;
+}
+
 .project-row {
     display: flex;
     flex-wrap: wrap;
