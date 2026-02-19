@@ -25,84 +25,132 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="container project-hero">
+    <section class="project-hero container">
         <h1>Evergreen Cases</h1>
         <p>Leather Crossbody Camera Bag · Launch Content</p>
-        <span class="image fit">
-            <img src="images/hero.jpg" alt="Hero Image">
-        </span>
+
+        <div class="row">
+            <div class="col-12">
+                <span class="image fit">
+                    <img src="images/hero.jpg" alt="Hero Image">
+                </span>
+            </div>
+        </div>
+
         <p class="section-text">
             Evergreen Cases, a growing brand known for durable hardshell cases, expanded into premium photography accessories with the launch of a leather crossbody camera bag. The challenge was to balance everyday utility with professional presentation, avoiding the overly athletic aesthetic of most small camera bags.
         </p>
     </section>
 
     <!-- Product Photography -->
-    <section class="container">
-        <h2>Product Photography</h2>
+    <section class="project-section container">
+        <header class="major">
+            <h2>Product Photography</h2>
+        </header>
 
         <!-- Hero Image -->
-        <span class="image fit">
-            <img src="images/product-studio1.jpg" alt="Product Studio">
-        </span>
+        <div class="row">
+            <div class="col-12">
+                <span class="image fit">
+                    <img src="images/product-studio1.jpg" alt="Product Studio">
+                </span>
+            </div>
+        </div>
 
-        <!-- Detail Images (2 per row) -->
-        <span class="image fit" style="max-width:48%; display:inline-block; margin-right:2%;">
-            <img src="images/product-detail1.jpg" alt="Product Detail 1">
-        </span>
-        <span class="image fit" style="max-width:48%; display:inline-block;">
-            <img src="images/product-detail2.jpg" alt="Product Detail 2">
-        </span>
-        <span class="image fit" style="max-width:48%; display:inline-block; margin-right:2%;">
-            <img src="images/product-detail3.jpg" alt="Product Detail 3">
-        </span>
-        <span class="image fit" style="max-width:48%; display:inline-block;">
-            <img src="images/product-detail4.jpg" alt="Product Detail 4">
-        </span>
+        <!-- Grid Images -->
+        <div class="row">
+            <div class="col-6">
+                <span class="image fit">
+                    <img src="images/product-detail1.jpg" alt="Product Detail 1">
+                </span>
+            </div>
+            <div class="col-6">
+                <span class="image fit">
+                    <img src="images/product-detail2.jpg" alt="Product Detail 2">
+                </span>
+            </div>
+            <div class="col-6">
+                <span class="image fit">
+                    <img src="images/product-detail3.jpg" alt="Product Detail 3">
+                </span>
+            </div>
+            <div class="col-6">
+                <span class="image fit">
+                    <img src="images/product-detail4.jpg" alt="Product Detail 4">
+                </span>
+            </div>
+        </div>
 
         <p class="about-secondary">Studio Photography · Material & Detail Focus</p>
     </section>
 
     <!-- Lifestyle Photography -->
-    <section class="container">
-        <h2>Lifestyle Photography</h2>
+    <section class="project-section container">
+        <header class="major">
+            <h2>Lifestyle Photography</h2>
+        </header>
 
         <!-- Main Image -->
-        <span class="image fit">
-            <img src="images/lifestyle1.jpg" alt="Lifestyle">
-        </span>
+        <div class="row">
+            <div class="col-12">
+                <span class="image fit">
+                    <img src="images/lifestyle1.jpg" alt="Lifestyle">
+                </span>
+            </div>
+        </div>
 
-        <!-- Supporting Images (2 per row) -->
-        <span class="image fit" style="max-width:48%; display:inline-block; margin-right:2%;">
-            <img src="images/lifestyle2.jpg" alt="Lifestyle 2">
-        </span>
-        <span class="image fit" style="max-width:48%; display:inline-block;">
-            <img src="images/lifestyle3.jpg" alt="Lifestyle 3">
-        </span>
+        <!-- Supporting Images -->
+        <div class="row">
+            <div class="col-6">
+                <span class="image fit">
+                    <img src="images/lifestyle2.jpg" alt="Lifestyle 2">
+                </span>
+            </div>
+            <div class="col-6">
+                <span class="image fit">
+                    <img src="images/lifestyle3.jpg" alt="Lifestyle 3">
+                </span>
+            </div>
+        </div>
 
         <p class="about-secondary">Lifestyle Direction · Environmental & Contextual Shots</p>
     </section>
 
     <!-- Typography & Campaign -->
-    <section class="container">
-        <h2>Typography & Campaign</h2>
+    <section class="project-section container">
+        <header class="major">
+            <h2>Typography & Campaign</h2>
+        </header>
 
-        <span class="image fit" style="max-width:48%; display:inline-block; margin-right:2%;">
-            <img src="images/typography1.jpg" alt="Typography">
-        </span>
-        <span class="image fit" style="max-width:48%; display:inline-block;">
-            <img src="images/email1.jpg" alt="Email Campaign">
-        </span>
+        <div class="row">
+            <div class="col-6">
+                <span class="image fit">
+                    <img src="images/typography1.jpg" alt="Typography">
+                </span>
+            </div>
+            <div class="col-6">
+                <span class="image fit">
+                    <img src="images/email1.jpg" alt="Email Campaign">
+                </span>
+            </div>
+        </div>
 
         <p class="about-secondary">Typography System · Email & Marketing Campaigns</p>
     </section>
 
     <!-- Outcome -->
-    <section class="container">
-        <h2>Outcome</h2>
+    <section class="project-section container">
+        <header class="major">
+            <h2>Outcome</h2>
+        </header>
 
-        <span class="image fit">
-            <img src="placeholders/outcome.jpg" alt="Outcome">
-        </span>
+        <div class="row">
+            <div class="col-12">
+                <span class="image fit">
+                    <img src="placeholders/outcome.jpg" alt="Outcome">
+                </span>
+            </div>
+        </div>
 
         <p>
             A cohesive visual ecosystem was created to position the product as both practical and premium,
@@ -120,7 +168,7 @@
 <script src="assets/js/main.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const imgs = document.querySelectorAll('.container img');
+  const imgs = document.querySelectorAll('.project-row img');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
