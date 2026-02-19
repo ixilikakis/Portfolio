@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Evergreen Cases — Leather Crossbody Camera Bag</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css?v=1" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
     <style>
         body.project-page {
@@ -17,7 +15,8 @@
             color: #F2F3F1;
         }
 
-        #header .logo a, #header .nav-links a {
+        #header .logo a,
+        #header .nav-links a {
             color: #F2F3F1;
         }
 
@@ -27,7 +26,13 @@
             padding: 0.5rem 1rem;
             text-decoration: none;
             font-weight: 600;
-            border-radius: 0;
+        }
+
+        /* Constrain layout width */
+        .project-section.container,
+        .project-hero.container {
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .project-hero {
@@ -56,9 +61,14 @@
             padding: 4rem 0;
         }
 
-        .project-section header h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+        .project-row {
+            max-width: 1000px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .project-row .12u {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .about-secondary {
@@ -68,88 +78,64 @@
         }
     </style>
 </head>
-<body class="project-page">
 
+<body class="project-page">
 <div id="page-wrapper">
 
-    <!-- Header -->
-    <section id="header">
-        <nav class="main-nav container">
-            <h1 class="logo"><a href="/index.html">YIANNIS XILIKAKIS</a></h1>
-            <ul class="nav-links">
-                <li><a href="/index.html" class="cta-button">Back to Home</a></li>
-            </ul>
-        </nav>
-    </section>
+<!-- Header -->
+<section id="header">
+    <nav class="main-nav container">
+        <h1 class="logo"><a href="/index.html">YIANNIS XILIKAKIS</a></h1>
+        <ul class="nav-links">
+            <li><a href="/index.html" class="cta-button">Back to Home</a></li>
+        </ul>
+    </nav>
+</section>
 
-    <!-- Hero Section -->
-    <section class="project-hero container">
-        <h1>Evergreen Cases</h1>
-        <p>Leather Crossbody Camera Bag · Launch Content</p>
-        <img src="images/hero.jpg" alt="Hero Image">
-    </section>
+<!-- Hero -->
+<section class="project-hero container">
+    <h1>Evergreen Cases</h1>
+    <p>Leather Crossbody Camera Bag · Launch Content</p>
+    <img src="images/hero.jpg" alt="Hero Image">
+</section>
 
-    <section class="project-section container">
+<!-- Product Photography -->
+<section class="project-section container">
     <header class="major">
         <h2>Product Photography</h2>
     </header>
 
-    <!-- Hero Image (Centered + Narrower) -->
     <div class="row project-row">
-        <div class="1u"></div>
-        <div class="10u 12u$(medium)">
+        <div class="12u">
             <span class="image fit">
-                <img src="images/product-studio1.jpg" alt="Product Studio">
+                <img src="images/product-studio1.jpg" alt="">
             </span>
         </div>
-        <div class="1u"></div>
     </div>
 
-    <section class="project-section">
-    <div class="container">
-        <div class="project-inner">
-
-            <header class="major">
-                <h2>Product Photography</h2>
-            </header>
-
-            <div class="row project-row">
-                <div class="12u">
-                    <span class="image fit">
-                        <img src="images/product-studio1.jpg" alt="">
-                    </span>
-                </div>
-            </div>
-
-            <div class="row project-row">
-                <div class="6u 12u$(medium)">
-                    <span class="image fit">
-                        <img src="images/product-detail1.jpg" alt="">
-                    </span>
-                </div>
-                <div class="6u 12u$(medium)">
-                    <span class="image fit">
-                        <img src="images/product-detail2.jpg" alt="">
-                    </span>
-                </div>
-                <div class="6u 12u$(medium)">
-                    <span class="image fit">
-                        <img src="images/product-detail3.jpg" alt="">
-                    </span>
-                </div>
-                <div class="6u 12u$(medium)">
-                    <span class="image fit">
-                        <img src="images/product-detail4.jpg" alt="">
-                    </span>
-                </div>
-            </div>
-
+    <div class="row project-row">
+        <div class="6u 12u$(medium)">
+            <span class="image fit">
+                <img src="images/product-detail1.jpg" alt="">
+            </span>
+        </div>
+        <div class="6u 12u$(medium)">
+            <span class="image fit">
+                <img src="images/product-detail2.jpg" alt="">
+            </span>
+        </div>
+        <div class="6u 12u$(medium)">
+            <span class="image fit">
+                <img src="images/product-detail3.jpg" alt="">
+            </span>
+        </div>
+        <div class="6u 12u$(medium)">
+            <span class="image fit">
+                <img src="images/product-detail4.jpg" alt="">
+            </span>
         </div>
     </div>
 </section>
-
-
-
 
 <!-- Lifestyle Photography -->
 <section class="project-section container">
@@ -157,25 +143,23 @@
         <h2>Lifestyle Photography</h2>
     </header>
 
-    <!-- Main Lifestyle -->
     <div class="row project-row">
         <div class="12u">
             <span class="image fit">
-                <img src="images/lifestyle1.jpg" alt="Lifestyle">
+                <img src="images/lifestyle1.jpg" alt="">
             </span>
         </div>
     </div>
 
-    <!-- Supporting Lifestyle -->
     <div class="row project-row">
         <div class="6u 12u$(medium)">
             <span class="image fit">
-                <img src="images/lifestyle2.jpg" alt="Lifestyle 2">
+                <img src="images/lifestyle2.jpg" alt="">
             </span>
         </div>
         <div class="6u 12u$(medium)">
             <span class="image fit">
-                <img src="images/lifestyle3.jpg" alt="Lifestyle 3">
+                <img src="images/lifestyle3.jpg" alt="">
             </span>
         </div>
     </div>
@@ -185,80 +169,51 @@
     </p>
 </section>
 
-    <!-- Typography & Campaign -->
-    <section class="project-section container">
-        <header class="major">
-            <h2>Typography & Campaign</h2>
-        </header>
+<!-- Typography & Campaign -->
+<section class="project-section container">
+    <header class="major">
+        <h2>Typography & Campaign</h2>
+    </header>
 
-        <div class="row">
-            <div class="6u 12u$(medium)">
-                <img src="images/typography1.jpg" alt="Typography">
-            </div>
-            <div class="6u 12u$(medium)">
-                <img src="images/email1.jpg" alt="Email Campaign">
-            </div>
+    <div class="row project-row">
+        <div class="6u 12u$(medium)">
+            <img src="images/typography1.jpg" alt="">
         </div>
-
-        <p class="about-secondary">Typography System · Email & Marketing Campaigns</p>
-    </section>
-
-    <!-- Outcome -->
-    <section class="project-section container">
-        <header class="major">
-            <h2>Outcome</h2>
-        </header>
-        <div class="row">
-            <div class="12u">
-                <img src="placeholders/outcome.jpg" alt="Outcome">
-            </div>
+        <div class="6u 12u$(medium)">
+            <img src="images/email1.jpg" alt="">
         </div>
-        <p>
-            A cohesive visual ecosystem was created to position the product as both practical and premium,
-            supporting launch campaigns and marketing efforts.
-        </p>
-    </section>
+    </div>
 
-</div> <!-- end page-wrapper -->
+    <p class="about-secondary">
+        Typography System · Email & Marketing Campaigns
+    </p>
+</section>
+
+<!-- Outcome -->
+<section class="project-section container">
+    <header class="major">
+        <h2>Outcome</h2>
+    </header>
+
+    <div class="row project-row">
+        <div class="12u">
+            <img src="placeholders/outcome.jpg" alt="">
+        </div>
+    </div>
+
+    <p>
+        A cohesive visual ecosystem was created to position the product as both practical and premium,
+        supporting launch campaigns and marketing efforts.
+    </p>
+</section>
+
+</div>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const imgs = document.querySelectorAll('.project-row img');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-  
-  imgs.forEach(img => observer.observe(img));
-});
-</script>
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('.project-row img');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.15 });
-
-    images.forEach(img => observer.observe(img));
-});
-</script>
-
-
-    
-
 
 </body>
 </html>
