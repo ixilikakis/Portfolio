@@ -4,127 +4,167 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Page</title>
-  <link rel="stylesheet" href="path/to/your/global.css">
+  <link rel="stylesheet" href="global.css">
   <style>
-    /* Project page specific grid styling */
-    #project-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-    }
-
-    /* First image full width */
-    #project-grid .project-hero {
-      width: 100%;
-      height: 600px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    /* Two half-width images */
-    #project-grid .project-row {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    #project-grid .project-row img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    /* Text sections between images */
-    .project-text {
-      max-width: 800px;
-      margin: 2rem auto;
-      line-height: 1.5;
+    /* ==============================
+       PROJECT PAGE STYLES
+       ============================== */
+    #project-page {
+      background-color: #F2F3F1;
+      font-family: 'Open Sans', sans-serif;
       color: #1F1F1F;
     }
 
-    /* Responsive tweaks */
-    @media (max-width: 768px) {
-      #project-grid .project-row {
+    /* Hero */
+    #project-page .hero {
+      position: relative;
+      height: 75vh;
+      overflow: hidden;
+      background-color: #eaeaea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #project-page .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #project-page .hero-text {
+      position: absolute;
+      z-index: 2;
+      color: #1F1F1F;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    /* Grid */
+    #project-page .project-grid {
+      max-width: 1200px;
+      margin: 4rem auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 20px;
+      align-items: start;
+    }
+
+    #project-page .project-grid .project-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+    }
+
+    /* Full-width first image */
+    #project-page .project-grid .project-item.full {
+      grid-column: 1 / -1;
+      height: 600px;
+    }
+
+    #project-page .project-grid .project-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    #project-page .project-grid .project-item img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Text sections */
+    #project-page .project-text {
+      max-width: 800px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 1rem;
+    }
+
+    #project-page .project-text h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    #project-page .project-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      #project-page .project-grid {
         grid-template-columns: 1fr;
+        grid-gap: 20px;
       }
 
-      #project-grid .project-row img {
-        height: 300px;
-      }
-
-      #project-grid .project-hero {
+      #project-page .project-grid .project-item.full {
         height: 400px;
       }
     }
   </style>
 </head>
-<body>
-  <!-- HEADER / NAV -->
+<body id="project-page">
+
+  <!-- Nav / Header -->
   <header id="header">
     <nav class="main-nav">
       <div class="logo">
-        <a href="/">Your Logo</a>
+        <a href="/">YourLogo</a>
       </div>
       <ul class="nav-links">
-        <li><a href="/about">About</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/portfolio.html">Portfolio</a></li>
+        <li><a href="/contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HERO IMAGE -->
-  <section id="project-hero-section">
-    <img src="path/to/hero-image.jpg" alt="Project Hero" class="project-hero">
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="hero-image.jpg" alt="Project Hero">
+    <div class="hero-text">Project Name</div>
   </section>
 
-  <!-- PROJECT GRID -->
-  <section id="project-grid">
-    <!-- Text before first image -->
-    <div class="project-text">
-      <p>Introduction text about the project or context.</p>
+  <!-- Project Grid -->
+  <section class="project-grid">
+
+    <!-- Full-width main image -->
+    <div class="project-item full">
+      <img src="image1.jpg" alt="Project Main">
     </div>
 
-    <!-- First full-width image -->
-    <img src="path/to/image1.jpg" alt="Project Full Width" class="project-hero">
-
-    <!-- Text before next row -->
-    <div class="project-text">
-      <p>Text describing product photography or next section.</p>
+    <!-- Half-width images -->
+    <div class="project-item">
+      <img src="image2.jpg" alt="Project Detail 1">
+    </div>
+    <div class="project-item">
+      <img src="image3.jpg" alt="Project Detail 2">
     </div>
 
-    <!-- Two half-width images -->
-    <div class="project-row">
-      <img src="path/to/image2.jpg" alt="Project Half 1">
-      <img src="path/to/image3.jpg" alt="Project Half 2">
-    </div>
-
-    <!-- Text before next row -->
-    <div class="project-text">
-      <p>Text describing lifestyle or typography section.</p>
-    </div>
-
-    <!-- Next two half-width images (if needed) -->
-    <div class="project-row">
-      <img src="path/to/image4.jpg" alt="Project Half 3">
-      <img src="path/to/image5.jpg" alt="Project Half 4">
-    </div>
-
-    <!-- Text for outcome -->
-    <div class="project-text">
-      <p>Outcome, results, or final notes on the project.</p>
-    </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer id="footer">
-    <div class="about-inner">
-      <p class="about-primary">Contact info or footer content here.</p>
-    </div>
-  </footer>
+  <!-- Project Text Sections -->
+  <section class="project-text">
+    <h3>Product Photography</h3>
+    <p>Description of product photography work goes here.</p>
+
+    <h3>Lifestyle Photography</h3>
+    <p>Description of lifestyle photography work goes here.</p>
+
+    <h3>Typography</h3>
+    <p>Description of typography work goes here.</p>
+
+    <h3>Outcome</h3>
+    <p>Description of the final outcome goes here.</p>
+  </section>
+
 </body>
 </html>
