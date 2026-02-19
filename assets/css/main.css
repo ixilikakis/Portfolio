@@ -3722,6 +3722,24 @@ body.project-page #page-wrapper {
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
+/* Desktop: 2 images per row for secondary images */
+@media screen and (min-width: 769px) {
+
+    /* Target all images after the first in each project-row */
+    .project-row .image:not(:first-child) {
+        width: calc(50% - 10px);  /* two per row with small gap */
+        margin: 0 5px 10px 5px;   /* horizontal and vertical spacing */
+        display: inline-block;
+    }
+
+    /* Ensure the first image stays full-width */
+    .project-row .image:first-child {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
+
 /* Hover effect on desktop */
 @media screen and (min-width: 737px) {
     .project-row .image.fit img:hover {
