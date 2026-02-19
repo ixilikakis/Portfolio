@@ -3652,11 +3652,11 @@ body.project-page #page-wrapper {
 }
 
 .project-hero img {
-    width: 100%;        
-    height: auto;       
+    width: 100%;
+    height: auto;
     display: block;
-    margin: 0;          
-    border-radius: 0;   
+    margin: 0;
+    border-radius: 0;
 }
 
 /* --------------------------------
@@ -3680,7 +3680,7 @@ body.project-page #page-wrapper {
 }
 
 /* --------------------------------
-   Grid Columns
+   Image Grid
 -------------------------------- */
 .project-row {
     display: flex;
@@ -3690,8 +3690,7 @@ body.project-page #page-wrapper {
 }
 
 /* First image full width */
-.project-row > div:first-child,
-.project-row > .12u {
+.project-row > div:first-child {
     flex: 1 1 100%;
     max-width: 100%;
 }
