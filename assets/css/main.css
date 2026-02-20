@@ -3715,21 +3715,6 @@ nav.main-nav .nav-links a:hover {
   margin-bottom: 1.5rem;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  #project-page .project-grid {
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-  }
-
-  #project-page .project-grid .project-item.full {
-    height: 400px;
-  }
-
-  #project-page .hero-text {
-    font-size: 2.2rem;
-  }
-}
 /* Text Section - Full Width Background */
 #project-page .project-text {
   background-color: #ffffff; /* full-width white background */
@@ -3754,5 +3739,23 @@ nav.main-nav .nav-links a:hover {
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  #project-page .project-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  #project-page .project-grid .project-item.full {
+    height: 400px;
+  }
+
+  #project-page .hero-text {
+    font-size: 2.2rem;
+  }
+}
+
 
 
