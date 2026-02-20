@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project One</title>
   <link rel="stylesheet" href="../assets/css/global.css">
-
   <style>
     /* ==============================
        PROJECT PAGE STYLES
@@ -43,7 +42,7 @@
       color: #ffffff;
     }
 
-    /* Grid */
+    /* Project Grid */
     #project-page .project-grid {
       max-width: 1200px;
       margin: 4rem auto;
@@ -78,16 +77,18 @@
       transform: scale(1.02);
     }
 
-    /* Text Section */
+    /* Text Sections */
     #project-page .project-text {
-      background-color: #ffffff; /* white background */
-      max-width: 800px;
-      margin: 3rem auto 5rem auto;
-      padding: 3rem 2rem;
+      background-color: #ffffff;  /* full-width white */
+      padding: 4rem 0;
       font-family: 'Open Sans', sans-serif;
       color: #1F1F1F;
-      border-radius: 6px;
-      line-height: 1.6;
+    }
+
+    #project-page .project-text .text-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem;
     }
 
     #project-page .project-text h3 {
@@ -98,6 +99,7 @@
 
     #project-page .project-text p {
       font-size: 1.1rem;
+      line-height: 1.6;
       margin-bottom: 2rem;
     }
 
@@ -109,15 +111,6 @@
 
       #project-page .project-item.full {
         height: 400px;
-      }
-
-      #project-page .project-text {
-        padding: 2rem 1rem;
-      }
-
-      #project-page .hero-text {
-        font-size: 2.2rem;
-        padding: 0 1rem;
       }
     }
   </style>
@@ -147,8 +140,10 @@
 
   <!-- Intro Text -->
   <section class="project-text">
-    <h3>Project Overview</h3>
-    <p>This case study highlights the design work completed for a digital marketing campaign, showcasing product photography, lifestyle photography, typography, and the final outcomes.</p>
+    <div class="text-inner">
+      <h3>Project Overview</h3>
+      <p>This case study highlights the design work completed for a digital marketing campaign, showcasing product photography, lifestyle photography, typography, and the final outcomes.</p>
+    </div>
   </section>
 
   <!-- Product Photography Grid -->
@@ -171,8 +166,10 @@
   </section>
 
   <section class="project-text">
-    <h3>Product Photography</h3>
-    <p>Description of product photography work goes here. Explain how the lighting, composition, and setup communicate the brand effectively.</p>
+    <div class="text-inner">
+      <h3>Product Photography</h3>
+      <p>Description of product photography work goes here. Explain how the lighting, composition, and setup communicate the brand effectively.</p>
+    </div>
   </section>
 
   <!-- Lifestyle Photography Grid -->
@@ -195,8 +192,10 @@
   </section>
 
   <section class="project-text">
-    <h3>Lifestyle Photography</h3>
-    <p>Description of lifestyle photography work goes here. Highlight environment, storytelling, and audience engagement.</p>
+    <div class="text-inner">
+      <h3>Lifestyle Photography</h3>
+      <p>Description of lifestyle photography work goes here. Highlight environment, storytelling, and audience engagement.</p>
+    </div>
   </section>
 
   <!-- Typography / Visual Identity Grid -->
@@ -219,18 +218,18 @@
   </section>
 
   <section class="project-text">
-    <h3>Typography & Visual Identity</h3>
-    <p>Description of typography and visual identity work goes here. Explain font choices, hierarchy, and design consistency.</p>
+    <div class="text-inner">
+      <h3>Typography & Visual Identity</h3>
+      <p>Description of typography and visual identity work goes here. Explain font choices, hierarchy, and design consistency. This section also reflects the final product as part of the campaign rollout.</p>
+    </div>
   </section>
 
-  <!-- Outcome Section (text only) -->
+  <!-- Outcome Text -->
   <section class="project-text">
-    <h3>Outcome</h3>
-    <p>
-      This campaign successfully launched the new product, establishing clear brand positioning 
-      and engaging the target audience across digital channels. Metrics indicate strong initial 
-      awareness, positive client feedback, and a scalable framework for ongoing campaign activity.
-    </p>
+    <div class="text-inner">
+      <h3>Outcome</h3>
+      <p>This campaign launched a new product with measurable success, generating client engagement and positive feedback. The design choices reinforced the brand message and supported the marketing objectives effectively.</p>
+    </div>
   </section>
 
 </body>
