@@ -3608,3 +3608,15 @@ nav.main-nav,
 nav.main-nav a {
     font-family: 'Open Sans', sans-serif !important;
 }
+
+#project-page nav.main-nav {
+    height: 152px;           /* match main page */
+    padding: 16px 32px;      /* match main page */
+    background-color: #F2F3F1; /* same as main page */
+}
+
+#project-page nav.main-nav a {
+    color: #1F1F1F;          /* dark text for readability */
+    font-weight: 600;        /* optional, match main page links */
+    font-family: 'Open Sans', sans-serif;
+}
