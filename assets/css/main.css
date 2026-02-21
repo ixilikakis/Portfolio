@@ -3631,6 +3631,34 @@ nav.main-nav .nav-links a:hover {
   color: #F2F3F1;              /* was #1F1F1F */
 }
 
+/* ==========================
+   NAVIGATION FONT WEIGHT FIX
+   ========================== */
+
+/* Logo */
+nav.main-nav .logo a {
+    font-weight: 300; /* light */
+}
+
+/* Navigation links */
+nav.main-nav .nav-links a {
+    font-weight: 300; /* light */
+}
+
+/* Mobile nav adjustments (override any previous weights) */
+@media (max-width: 768px) {
+    nav.main-nav .logo a {
+        font-weight: 300;
+    }
+
+    nav.main-nav .nav-links li {
+        font-weight: 300;
+    }
+
+    nav.main-nav .nav-links a {
+        font-weight: 300;
+    }
+}
 
 /* ==============================
    HERO
