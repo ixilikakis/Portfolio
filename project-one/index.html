@@ -2,235 +2,160 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project One</title>
-  <link rel="stylesheet" href="../assets/css/global.css">
-  <style>
-    /* ==============================
-       PROJECT PAGE STYLES
-    ============================== */
-    #project-page {
-      background-color: #F2F3F1;
-      font-family: 'Open Sans', sans-serif;
-      color: #1F1F1F;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* Hero */
-    #project-page .hero {
-      position: relative;
-      height: 75vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  <!-- Open Sans (remove if already loaded globally) -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    #project-page .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    #project-page .hero-text {
-      position: absolute;
-      z-index: 2;
-      text-align: center;
-      font-size: 3rem;
-      font-weight: 300;
-      letter-spacing: 2px;
-      color: #ffffff;
-    }
-
-    /* Project Grid */
-    #project-page .project-grid {
-      max-width: 1200px;
-      margin: 4rem auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      align-items: start;
-      padding: 0 1rem;
-    }
-
-    #project-page .project-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 6px;
-    }
-
-    #project-page .project-item.full {
-      grid-column: 1 / -1;
-      height: 600px;
-    }
-
-    #project-page .project-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-
-    #project-page .project-item img:hover {
-      transform: scale(1.02);
-    }
-
-    /* Text Sections */
-    #project-page .project-text {
-      background-color: #ffffff;  /* full-width white */
-      padding: 4rem 0;
-      font-family: 'Open Sans', sans-serif;
-      color: #1F1F1F;
-    }
-
-    #project-page .project-text .text-inner {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    #project-page .project-text h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    #project-page .project-text p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      #project-page .project-grid {
-        grid-template-columns: 1fr;
-      }
-
-      #project-page .project-item.full {
-        height: 400px;
-      }
-    }
-  </style>
+  <!-- Main Site CSS -->
+  <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
 <body id="project-page">
 
-  <!-- Header -->
+  <!-- ==============================
+       NAVIGATION
+  ============================== -->
   <header id="header">
     <nav class="main-nav">
       <div class="logo">
-        <a href="/">YourLogo</a>
+        <a href="../index.html">YourLogo</a>
       </div>
       <ul class="nav-links">
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/portfolio.html">Portfolio</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../portfolio.html">Portfolio</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
+
+  <!-- ==============================
+       HERO
+  ============================== -->
   <section class="hero">
     <img src="images/hero.jpg" alt="Project Hero">
-    <div class="hero-text">Project One</div>
+    <div class="hero-text">Product Launch Campaign</div>
   </section>
 
-  <!-- Intro Text -->
+
+  <!-- ==============================
+       OVERVIEW
+  ============================== -->
   <section class="project-text">
     <div class="text-inner">
-      <h3>Project Overview</h3>
-      <p>This case study highlights the design work completed for a digital marketing campaign, showcasing product photography, lifestyle photography, typography, and the final outcomes.</p>
+      <span class="project-label">overview</span>
+      <p class="project-primary">
+        A digital launch campaign developed to introduce a new product with clarity, confidence, and visual authority.
+      </p>
+      <p class="project-secondary">
+        This case study highlights the full creative direction including product photography, lifestyle imagery, typographic development, and the strategic rollout across digital marketing platforms.
+      </p>
     </div>
   </section>
 
-  <!-- Product Photography Grid -->
+
+  <!-- ==============================
+       PRODUCT PHOTOGRAPHY GRID
+  ============================== -->
   <section class="project-grid">
     <div class="project-item full">
-      <img src="images/product-studio1.jpg" alt="Product Main">
+      <img src="images/product-main.jpg" alt="Product Main">
     </div>
     <div class="project-item">
-      <img src="images/product-detail1.jpg" alt="Product Detail 1">
+      <img src="images/product-01.jpg" alt="Product Detail">
     </div>
     <div class="project-item">
-      <img src="images/product-detail2.jpg" alt="Product Detail 2">
-    </div>
-    <div class="project-item">
-      <img src="images/product-detail3.jpg" alt="Product Detail 3">
-    </div>
-    <div class="project-item">
-      <img src="images/product-detail4.jpg" alt="Product Detail 4">
+      <img src="images/product-02.jpg" alt="Product Detail">
     </div>
   </section>
 
   <section class="project-text">
     <div class="text-inner">
-      <h3>Product Photography</h3>
-      <p>Description of product photography work goes here. Explain how the lighting, composition, and setup communicate the brand effectively.</p>
+      <span class="project-label">product photography</span>
+      <p class="project-primary">
+        Studio photography designed to emphasize material quality, precision, and brand tone.
+      </p>
+      <p class="project-secondary">
+        Controlled lighting and minimal composition ensured the product remained the focal point while maintaining a premium visual language aligned with the campaign strategy.
+      </p>
     </div>
   </section>
 
-  <!-- Lifestyle Photography Grid -->
+
+  <!-- ==============================
+       LIFESTYLE GRID
+  ============================== -->
   <section class="project-grid">
     <div class="project-item full">
       <img src="images/lifestyle-main.jpg" alt="Lifestyle Main">
     </div>
     <div class="project-item">
-      <img src="images/lifestyle1.jpg" alt="Lifestyle Detail 1">
+      <img src="images/lifestyle-01.jpg" alt="Lifestyle Detail">
     </div>
     <div class="project-item">
-      <img src="images/lifestyle2.jpg" alt="Lifestyle Detail 2">
-    </div>
-    <div class="project-item">
-      <img src="images/lifestyle3.jpg" alt="Lifestyle Detail 3">
-    </div>
-    <div class="project-item">
-      <img src="images/lifestyle4.jpg" alt="Lifestyle Detail 4">
+      <img src="images/lifestyle-02.jpg" alt="Lifestyle Detail">
     </div>
   </section>
 
   <section class="project-text">
     <div class="text-inner">
-      <h3>Lifestyle Photography</h3>
-      <p>Description of lifestyle photography work goes here. Highlight environment, storytelling, and audience engagement.</p>
+      <span class="project-label">lifestyle</span>
+      <p class="project-primary">
+        Context-driven imagery created to position the product within the daily rhythm of its audience.
+      </p>
+      <p class="project-secondary">
+        The goal was to shift perception from object to experience, supporting the narrative of usability and integration into real environments.
+      </p>
     </div>
   </section>
 
-  <!-- Typography / Visual Identity Grid -->
+
+  <!-- ==============================
+       TYPOGRAPHY GRID
+  ============================== -->
   <section class="project-grid">
     <div class="project-item full">
-      <img src="images/typography-main.jpg" alt="Typography Main">
+      <img src="images/type-main.jpg" alt="Typography Main">
     </div>
     <div class="project-item">
-      <img src="images/typography1.jpg" alt="Typography Detail 1">
+      <img src="images/type-01.jpg" alt="Typography Detail">
     </div>
     <div class="project-item">
-      <img src="images/typography2.jpg" alt="Typography Detail 2">
-    </div>
-    <div class="project-item">
-      <img src="images/typography3.jpg" alt="Typography Detail 3">
-    </div>
-    <div class="project-item">
-      <img src="images/typography4.jpg" alt="Typography Detail 4">
+      <img src="images/type-02.jpg" alt="Typography Detail">
     </div>
   </section>
 
   <section class="project-text">
     <div class="text-inner">
-      <h3>Typography & Visual Identity</h3>
-      <p>Description of typography and visual identity work goes here. Explain font choices, hierarchy, and design consistency. This section also reflects the final product as part of the campaign rollout.</p>
+      <span class="project-label">typography & visual identity</span>
+      <p class="project-primary">
+        A refined typographic system built to balance clarity and distinction across campaign assets.
+      </p>
+      <p class="project-secondary">
+        Hierarchy, spacing, and scale were carefully developed to ensure consistency across landing pages, digital ads, and promotional materials.
+      </p>
     </div>
   </section>
 
-  <!-- Outcome Text -->
+
+  <!-- ==============================
+       OUTCOME (TEXT ONLY)
+  ============================== -->
   <section class="project-text">
     <div class="text-inner">
-      <h3>Outcome</h3>
-      <p>This campaign launched a new product with measurable success, generating client engagement and positive feedback. The design choices reinforced the brand message and supported the marketing objectives effectively.</p>
+      <span class="project-label">outcome</span>
+      <p class="project-primary">
+        The campaign successfully launched the product into market with strong visual cohesion and immediate brand recognition.
+      </p>
+      <p class="project-secondary">
+        Through strategic visual direction and consistent execution, the project delivered a unified digital presence that supported awareness, engagement, and product positioning from day one.
+      </p>
     </div>
   </section>
+
 
 </body>
 </html>
