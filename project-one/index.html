@@ -202,5 +202,62 @@
   </div>
 </section>
 
+  <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const carrot = document.getElementById("scroll-carrot");
+
+    const sections = [
+        document.getElementById("header"),
+        document.getElementById("portfolio"),
+        document.getElementById("services"),
+        document.getElementById("footer")
+    ];
+
+    let currentIndex = 0;
+
+    function isCompletelyOffScreen(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.bottom <= 0;
+    }
+
+    function updateCurrentSection() {
+        if (!isCompletelyOffScreen(sections[0])) {
+            carrot.classList.remove("visible");
+            currentIndex = 0;
+            return;
+        }
+
+        carrot.classList.add("visible");
+
+        for (let i = sections.length - 1; i > 0; i--) {
+            if (isCompletelyOffScreen(sections[i - 1])) {
+                currentIndex = i;
+                break;
+            }
+        }
+    }
+
+    carrot.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            sections[currentIndex - 1].scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    });
+
+    window.addEventListener("scroll", updateCurrentSection);
+    window.addEventListener("resize", updateCurrentSection);
+
+    updateCurrentSection();
+});
+</script>
+
 </body>
 </html>
