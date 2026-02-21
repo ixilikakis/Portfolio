@@ -3602,3 +3602,9 @@ nav.main-nav .nav-links a:hover {
     padding: 4rem 1.5rem;
   }
 }
+
+/* === FORCE NAVIGATION FONT === */
+nav.main-nav,
+nav.main-nav a {
+    font-family: 'Open Sans', sans-serif !important;
+}
