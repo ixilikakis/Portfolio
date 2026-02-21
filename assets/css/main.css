@@ -3637,26 +3637,26 @@ nav.main-nav .nav-links a:hover {
 
 /* Logo */
 nav.main-nav .logo a {
-    font-weight: 300; /* light */
+    font-weight: 600; /* light */
 }
 
 /* Navigation links */
 nav.main-nav .nav-links a {
-    font-weight: 300; /* light */
+    font-weight: 700; /* light */
 }
 
 /* Mobile nav adjustments (override any previous weights) */
 @media (max-width: 768px) {
     nav.main-nav .logo a {
-        font-weight: 300;
+        font-weight: 600;
     }
 
     nav.main-nav .nav-links li {
-        font-weight: 300;
+        font-weight: 700;
     }
 
     nav.main-nav .nav-links a {
-        font-weight: 300;
+        font-weight: 700;
     }
 }
 
