@@ -3517,13 +3517,14 @@ nav.main-nav .nav-links a:hover {
   letter-spacing: 2px;
 }
 
+/* ===== PROJECT GRID ===== */
 #project-page .project-grid {
   max-width: 1200px;
   margin: 4rem auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 20px;
-  align-items: start;
+  gap: 20px;
+  align-items: stretch;  /* forces items to equal height */
   padding: 0 1rem;
 }
 
@@ -3531,12 +3532,12 @@ nav.main-nav .nav-links a:hover {
   position: relative;
   overflow: hidden;
   border-radius: 6px;
-  height: 400px;
+  min-height: 400px;  /* keeps height proportional */
 }
 
 #project-page .project-item.full {
   grid-column: 1 / -1;
-  height: 600px;
+  min-height: 600px;
 }
 
 #project-page .project-item img {
@@ -3552,6 +3553,7 @@ nav.main-nav .nav-links a:hover {
   transform: scale(1.02);
 }
 
+/* ===== PROJECT TEXT ===== */
 #project-page .project-text {
   padding: 6rem 2rem;
   background-color: #1F1F1F;
@@ -3584,14 +3586,15 @@ nav.main-nav .nav-links a:hover {
   color: #B8B8B8;
 }
 
+/* ===== MOBILE ===== */
 @media (max-width: 900px) {
   #project-page .project-grid {
     grid-template-columns: 1fr;
-    grid-gap: 20px;
+    gap: 20px;
   }
 
   #project-page .project-item.full {
-    height: 400px;
+    min-height: 400px;
   }
 
   #project-page .hero-text {
