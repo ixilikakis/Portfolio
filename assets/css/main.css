@@ -3626,9 +3626,9 @@ nav.main-nav .nav-links a:hover {
    ============================== */
 
 #project-page {
-  background-color: #F2F3F1;
+  background-color: #1F1F1F;   /* was #F2F3F1 */
   font-family: 'Open Sans', sans-serif;
-  color: #1F1F1F;
+  color: #F2F3F1;              /* was #1F1F1F */
 }
 
 
@@ -3640,7 +3640,7 @@ nav.main-nav .nav-links a:hover {
   position: relative;
   height: 75vh;
   overflow: hidden;
-  background-color: #eaeaea;
+  background-color: #1F1F1F;   /* was #eaeaea */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3656,7 +3656,7 @@ nav.main-nav .nav-links a:hover {
 #project-page .hero-text {
   position: absolute;
   z-index: 2;
-  color: #1F1F1F;
+  color: #F2F3F1;              /* was #1F1F1F */
   text-align: center;
   font-size: 3rem;
   font-weight: 300;
@@ -3705,12 +3705,12 @@ nav.main-nav .nav-links a:hover {
 
 
 /* ==============================
-   TEXT SECTIONS (About-style formatting)
+   TEXT SECTIONS (Dark Version)
    ============================== */
 
 #project-page .project-text {
   padding: 6rem 2rem;
-  background-color: #ffffff;
+  background-color: #1F1F1F;   /* was #ffffff */
 }
 
 #project-page .project-text .text-inner {
@@ -3724,7 +3724,7 @@ nav.main-nav .nav-links a:hover {
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: lowercase;
-  color: #6f6f6f;
+  color: #B8B8B8;              /* softened secondary */
   margin-bottom: 2rem;
 }
 
@@ -3732,7 +3732,7 @@ nav.main-nav .nav-links a:hover {
 #project-page .project-primary {
   font-size: 1.6rem;
   line-height: 1.5;
-  color: #1f1f1f;
+  color: #F2F3F1;              /* inverted */
   margin-bottom: 1.75rem;
 }
 
@@ -3740,7 +3740,7 @@ nav.main-nav .nav-links a:hover {
 #project-page .project-secondary {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #4a4a4a;
+  color: #B8B8B8;              /* softened secondary */
 }
 
 
