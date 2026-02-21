@@ -2755,7 +2755,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #F2F3F1;
@@ -3626,16 +3625,31 @@ nav.main-nav .nav-links a:hover {
    ============================== */
 
 #project-page {
-  background-color: #1F1F1F;   /* was #F2F3F1 */
-  font-family: 'Open Sans', sans-serif;
-  color: #F2F3F1;              /* was #1F1F1F */
+    font-family: 'Open Sans', sans-serif;
+    color: #F2F3F1;
+    background-color: #1F1F1F;
 }
 
-/* Headings */
-h1, h2, h3, h4 {
+#project-page h1, #project-page h2, #project-page h3, #project-page h4, #project-page h5, #project-page h6 {
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     letter-spacing: 1.5px;
-    color: #1F1F1F;
+    color: #F2F3F1;
+}
+
+/* Hero text */
+#project-page .hero-text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Project text sections */
+#project-page .project-text,
+#project-page .project-text .text-inner,
+#project-page .project-label,
+#project-page .project-primary,
+#project-page .project-secondary {
+    font-family: 'Open Sans', sans-serif;
+}
 }
 
 /* ==========================
