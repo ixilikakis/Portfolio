@@ -205,8 +205,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const carrot = document.getElementById("scroll-carrot");
 
-    // IDs of your sections in the order they appear
+    // Order of sections from top to bottom
     const sections = [
+        document.getElementById("header"),
         document.getElementById("product-photography"),
         document.getElementById("lifestyle-photography"),
         document.getElementById("typography"),
@@ -221,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function updateCurrentSection() {
-        // Hide carrot if we are at the top of the page
+        // If top header is still visible, hide carrot
         if (!isCompletelyOffScreen(sections[0])) {
             carrot.classList.remove("visible");
             currentIndex = 0;
@@ -230,15 +231,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         carrot.classList.add("visible");
 
-        // Determine current section based on which sections have scrolled completely offscreen
-        for (let i = sections.length - 1; i >= 0; i--) {
-            if (isCompletelyOffScreen(sections[i])) {
-                currentIndex = i + 1;
+        // Determine current section based on which previous sections have fully disappeared
+        for (let i = sections.length - 1; i > 0; i--) {
+            if (isCompletelyOffScreen(sections[i - 1])) {
+                currentIndex = i;
                 break;
             }
         }
-        // Prevent going beyond last section
-        if (currentIndex >= sections.length) currentIndex = sections.length - 1;
     }
 
     carrot.addEventListener("click", () => {
@@ -252,6 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", updateCurrentSection);
     window.addEventListener("resize", updateCurrentSection);
 
+    // Initial check in case page is already scrolled
     updateCurrentSection();
 });
 </script>
