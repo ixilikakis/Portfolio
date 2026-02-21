@@ -2762,12 +2762,11 @@ body {
 }
 
 /* Headings */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     letter-spacing: 1.5px;
     color: #1F1F1F;
 }
-
 
 /* ==========================
    HEADER / NAVIGATION
@@ -2802,7 +2801,7 @@ nav.main-nav .logo {
 
 nav.main-nav .logo a {
     font-size: 1.7rem;
-    font-weight: 700; /* BOLD name */
+    font-weight: 700; 
     letter-spacing: 1px;
     line-height: 1;
     color: #1F1F1F;
@@ -2829,6 +2828,9 @@ nav.main-nav .nav-links a:hover {
     color: #4F5D4A;
 }
 
+/* ==========================
+   BANNER
+   ========================== */
 
 #banner {
     position: relative;
@@ -2839,63 +2841,56 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ==========================
-   MOBILE NAV - POLISHED VERSION (NO SEPARATORS)
+   MOBILE NAV
    ========================== */
+
 @media (max-width: 768px) {
 
-    /* Stack logo on top, links below, left-aligned */
     nav.main-nav {
         flex-direction: column !important;
         align-items: flex-start !important;
         padding: 1rem 2rem; 
     }
 
-    /* Override header centering from template */
     #header {
         text-align: left !important;
     }
 
-    /* Logo spacing */
     nav.main-nav .logo {
-        margin-bottom: 0.85rem; /* spacing between logo and links */
+        margin-bottom: 0.85rem;
     }
 
-    /* Links row */
     nav.main-nav .nav-links {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap;
-        gap: 1.25rem !important;        /* more spacing between links */
+        gap: 1.25rem !important;
         padding: 0;
         margin: 0;
         list-style: none;
         justify-content: flex-start !important;
     }
 
-    /* Each link */
     nav.main-nav .nav-links li {
         display: inline-flex;
         align-items: center;
-        font-size: 3.05rem;              /* slightly larger */
-        font-weight: 200;                /* lighter weight */
-        letter-spacing: 1.5px;           /* more spacing between letters */
+        font-size: 3.05rem;
+        font-weight: 200;
+        letter-spacing: 1.5px;
         line-height: 1.2;
     }
 
-    /* Link style */
     nav.main-nav .nav-links a {
-        color: #6B6B6B;                  /* brand color */
+        color: #6B6B6B;
         text-decoration: none;
         transition: opacity 0.15s ease, transform 0.1s ease;
     }
 
-    /* Tap / active feedback */
     nav.main-nav .nav-links a:active {
         opacity: 0.65;
         transform: translateY(1px);
     }
 
-    /* Responsive tweak for very narrow screens */
     @media (max-width: 360px) {
         nav.main-nav .nav-links {
             gap: 1rem;
@@ -2903,24 +2898,21 @@ nav.main-nav .nav-links a:hover {
     }
 }
 
-
-
-
 /* ==========================
-   MOBILE SCROLL CARROT
+   SCROLL CARROT
    ========================== */
 
 #scroll-carrot {
     position: fixed;
     bottom: 1.25rem;
     left: 1.25rem;
-    width: 44px;                     /* true circle */
-    height: 44px;                    /* true circle */
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.7);
-    background: rgba(0, 0, 0, 0.35);  /* muted but readable */
+    background: rgba(0, 0, 0, 0.35);
     color: #fff;
-    font-size: 0;                     /* removes old caret space */
+    font-size: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2937,167 +2929,127 @@ nav.main-nav .nav-links a:hover {
 }
 
 #scroll-carrot svg {
-    display: block;       /* ensures proper alignment in flex */
-    width: 16px;          /* arrow size */
+    display: block;
+    width: 16px;
     height: 16px;
 }
 
-/* Hover / touch feedback */
 #scroll-carrot:hover,
 #scroll-carrot:active {
-    background: rgba(0, 0, 0, 0.5); /* slightly darker on press */
-    transform: scale(1.05);          /* subtle scaling */
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
 }
 
-/* Disable entirely on desktop */
 @media (min-width: 769px) {
     #scroll-carrot {
         display: none;
     }
 }
 
-
-
-
 /* ==========================
    HERO / VIDEO BANNER
    ========================== */
 
-/* Video background */
 .hero-video {
     position: absolute;
-    inset: 0;              /* shorthand for top:0; right:0; bottom:0; left:0 */
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: 1;
 }
 
-/* Text overlay */
 .hero-text {
     position: absolute;
-    inset: 0;               /* full overlay */
+    inset: 0;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* vertical centering */
-    align-items: center;      /* horizontal centering */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 0 1rem;
 }
 
-/* Heading that fades */
 .fade-text-container {
     transition: opacity 1s ease-in-out;
-    text-transform: lowercase; /* all text lowercase */
+    text-transform: lowercase;
     opacity: 1;
-    font-size: 3rem;           /* adjust size */
+    font-size: 3rem;
     font-weight: 300;
     letter-spacing: 2px;
-    margin-bottom: 2rem;       /* space below heading for CTA */
+    margin-bottom: 2rem;
 }
-
 
 .cta-button:hover {
     background-color: #3E4A3B;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-
-    nav.main-nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav.main-nav .nav-links {
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 0.75rem;
-    }
-
     .fade-text-container {
-        font-size: 2.2rem;        /* existing size */
-        margin-bottom: 1.5rem;    /* existing spacing below container */
-        line-height: 1.7;          /* added to space out stacked lines */
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
     }
-
 }
+
+/* ==========================
+   PORTFOLIO / TEXT SECTIONS
+   ========================== */
+
+/* Portfolio Text Section */
 .portfolio-text-section {
-  padding-top: 80px;    /* space from the hero video */
-  padding-bottom: 60px; /* space before the grid */
-  max-width: 1200px;    /* keeps it aligned with About section */
-  margin: 0 auto;       /* center it horizontally */
+  padding-top: 80px;
+  padding-bottom: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.portfolio-text-section .about-label {
-  display: block;
-  margin-bottom: 20px;
-}
-
+.portfolio-text-section .about-label,
 .portfolio-text-section .about-primary,
 .portfolio-text-section .about-secondary {
   margin-bottom: 20px;
 }
 
-
-}
-/* ==========================
-   PORTFOLIO SECTION
-   ========================== */
+/* Portfolio Grid */
 #portfolio {
   padding: 4rem 2rem;
-  max-width: 1200px;   /* limits content width */
-  margin: 0 auto;      /* centers the section */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Section title */
 .section-title {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
-  margin-top: 4rem;     /* breathing room above */
-  margin-bottom: 1.5rem; /* space below before intro */
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
   color: #1F1F1F;
 }
-/* Portfolio Intro / Text Section */
+
 #portfolio-intro {
-    background-color: #FFFFFF; /* full-width white background */
-    width: 100%;               /* ensures it spans entire page */
-    padding-top: 4rem;         /* spacing above text */
-    padding-bottom: 4rem;      /* spacing below text */
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 4rem 0;
 }
 
 #portfolio-intro .about-inner {
-    max-width: 800px;           /* keeps text block constrained */
-    margin: 0 auto;             /* centers text */
-    padding-left: 2rem;         /* horizontal padding for smaller screens */
-    padding-right: 2rem;
-    line-height: 1.4;           /* matches About section text spacing */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    line-height: 1.4;
 }
 
-/* ===============================
-   FEATURED WORK SECTION
-================================= */
-
+/* Featured Work */
 #featured-work {
   padding: 100px 8%;
   background-color: #F2F3F1;
 }
 
-/* Section Title */
 .featured-header {
   margin-bottom: 60px;
 }
 
-.section-title {
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: #1F1F1F;
-}
-
-/* Project Wrapper */
 .featured-project {
   display: flex;
   align-items: flex-start;
@@ -3105,12 +3057,10 @@ nav.main-nav .nav-links a:hover {
   margin-bottom: 120px;
 }
 
-/* Reverse layout for second project */
 .featured-project.reverse {
   flex-direction: row-reverse;
 }
 
-/* Text Column */
 .project-info {
   flex: 1;
 }
@@ -3154,7 +3104,6 @@ nav.main-nav .nav-links a:hover {
   font-size: 0.95rem;
 }
 
-/* Image Column */
 .project-images {
   flex: 1.2;
 }
@@ -3166,7 +3115,6 @@ nav.main-nav .nav-links a:hover {
   object-fit: cover;
 }
 
-/* Two smaller images below hero */
 .image-row {
   display: flex;
   gap: 20px;
@@ -3177,12 +3125,7 @@ nav.main-nav .nav-links a:hover {
   width: 50%;
 }
 
-/* ===============================
-   RESPONSIVE
-================================= */
-
 @media (max-width: 900px) {
-
   .featured-project,
   .featured-project.reverse {
     flex-direction: column;
@@ -3201,15 +3144,11 @@ nav.main-nav .nav-links a:hover {
   }
 }
 
-
-
-
-/* Optional intro text above the grid */
 .section-intro {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 2.5rem; /* space between intro and grid */
+  margin-bottom: 2.5rem;
   color: #1F1F1F;
   max-width: 800px;
   margin-left: auto;
@@ -3217,23 +3156,21 @@ nav.main-nav .nav-links a:hover {
   line-height: 1.4;
 }
 
-/* Grid container */
+/* Portfolio Grid */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 0; /* remove spacing between items */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
   width: 100%;
 }
 
-/* Each portfolio item */
 .portfolio-item {
-  position: relative;   /* for overlay */
+  position: relative;
   overflow: hidden;
-  height: 1000px;       /* fixed tall height */
+  height: 1000px;
   border-radius: 6px;
 }
 
-/* Images */
 .portfolio-item img {
   width: 100%;
   height: 100%;
@@ -3243,46 +3180,39 @@ nav.main-nav .nav-links a:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Image hover effect */
 .portfolio-item img:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Overlay */
 .portfolio-overlay {
   position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
-  background-color: rgba(79,93,74,0.7); /* olive green */
+  inset: 0;
+  background-color: rgba(79,93,74,0.7);
   opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: opacity 0.3s ease;
-  pointer-events: none; /* allows clicking the image */
+  pointer-events: none;
 }
 
-/* Show overlay on hover */
 .portfolio-item:hover .portfolio-overlay {
   opacity: 1;
 }
 
-/* Overlay text */
 .portfolio-title {
-  color: #F2F3F1; /* light neutral */
+  color: #F2F3F1;
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
   padding: 0 1rem;
-  pointer-events: none; /* ensures clicks still open lightbox */
+  pointer-events: none;
 }
 
-/* ==========================
-   RESPONSIVE
-   ========================== */
 @media (max-width: 768px) {
   .portfolio-grid {
-    grid-template-columns: 1fr; /* single column on mobile */
+    grid-template-columns: 1fr;
   }
 
   .section-title {
@@ -3294,25 +3224,28 @@ nav.main-nav .nav-links a:hover {
   }
 
   .portfolio-item {
-    height: 600px; /* reduce height on smaller screens */
+    height: 600px;
   }
 
   .portfolio-title {
     font-size: 1.25rem;
   }
 }
+
 /* ==========================
-   ABOUT / POSITIONING
+   ABOUT / ME
    ========================== */
 
-#about {
+#about, #me {
   padding: 6rem 2rem;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .about-inner {
-  max-width: 720px;
+  max-width: 800px;
   margin: 0 auto;
+  padding: 0 2rem;
+  line-height: 1.4;
 }
 
 .about-label {
@@ -3337,9 +3270,9 @@ nav.main-nav .nav-links a:hover {
   color: #4a4a4a;
 }
 
-/* ===============================
+/* ==========================
    SERVICES / ACCORDION
-================================= */
+   ========================== */
 
 #services {
   padding: 80px 8%;
@@ -3352,7 +3285,6 @@ nav.main-nav .nav-links a:hover {
   flex-wrap: wrap;
 }
 
-/* Left column: text */
 .services-text {
   flex: 1;
   min-width: 280px;
@@ -3373,13 +3305,11 @@ nav.main-nav .nav-links a:hover {
   color: #1F1F1F;
 }
 
-/* Right column: accordion */
 .services-accordion {
   flex: 1.2;
   min-width: 280px;
 }
 
-/* Accordion item */
 .accordion-item {
   border-bottom: 1px solid rgba(31,31,31,0.1);
 }
@@ -3398,17 +3328,14 @@ nav.main-nav .nav-links a:hover {
   cursor: pointer;
 }
 
-/* Force default accordion button color */
 #services .accordion-btn {
   color: #4F5D4A !important;
 }
 
-/* Open state */
 #services .accordion-item.active .accordion-btn {
   background-color: #4F5D4A;
   color: #F2F3F1 !important;
 }
-
 
 .accordion-icon {
   display: inline-block;
@@ -3437,14 +3364,20 @@ nav.main-nav .nav-links a:hover {
   line-height: 1.5;
 }
 
-/* Rotate + icon when open */
 .accordion-item.active .accordion-icon {
   transform: rotate(45deg);
 }
 
-/* ===============================
-   RESPONSIVE
-================================= */
+#services .accordion-btn:hover,
+#services .accordion-item.active .accordion-btn {
+  border-radius: 0 !important;
+}
+
+#services .accordion-btn:hover .accordion-icon,
+#services .accordion-item.active .accordion-icon {
+  border-radius: 0 !important;
+}
+
 @media (max-width: 900px) {
   .services-container {
     flex-direction: column;
@@ -3455,87 +3388,12 @@ nav.main-nav .nav-links a:hover {
   }
 }
 
-/* Override Dopetrope hover for accordion buttons */
-#services .accordion-btn:hover {
-  background-color: #4F5D4A;
-  color: #F2F3F1 !important;
-  border-color: #4F5D4A;
-}
-
-/* Optional: change the + / - icon color on hover */
-.accordion-btn:hover .accordion-icon {
-  background-color: #F2F3F1;  /* invert for contrast */
-  color: #4F5D4A;
-  border-color: #4F5D4A;
-}
-/* Accordion panel text alignment */
-.accordion-panel {
-  text-align: left; /* left justify all text */
-}
-
-/* Lists inside the panel */
-.accordion-panel ul {
-  padding-left: 1.5rem; /* ensure bullets and text stay aligned */
-  margin: 0.5rem 0;
-}
-
-
-/* Force accordion dropdown text left inside Services */
-#services ul,
-#services li {
-  text-align: left;
-}
-
-/* Force hard corners only on hover + active */
-#services .accordion-btn:hover,
-#services .accordion-item.active .accordion-btn {
-  border-radius: 0 !important;
-}
-
-/* Also remove rounding from the icon when active or hover */
-#services .accordion-btn:hover .accordion-icon,
-#services .accordion-item.active .accordion-icon {
-  border-radius: 0 !important;
-}
-
-
-
-
-/* ==========================
-   OLD SERVICES CARDS HIDDEN
-   ========================== */
 #old-services {
   display: none;
 }
 
 /* ==========================
-   Me Section (full-width, matches About section)
-   ========================== */
-#me {
-    background-color: #FFFFFF;  /* full-width white background */
-    width: 100%;
-    padding-top: 4rem;          /* same spacing as About section */
-    padding-bottom: 4rem;
-}
-
-#me .about-inner {
-    max-width: 800px;           /* constrained like About */
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    line-height: 1.4;
-}
-
-#me .about-label,
-#me .about-primary,
-#me .about-secondary {
-    font-family: 'Open Sans', sans-serif;
-    color: #1F1F1F;             /* matches About section text */
-}
-
-
-/* ==========================
-   Footer / Contact Section
+   FOOTER
    ========================== */
 
 #footer {
@@ -3545,24 +3403,17 @@ nav.main-nav .nav-links a:hover {
   position: relative;
 }
 
-/* Match About section column */
 #footer .about-inner {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* Contact label */
-#footer .about-label {
-  color: #FFFFFF;
-}
-
-/* Main footer text */
+#footer .about-label,
 #footer .about-primary {
   color: #FFFFFF;
 }
 
-/* Email link */
 #footer a {
   color: #F2F3F1;
   text-decoration: underline;
@@ -3572,14 +3423,12 @@ nav.main-nav .nav-links a:hover {
   opacity: 0.85;
 }
 
-/* Copyright block aligned to same column */
 #footer #copyright {
   max-width: 900px;
   margin: 2em auto 0 auto;
   padding: 0 2rem;
 }
 
-/* Remove template list styling */
 #footer #copyright ul.links {
   list-style: none;
   margin: 0;
@@ -3593,8 +3442,10 @@ nav.main-nav .nav-links a:hover {
   margin: 0;
 }
 
+/* ==========================
+   FEATURED PROJECT CTA
+   ========================== */
 
-/* Featured Project CTA — Sharp Minimal Rectangle */
 .featured-project .cta-button {
   display: inline-block;
   margin-top: 1.75rem;
@@ -3604,7 +3455,7 @@ nav.main-nav .nav-links a:hover {
   color: #4F5D4A;
   text-decoration: none;
   font-weight: 600;
-  letter-spacing: 0.04em;   /* slight refinement */
+  letter-spacing: 0.04em;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
@@ -3613,16 +3464,17 @@ nav.main-nav .nav-links a:hover {
   color: #F2F3F1;
 }
 
-/* ===============================
+/* ==========================
    HIDE LAST TWO PORTFOLIO ITEMS
-================================= */
+   ========================== */
+
 .portfolio-grid .portfolio-item:nth-last-child(-n+2) {
     display: none;
 }
 
-/* ==============================
-   PROJECT PAGE STYLES
-   ============================== */
+/* ==========================
+   PROJECT PAGE
+   ========================== */
 
 #project-page {
     font-family: 'Open Sans', sans-serif;
@@ -3630,173 +3482,19 @@ nav.main-nav .nav-links a:hover {
     background-color: #1F1F1F;
 }
 
-#project-page h1, #project-page h2, #project-page h3, #project-page h4, #project-page h5, #project-page h6 {
+#project-page h1, #project-page h2, #project-page h3, #project-page h4,
+#project-page h5, #project-page h6 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     letter-spacing: 1.5px;
     color: #F2F3F1;
 }
 
-/* Hero text */
-#project-page .hero-text {
-    font-family: 'Open Sans', sans-serif;
-}
-
-/* Project text sections */
-#project-page .project-text,
-#project-page .project-text .text-inner,
-#project-page .project-label,
-#project-page .project-primary,
-#project-page .project-secondary {
-    font-family: 'Open Sans', sans-serif;
-}
-}
-
-/* ==========================
-   HEADER / NAVIGATION
-   ========================== */
-
-/* Kill all leftover Dopetrope spacing */
-#header {
-    margin: 0;
-    padding: 0;
-}
-
-#header::before,
-#header::after {
-    display: none;
-    content: none;
-}
-
-nav.main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #F2F3F1;
-    position: relative;
-    z-index: 10;
-}
-
-/* Logo */
-nav.main-nav .logo {
-    margin: 0;
-}
-
-nav.main-nav .logo a {
-    font-size: 1.7rem;
-    font-weight: 700; /* BOLD name */
-    letter-spacing: 1px;
-    line-height: 1;
-    color: #1F1F1F;
-    text-decoration: none;
-}
-
-/* Navigation links */
-nav.main-nav .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-nav.main-nav .nav-links a {
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1;
-    color: #1F1F1F;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav.main-nav .nav-links a:hover {
-    color: #4F5D4A;
-}
-
-
-#banner {
-    position: relative;
-    height: 75vh;
-    overflow: hidden;
-    margin: 0;
-    background-color: #F2F3F1;
-}
-
-/* ==========================
-   MOBILE NAV - POLISHED VERSION (NO SEPARATORS)
-   ========================== */
-@media (max-width: 768px) {
-
-    /* Stack logo on top, links below, left-aligned */
-    nav.main-nav {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        padding: 1rem 2rem; 
-    }
-
-    /* Override header centering from template */
-    #header {
-        text-align: left !important;
-    }
-
-    /* Logo spacing */
-    nav.main-nav .logo {
-        margin-bottom: 0.85rem; /* spacing between logo and links */
-    }
-
-    /* Links row */
-    nav.main-nav .nav-links {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap;
-        gap: 1.25rem !important;        /* more spacing between links */
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        justify-content: flex-start !important;
-    }
-
-    /* Each link */
-    nav.main-nav .nav-links li {
-        display: inline-flex;
-        align-items: center;
-        font-size: 3.05rem;              /* slightly larger */
-        font-weight: 200;                /* lighter weight */
-        letter-spacing: 1.5px;           /* more spacing between letters */
-        line-height: 1.2;
-    }
-
-    /* Link style */
-    nav.main-nav .nav-links a {
-        color: #6B6B6B;                  /* brand color */
-        text-decoration: none;
-        transition: opacity 0.15s ease, transform 0.1s ease;
-    }
-
-    /* Tap / active feedback */
-    nav.main-nav .nav-links a:active {
-        opacity: 0.65;
-        transform: translateY(1px);
-    }
-
-    /* Responsive tweak for very narrow screens */
-    @media (max-width: 360px) {
-        nav.main-nav .nav-links {
-            gap: 1rem;
-        }
-    }
-}
-
-
-
-/* ==============================
-   HERO
-   ============================== */
-
 #project-page .hero {
   position: relative;
   height: 75vh;
   overflow: hidden;
-  background-color: #1F1F1F;   /* was #eaeaea */
+  background-color: #1F1F1F;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3812,17 +3510,12 @@ nav.main-nav .nav-links a:hover {
 #project-page .hero-text {
   position: absolute;
   z-index: 2;
-  color: #F2F3F1;              /* was #1F1F1F */
+  color: #F2F3F1;
   text-align: center;
   font-size: 3rem;
   font-weight: 300;
   letter-spacing: 2px;
 }
-
-
-/* ==============================
-   PROJECT GRID
-   ============================== */
 
 #project-page .project-grid {
   max-width: 1200px;
@@ -3859,14 +3552,9 @@ nav.main-nav .nav-links a:hover {
   transform: scale(1.02);
 }
 
-
-/* ==============================
-   TEXT SECTIONS (Dark Version)
-   ============================== */
-
 #project-page .project-text {
   padding: 6rem 2rem;
-  background-color: #1F1F1F;   /* was #ffffff */
+  background-color: #1F1F1F;
 }
 
 #project-page .project-text .text-inner {
@@ -3874,38 +3562,29 @@ nav.main-nav .nav-links a:hover {
   margin: 0 auto;
 }
 
-/* Section label */
 #project-page .project-label {
   display: block;
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: lowercase;
-  color: #B8B8B8;              /* softened secondary */
+  color: #B8B8B8;
   margin-bottom: 2rem;
 }
 
-/* Primary statement */
 #project-page .project-primary {
   font-size: 1.6rem;
   line-height: 1.5;
-  color: #F2F3F1;              /* inverted */
+  color: #F2F3F1;
   margin-bottom: 1.75rem;
 }
 
-/* Supporting paragraph */
 #project-page .project-secondary {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #B8B8B8;              /* softened secondary */
+  color: #B8B8B8;
 }
 
-
-/* ==============================
-   RESPONSIVE
-   ============================== */
-
 @media (max-width: 900px) {
-
   #project-page .project-grid {
     grid-template-columns: 1fr;
     grid-gap: 20px;
@@ -3922,5 +3601,4 @@ nav.main-nav .nav-links a:hover {
   #project-page .project-text {
     padding: 4rem 1.5rem;
   }
-
 }
