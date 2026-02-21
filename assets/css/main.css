@@ -3648,15 +3648,15 @@ nav.main-nav .nav-links a {
 /* Mobile nav adjustments (override any previous weights) */
 @media (max-width: 768px) {
     nav.main-nav .logo a {
-        font-weight: 300;
+        font-weight: 600;
     }
 
     nav.main-nav .nav-links li {
-        font-weight: 300;
+        font-weight: 600;
     }
 
     nav.main-nav .nav-links a {
-        font-weight: 300;
+        font-weight: 600;
     }
 }
 
