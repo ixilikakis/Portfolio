@@ -3632,33 +3632,140 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ==========================
-   NAVIGATION FONT WEIGHT FIX
+   HEADER / NAVIGATION
    ========================== */
 
+/* Kill all leftover Dopetrope spacing */
+#header {
+    margin: 0;
+    padding: 0;
+}
+
+#header::before,
+#header::after {
+    display: none;
+    content: none;
+}
+
+nav.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #F2F3F1;
+    position: relative;
+    z-index: 10;
+}
+
 /* Logo */
+nav.main-nav .logo {
+    margin: 0;
+}
+
 nav.main-nav .logo a {
-    font-weight: 600; /* light */
+    font-size: 1.7rem;
+    font-weight: 700; /* BOLD name */
+    letter-spacing: 1px;
+    line-height: 1;
+    color: #1F1F1F;
+    text-decoration: none;
 }
 
 /* Navigation links */
+nav.main-nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
 nav.main-nav .nav-links a {
-    font-weight: 700; /* light */
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #1F1F1F;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Mobile nav adjustments (override any previous weights) */
+nav.main-nav .nav-links a:hover {
+    color: #4F5D4A;
+}
+
+
+#banner {
+    position: relative;
+    height: 75vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #F2F3F1;
+}
+
+/* ==========================
+   MOBILE NAV - POLISHED VERSION (NO SEPARATORS)
+   ========================== */
 @media (max-width: 768px) {
-    nav.main-nav .logo a {
-        font-weight: 600;
+
+    /* Stack logo on top, links below, left-aligned */
+    nav.main-nav {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 1rem 2rem; 
     }
 
+    /* Override header centering from template */
+    #header {
+        text-align: left !important;
+    }
+
+    /* Logo spacing */
+    nav.main-nav .logo {
+        margin-bottom: 0.85rem; /* spacing between logo and links */
+    }
+
+    /* Links row */
+    nav.main-nav .nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 1.25rem !important;        /* more spacing between links */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        justify-content: flex-start !important;
+    }
+
+    /* Each link */
     nav.main-nav .nav-links li {
-        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        font-size: 3.05rem;              /* slightly larger */
+        font-weight: 200;                /* lighter weight */
+        letter-spacing: 1.5px;           /* more spacing between letters */
+        line-height: 1.2;
     }
 
+    /* Link style */
     nav.main-nav .nav-links a {
-        font-weight: 700;
+        color: #6B6B6B;                  /* brand color */
+        text-decoration: none;
+        transition: opacity 0.15s ease, transform 0.1s ease;
+    }
+
+    /* Tap / active feedback */
+    nav.main-nav .nav-links a:active {
+        opacity: 0.65;
+        transform: translateY(1px);
+    }
+
+    /* Responsive tweak for very narrow screens */
+    @media (max-width: 360px) {
+        nav.main-nav .nav-links {
+            gap: 1rem;
+        }
     }
 }
+
+
 
 /* ==============================
    HERO
