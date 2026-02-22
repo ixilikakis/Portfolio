@@ -3867,3 +3867,7 @@ nav.main-nav a {
     }
 }
 
+.project-item img {
+    border-radius: 0 !important;
+}
+
