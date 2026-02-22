@@ -3621,119 +3621,85 @@ nav.main-nav .nav-links a:hover {
     display: none;
 }
 
-/* ==========================
-   PROJECT PAGE
-   ========================== */
+/* ==============================
+   PROJECT PAGE STYLES
+   ============================== */
 
 #project-page {
-    font-family: 'Open Sans', sans-serif;
-    color: #F2F3F1;
-    background-color: #1F1F1F;
+  background-color: #F2F3F1;
+  background-color: #1F1F1F;   /* was #F2F3F1 */
+  font-family: 'Open Sans', sans-serif;
+  color: #1F1F1F;
+  color: #F2F3F1;              /* was #1F1F1F */
 }
 
-#project-page h1, #project-page h2, #project-page h3, #project-page h4,
-#project-page h5, #project-page h6 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    letter-spacing: 1.5px;
-    color: #F2F3F1;
-}
 
-#project-page .hero {
+@@ -3640,7 +3640,7 @@
   position: relative;
   height: 75vh;
   overflow: hidden;
-  background-color: #1F1F1F;
+  background-color: #eaeaea;
+  background-color: #1F1F1F;   /* was #eaeaea */
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#project-page .hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
+@@ -3656,7 +3656,7 @@
 #project-page .hero-text {
   position: absolute;
   z-index: 2;
-  color: #F2F3F1;
+  color: #1F1F1F;
+  color: #F2F3F1;              /* was #1F1F1F */
   text-align: center;
   font-size: 3rem;
   font-weight: 300;
-  letter-spacing: 2px;
-}
+@@ -3705,12 +3705,12 @@
 
-#project-page .project-grid {
-  max-width: 1200px;
-  margin: 4rem auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 20px;
-  align-items: start;
-  padding: 0 1rem;
-}
 
-#project-page .project-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-  height: 400px;
-}
-
-#project-page .project-item.full {
-  grid-column: 1 / -1;
-  height: 600px;
-}
-
-#project-page .project-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-#project-page .project-item img:hover {
-  transform: scale(1.02);
-}
+/* ==============================
+   TEXT SECTIONS (About-style formatting)
+   TEXT SECTIONS (Dark Version)
+   ============================== */
 
 #project-page .project-text {
   padding: 6rem 2rem;
-  background-color: #1F1F1F;
+  background-color: #ffffff;
+  background-color: #1F1F1F;   /* was #ffffff */
 }
 
 #project-page .project-text .text-inner {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-#project-page .project-label {
-  display: block;
+@@ -3724,47 +3724,47 @@
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: lowercase;
-  color: #B8B8B8;
+  color: #6f6f6f;
+  color: #B8B8B8;              /* softened secondary */
   margin-bottom: 2rem;
 }
 
+/* Primary statement */
 #project-page .project-primary {
   font-size: 1.6rem;
   line-height: 1.5;
-  color: #F2F3F1;
+  color: #1f1f1f;
+  color: #F2F3F1;              /* inverted */
   margin-bottom: 1.75rem;
 }
 
+/* Supporting paragraph */
 #project-page .project-secondary {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #B8B8B8;
+  color: #4a4a4a;
+  color: #B8B8B8;              /* softened secondary */
 }
 
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
 @media (max-width: 900px) {
+
   #project-page .project-grid {
     grid-template-columns: 1fr;
     grid-gap: 20px;
@@ -3750,70 +3716,5 @@ nav.main-nav .nav-links a:hover {
   #project-page .project-text {
     padding: 4rem 1.5rem;
   }
-}
 
-/* === FORCE NAVIGATION FONT === */
-nav.main-nav,
-nav.main-nav a {
-    font-family: 'Open Sans', sans-serif !important;
-}
-
-#project-page nav.main-nav {
-    height: 152px;           /* match main page */
-    padding: 16px 32px;      /* match main page */
-    background-color: #F2F3F1; /* same as main page */
-}
-
-#project-page nav.main-nav a {
-    color: #1F1F1F;          /* dark text for readability */
-    font-weight: 600;        /* optional, match main page links */
-    font-family: 'Open Sans', sans-serif;
-}
-
-/* ==========================
-   SCROLL CARROT
-   ========================== */
-
-#scroll-carrot {
-    position: fixed;
-    bottom: 1.25rem;
-    left: 1.25rem;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    background: rgba(0, 0, 0, 0.35);
-    color: #fff;
-    font-size: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.1s ease, background 0.1s ease;
-    z-index: 999;
-}
-
-#scroll-carrot.visible {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-#scroll-carrot svg {
-    display: block;
-    width: 16px;
-    height: 16px;
-}
-
-#scroll-carrot:hover,
-#scroll-carrot:active {
-    background: rgba(0, 0, 0, 0.5);
-    transform: scale(1.05);
-}
-
-@media (min-width: 769px) {
-    #scroll-carrot {
-        display: none;
-    }
 }
