@@ -3739,6 +3739,11 @@ nav.main-nav .nav-links a:hover {
   color: #B8B8B8;
 }
 
+/* Dark background for all project grids */
+.project-grid {
+    background-color: #333333;
+}
+
 @media (max-width: 900px) {
   #project-page .project-grid {
     grid-template-columns: 1fr;
