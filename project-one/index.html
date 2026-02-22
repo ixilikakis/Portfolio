@@ -197,9 +197,10 @@
 
 
 
- <script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
     const carrot = document.getElementById("scroll-carrot");
+    const footer = document.getElementById("footer");
 
     // Order of sections from top to bottom
     const sections = [
@@ -217,7 +218,13 @@ document.addEventListener("DOMContentLoaded", () => {
         return rect.bottom <= 0;
     }
 
+    function isPartiallyVisible(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+    }
+
     function updateCurrentSection() {
+
         // If top header is still visible, hide carrot
         if (!isCompletelyOffScreen(sections[0])) {
             carrot.classList.remove("visible");
@@ -226,6 +233,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         carrot.classList.add("visible");
+
+        // ✅ NEW: If footer is visible, lock to outcome
+        if (isPartiallyVisible(footer)) {
+            currentIndex = sections.length - 1; // outcome index
+            return;
+        }
 
         // Determine current section based on which previous sections have fully disappeared
         for (let i = sections.length - 1; i > 0; i--) {
@@ -247,7 +260,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", updateCurrentSection);
     window.addEventListener("resize", updateCurrentSection);
 
-    // Initial check in case page is already scrolled
     updateCurrentSection();
 });
 </script>
