@@ -3668,29 +3668,33 @@ nav.main-nav .nav-links a:hover {
   letter-spacing: 2px;
 }
 
+/* Project Grid */
 #project-page .project-grid {
   max-width: 1200px;
   margin: 4rem auto;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr;  /* first column twice as wide */
   grid-gap: 20px;
   align-items: start;
   padding: 0 1rem;
 }
 
-#project-page .project-item {
+/* Each grid item */
+#project-page .project-grid .project-item {
   position: relative;
   overflow: hidden;
   border-radius: 6px;
   height: 400px;
 }
 
-#project-page .project-item.full {
+/* Full-width first image */
+#project-page .project-grid .project-item.full {
   grid-column: 1 / -1;
   height: 600px;
 }
 
-#project-page .project-item img {
+/* Images */
+#project-page .project-grid .project-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -3699,7 +3703,7 @@ nav.main-nav .nav-links a:hover {
   cursor: pointer;
 }
 
-#project-page .project-item img:hover {
+#project-page .project-grid .project-item img:hover {
   transform: scale(1.02);
 }
 
