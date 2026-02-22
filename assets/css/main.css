@@ -3824,14 +3824,3 @@ nav.main-nav a {
     }
 }
 
-/* Remove extra space below the outcome text */
-#outcome + .project-text {
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-/* Remove top spacing from the footer */
-#footer {
-    margin-top: 0;
-    padding-top: 0;
-}
