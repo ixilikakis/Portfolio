@@ -3808,6 +3808,17 @@ nav.main-nav a {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Remove padding/margin inside the grid */
+.project-grid {
+    padding: 0;       /* no padding */
+    gap: 0;           /* remove spacing between grid items */
+}
+
+/* Remove rounded corners from images */
+.project-item img {
+    border-radius: 0; /* square edges */
+}
+
 /* ==========================
    SCROLL CARROT
    ========================== */
