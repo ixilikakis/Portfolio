@@ -204,12 +204,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Order of sections from top to bottom
     const sections = [
-        document.getElementById("header"),
-        document.getElementById("product-photography"),
-        document.getElementById("lifestyle-photography"),
-        document.getElementById("typography"),
-        document.getElementById("outcome")
-    ];
+    document.getElementById("header"),
+    document.getElementById("product-photography"),
+    document.getElementById("lifestyle-photography"),
+    document.getElementById("typography"),
+    document.getElementById("outcome"),
+    document.getElementById("footer")   // new addition
+];
 
     let currentIndex = 0;
 
@@ -250,12 +251,12 @@ if (isPartiallyVisible(footer)) {
     }
 
     carrot.addEventListener("click", () => {
-        if (currentIndex > 0) {
-            sections[currentIndex - 1].scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    });
+    if (sections[currentIndex] === footer) {
+        outcome.scrollIntoView({ behavior: "smooth" });
+    } else if (currentIndex > 0) {
+        sections[currentIndex - 1].scrollIntoView({ behavior: "smooth" });
+    }
+});
 
     window.addEventListener("scroll", updateCurrentSection);
     window.addEventListener("resize", updateCurrentSection);
