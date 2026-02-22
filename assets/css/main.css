@@ -3739,10 +3739,6 @@ nav.main-nav .nav-links a:hover {
   color: #B8B8B8;
 }
 
-/* Dark background for all project grids */
-.project-grid {
-    background-color: #333333;
-}
 
 @media (max-width: 900px) {
   #project-page .project-grid {
@@ -3762,6 +3758,37 @@ nav.main-nav .nav-links a:hover {
     padding: 4rem 1.5rem;
   }
 }
+
+/* ==============================
+   Dark Mode Colors for Project Page
+============================== */
+
+/* Page background & text */
+body#project-page {
+    background-color: #1F1F1F;  /* dark background */
+    color: #F2F3F1;             /* light text */
+}
+
+/* Hero text / project text */
+.project-text {
+    color: #F2F3F1;             /* main text light */
+}
+
+/* Secondary / muted text */
+.project-text .project-secondary {
+    color: #6B6B6B;             /* muted secondary text */
+}
+
+/* Optional: slightly darker backgrounds for sections */
+.project-text.alternate-bg {
+    background-color: #2A2A2A;  /* subtle dark contrast */
+}
+
+/* Optional: project grids background */
+.project-grid {
+    background-color: #333333;  /* dark background behind images */
+}
+
 
 /* === FORCE NAVIGATION FONT === */
 nav.main-nav,
