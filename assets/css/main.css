@@ -2998,6 +2998,16 @@ nav.main-nav .nav-links a:hover {
     margin-bottom: 2rem;       /* space below heading for CTA */
 }
 
+.hero-copy {
+    max-width: 900px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 1rem;
+    color: #1F1F1F;  /* dark text for light background */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
 
 .cta-button:hover {
     background-color: #3E4A3B;
