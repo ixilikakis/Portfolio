@@ -485,24 +485,23 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- GLightbox JS -->
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script>
-  const lightbox = GLightbox({
-    selector: '.glightbox'
-  });
-</script>
-<script>
-const heroText = document.querySelector('.fade-text-container');
-const phrases = ["Brand Identity & Visual Systems Designer", "in Crete, Greece"];
+const heroTexts = document.querySelectorAll('.fade-text-container');
 let current = 0;
 
 setInterval(() => {
-  // Fade out
-  heroText.style.opacity = 0;
+  // Fade out current
+  heroTexts[current].style.opacity = 0;
 
   setTimeout(() => {
-    // Change text and fade in
-    current = (current + 1) % phrases.length;
-    heroText.textContent = phrases[current];
-    heroText.style.opacity = 1;
+    // Hide current
+    heroTexts[current].style.display = 'none';
+
+    // Move to next
+    current = (current + 1) % heroTexts.length;
+
+    // Show next and fade in
+    heroTexts[current].style.display = 'block';
+    heroTexts[current].style.opacity = 1;
   }, 1000); // matches 1s CSS transition
 }, 5000); // switch every 5 seconds
 </script>
@@ -533,6 +532,7 @@ document.querySelectorAll('.accordion-btn').forEach(btn => {
 	</body>
 
 </html>
+
 
 
 
