@@ -3023,7 +3023,7 @@ nav.main-nav .nav-links a:hover {
 }
 
 .hero-copy p + p {
-    margin-top: 0.25rem;      /* gap between the two paragraphs */
+    margin-top: 0.75rem;      /* gap between the two paragraphs */
 }
 
 
