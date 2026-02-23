@@ -3867,7 +3867,8 @@ nav.main-nav a {
     }
 }
 
-#project-page .project-item {
-    border-radius: 0 !important;
+.project-item,
+.portfolio-item {
+  border-radius: 0 !important;
 }
 
