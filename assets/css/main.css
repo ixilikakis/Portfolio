@@ -3010,7 +3010,7 @@ nav.main-nav .nav-links a:hover {
 
 .hero-copy {
     padding: 3rem 1rem 4rem 1rem; /* breathing space around text */
-    text-align: center;           /* center-align for elegance */
+    text-align: left;           /* center-align for elegance */
 }
 
 .hero-copy p {
@@ -3024,7 +3024,7 @@ nav.main-nav .nav-links a:hover {
 
 .hero-copy p span + span {
     display: block;               /* each span on its own line */
-    margin-top: 0.5rem;           /* small gap for hierarchy */
+    margin-top: 0.2rem;           /* small gap for hierarchy */
 }
 
 
