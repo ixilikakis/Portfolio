@@ -3024,7 +3024,7 @@ nav.main-nav .nav-links a:hover {
 
 .hero-copy p span + span {
     display: block;               /* each span on its own line */
-    margin-top: 0.1rem;           /* tighter spacing between sentences */
+    margin-top: 0.5rem;           /* tighter spacing between sentences */
 }
 
 
