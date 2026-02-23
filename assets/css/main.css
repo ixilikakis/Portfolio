@@ -3010,21 +3010,20 @@ nav.main-nav .nav-links a:hover {
 
 .hero-copy {
     padding: 3rem 1rem 4rem 1rem; /* breathing space around text */
-    text-align: left;           /* center-align for elegance */
+    text-align: left;           /* left-align for elegance */
 }
 
 .hero-copy p {
-    line-height: 1.4;   /* tighter spacing between lines */
-    font-size: 0.95rem;
-    color: #555555;
-    max-width: 700px;
-    margin: 0 auto;
-    font-weight: 300;
+    font-size: 0.95rem;       /* slightly smaller text */
+    line-height: 1.6;         /* spacing within each paragraph */
+    color: #555555;           /* muted dark text */
+    max-width: 700px;         /* limits width for readability */
+    margin: 0 auto;           /* center the block */
+    font-weight: 300;         /* light text */
 }
 
-.hero-copy p span + span {
-    display: block;               /* each span on its own line */
-    margin-top: 0.5rem;           /* tighter spacing between sentences */
+.hero-copy p + p {
+    margin-top: 0.25rem;      /* gap between the two paragraphs */
 }
 
 
