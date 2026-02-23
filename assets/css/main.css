@@ -3008,6 +3008,25 @@ nav.main-nav .nav-links a:hover {
     line-height: 1.6;
 }
 
+.hero-copy {
+    padding: 3rem 1rem 4rem 1rem; /* breathing space around text */
+    text-align: center;           /* center-align for elegance */
+}
+
+.hero-copy p {
+    font-size: 0.95rem;           /* slightly smaller text */
+    line-height: 1.8;             /* airy, readable line spacing */
+    color: #555555;               /* muted gray */
+    max-width: 700px;             /* limits width for readability */
+    margin: 0 auto;               /* centers block */
+    font-weight: 300;             /* light and subtle */
+}
+
+.hero-copy p span + span {
+    display: block;               /* each span on its own line */
+    margin-top: 0.5rem;           /* small gap for hierarchy */
+}
+
 
 .cta-button:hover {
     background-color: #3E4A3B;
