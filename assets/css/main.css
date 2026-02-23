@@ -3163,7 +3163,7 @@ nav.main-nav .nav-links a:hover {
 .project-images img {
   width: 100%;
   display: block;
-  border-radius: 10px;
+  border-radius: 0px;
   object-fit: cover;
 }
 
@@ -3231,7 +3231,7 @@ nav.main-nav .nav-links a:hover {
   position: relative;   /* for overlay */
   overflow: hidden;
   height: 1000px;       /* fixed tall height */
-  border-radius: 6px;
+  border-radius: 0px;
 }
 
 /* Images */
