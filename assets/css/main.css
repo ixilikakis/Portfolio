@@ -3652,7 +3652,7 @@ nav.main-nav .nav-links a:hover {
 }
 
 /* ==========================
-   PROJECT PAGE
+   Legacy Sling Page
    ========================== */
 
 #project-page {
@@ -3902,5 +3902,13 @@ nav.main-nav a {
 .project-item,
 .portfolio-item {
   border-radius: 0 !important;
+}
+
+/* ==========================
+   Palaiologue Page
+   ========================== */
+
+.palaiologue-hero h1 {
+    color: #1f1f1f;
 }
 
