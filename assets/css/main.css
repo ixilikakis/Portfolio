@@ -3908,7 +3908,7 @@ nav.main-nav a {
    Palaiologue Page
    ========================== */
 
-.hero .hero-text h1 {
-    color: #1f1f1f;
+.hero.palaiologue-hero .hero-text h1 {
+  color: #1f1f1f !important;
 }
 
