@@ -532,46 +532,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-  // Create cursor
   const cursor = document.createElement("div");
   cursor.classList.add("cursor");
   document.body.appendChild(cursor);
 
-  // Move cursor with mouse
+  // Track mouse
   document.addEventListener("mousemove", e => {
     cursor.style.top = `${e.clientY}px`;
     cursor.style.left = `${e.clientX}px`;
   });
 
-  // Hover interactions
-  const interactiveSelector = "a, button, .accordion-btn, .glightbox, .featured-project-link";
-  
-  // Use event delegation for dynamically added elements
-  document.addEventListener("mouseover", e => {
-    if (e.target.closest(interactiveSelector)) {
-      cursor.classList.add("hovering");
-    }
-  });
-  document.addEventListener("mouseout", e => {
-    if (e.target.closest(interactiveSelector)) {
-      cursor.classList.remove("hovering");
-    }
-  });
+  // Selector for all interactive things
+  const interactiveSelector = "a, button, .accordion-btn, .glightbox, .featured-project-link, .gslide";
 
-  // GLightbox hover fix (works on slides as well)
+  // Event delegation for hover effects
   document.addEventListener("mouseover", e => {
-    if (e.target.closest(".gslide")) {
+    if (e.target.closest(interactiveSelector)) {
       cursor.classList.add("hovering");
     }
   });
   document.addEventListener("mouseout", e => {
-    if (e.target.closest(".gslide")) {
+    if (e.target.closest(interactiveSelector)) {
       cursor.classList.remove("hovering");
     }
   });
 });
 	</script>
 	
+
 
 
 
