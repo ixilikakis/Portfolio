@@ -2740,46 +2740,32 @@ input, select, textarea {
    GLOBAL RESET & BASE
    ========================== */
 
-/* Hide the default cursor */
-body {
-  cursor: none;
-}
-
-/* Base cursor */
+/* Custom Cursor */
 .cursor {
   position: fixed;
   top: 0;
   left: 0;
   width: 20px;
   height: 20px;
+  background-color: #4F5D4A;
   border-radius: 50%;
-  pointer-events: none;
-  background: #4F5D4A; /* Olive green */
+  pointer-events: none; /* don't block clicks */
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease, box-shadow 0.3s ease;
+  transition: width 0.2s ease, height 0.2s ease, box-shadow 0.3s ease, opacity 0.2s ease;
   z-index: 9999;
+  mix-blend-mode: difference; /* optional for visibility on light/dark backgrounds */
 }
 
 /* Hover effect for interactive elements */
 .cursor-hover {
-  width: 50px;
-  height: 50px;
-  box-shadow: 0 0 0 15px rgba(79, 93, 74, 0.2),
-              0 0 0 30px rgba(79, 93, 74, 0.1);
-  background: #4F5D4A;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 0 15px 5px rgba(79, 93, 74, 0.6); /* radiating olive green */
 }
 
-/* Hide default cursor everywhere */
-body, a, button, .accordion-btn, .cta-button {
-  cursor: none !important;
-}
-
-/* Hide default cursor everywhere */
-body,
-a,
-button,
-.portfolio-grid a {
-    cursor: none !important;
+/* Ensure links/buttons have no default cursor */
+a, button, .accordion-btn, .glightbox {
+  cursor: none;
 }
 
 * {
