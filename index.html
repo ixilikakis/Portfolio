@@ -568,14 +568,12 @@ function animateCursor() {
 }
 animateCursor();
 
-// Hover effect for interactive elements
-document.querySelectorAll('a, .accordion-btn, .cta-button, button').forEach(el => {
-  el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
-  el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
-});
+// Example site-wide hover targets
+const hoverTargets = document.querySelectorAll('a, button, .accordion-btn, .glightbox');
 	
 </script>
 	
+
 
 
 
