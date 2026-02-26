@@ -2740,9 +2740,9 @@ input, select, textarea {
    GLOBAL RESET & BASE
    ========================== */
 
-/* Hide the default cursor */
-body {
-  cursor: none;
+/* Hide default cursor everywhere */
+body, a, button, .portfolio-grid a {
+  cursor: none !important;
 }
 
 /* Base cursor */
@@ -2756,7 +2756,7 @@ body {
   pointer-events: none;
   background: #4F5D4A; /* Olive green */
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease, box-shadow 0.3s ease;
+  transition: width 0.2s ease, height 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
   z-index: 9999;
 }
 
@@ -2767,14 +2767,6 @@ body {
   box-shadow: 0 0 0 15px rgba(79, 93, 74, 0.2),
               0 0 0 30px rgba(79, 93, 74, 0.1);
   background: #4F5D4A;
-}
-
-/* Hide default cursor everywhere */
-body,
-a,
-button,
-.portfolio-grid a {
-    cursor: none !important;
 }
 
 * {
