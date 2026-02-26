@@ -2769,6 +2769,11 @@ body {
   background: #4F5D4A;
 }
 
+/* Hide default cursor everywhere */
+body, a, button, .accordion-btn, .cta-button {
+  cursor: none !important;
+}
+
 * {
     margin: 0;
     padding: 0;
