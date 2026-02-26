@@ -2770,8 +2770,11 @@ body {
 }
 
 /* Hide default cursor everywhere */
-body, a, button, .accordion-btn, .cta-button {
-  cursor: none !important;
+body,
+a,
+button,
+.portfolio-grid a {
+    cursor: none !important;
 }
 
 * {
