@@ -2740,6 +2740,11 @@ input, select, textarea {
    GLOBAL RESET & BASE
    ========================== */
 
+/* Hide the default cursor */
+body {
+  cursor: none;
+}
+
 /* Base cursor */
 .cursor {
   position: fixed;
@@ -2749,25 +2754,19 @@ input, select, textarea {
   height: 20px;
   border-radius: 50%;
   pointer-events: none;
-  background: #4F5D4A;
+  background: #4F5D4A; /* Olive green */
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease, box-shadow 0.3s ease, transform 0.1s ease;
+  transition: width 0.2s ease, height 0.2s ease, box-shadow 0.3s ease;
   z-index: 9999;
-  mix-blend-mode: difference; /* optional for subtle effect on light/dark backgrounds */
 }
 
 /* Hover effect for interactive elements */
 .cursor-hover {
   width: 50px;
   height: 50px;
-  box-shadow: 0 0 0 15px rgba(79, 93, 74, 0.2), 0 0 0 30px rgba(79, 93, 74, 0.1);
+  box-shadow: 0 0 0 15px rgba(79, 93, 74, 0.2),
+              0 0 0 30px rgba(79, 93, 74, 0.1);
   background: #4F5D4A;
-}
-
-/* Optional: subtle fade-in/out for cursor */
-.cursor-fade {
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 * {
