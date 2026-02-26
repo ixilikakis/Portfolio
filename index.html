@@ -537,9 +537,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================
   // GLightbox
   // =========================
-  (function() {
-    if (typeof GLightbox === "undefined") return;
-
+  <!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
     const lightbox = GLightbox({
       selector: '.glightbox',
       loop: true,
@@ -547,17 +548,15 @@ document.addEventListener("DOMContentLoaded", () => {
       openEffect: 'fade',
       closeEffect: 'fade'
     });
-  })();
-
-});
+  });
 </script>
-
 
 
 
 	</body>
 
 </html>
+
 
 
 
