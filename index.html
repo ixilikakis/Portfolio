@@ -546,7 +546,11 @@ document.querySelectorAll('.accordion-btn').forEach(btn => {
 window.addEventListener("load", function () {
   GLightbox({
     selector: '.glightbox',
-    loop: true
+    loop: true,
+    openEffect: 'fade',
+    closeEffect: 'fade',
+    slideEffect: 'fade',
+    moreLength: 0
   });
 });
 </script>
@@ -556,6 +560,7 @@ window.addEventListener("load", function () {
 	</body>
 
 </html>
+
 
 
 
