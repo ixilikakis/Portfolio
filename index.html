@@ -449,132 +449,112 @@
 <script src="assets/js/main.js"></script>
 
 <script>
-// Carrot scroll indicator
 document.addEventListener("DOMContentLoaded", () => {
-    const carrot = document.getElementById("scroll-carrot");
-    const sections = [
-        document.getElementById("header"),
-        document.getElementById("portfolio"),
-        document.getElementById("services"),
-        document.getElementById("footer")
-    ];
-    let currentIndex = 0;
-
-    function isCompletelyOffScreen(el) {
-        const rect = el.getBoundingClientRect();
-        return rect.bottom <= 0;
+  /* ===== Existing JS ===== */
+  // Scroll carrot
+  const carrot = document.getElementById("scroll-carrot");
+  const sections = [
+    document.getElementById("header"),
+    document.getElementById("portfolio"),
+    document.getElementById("services"),
+    document.getElementById("footer")
+  ];
+  let currentIndex = 0;
+  function isCompletelyOffScreen(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.bottom <= 0;
+  }
+  function updateCurrentSection() {
+    if (!isCompletelyOffScreen(sections[0])) {
+      carrot.classList.remove("visible");
+      currentIndex = 0;
+      return;
     }
-
-    function updateCurrentSection() {
-        if (!isCompletelyOffScreen(sections[0])) {
-            carrot.classList.remove("visible");
-            currentIndex = 0;
-            return;
-        }
-        carrot.classList.add("visible");
-        for (let i = sections.length - 1; i > 0; i--) {
-            if (isCompletelyOffScreen(sections[i - 1])) {
-                currentIndex = i;
-                break;
-            }
-        }
+    carrot.classList.add("visible");
+    for (let i = sections.length - 1; i > 0; i--) {
+      if (isCompletelyOffScreen(sections[i - 1])) {
+        currentIndex = i;
+        break;
+      }
     }
+  }
+  carrot.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      sections[currentIndex - 1].scrollIntoView({ behavior: "smooth" });
+    }
+  });
+  window.addEventListener("scroll", updateCurrentSection);
+  window.addEventListener("resize", updateCurrentSection);
+  updateCurrentSection();
 
-    carrot.addEventListener("click", () => {
-        if (currentIndex > 0) {
-            sections[currentIndex - 1].scrollIntoView({ behavior: "smooth" });
-        }
-    });
-
-    window.addEventListener("scroll", updateCurrentSection);
-    window.addEventListener("resize", updateCurrentSection);
-    updateCurrentSection();
-});
-
-// Hero text fade
-const heroTexts = document.querySelectorAll('.fade-text-container');
-let current = 0;
-setInterval(() => {
+  // Hero fade
+  const heroTexts = document.querySelectorAll('.fade-text-container');
+  let current = 0;
+  setInterval(() => {
     heroTexts[current].style.opacity = 0;
     setTimeout(() => {
-        heroTexts[current].style.display = 'none';
-        current = (current + 1) % heroTexts.length;
-        heroTexts[current].style.display = 'block';
-        heroTexts[current].style.opacity = 1;
+      heroTexts[current].style.display = 'none';
+      current = (current + 1) % heroTexts.length;
+      heroTexts[current].style.display = 'block';
+      heroTexts[current].style.opacity = 1;
     }, 1000);
-}, 5000);
+  }, 5000);
 
-// Accordion buttons
-document.querySelectorAll('.accordion-btn').forEach(btn => {
+  // Accordion
+  document.querySelectorAll('.accordion-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const content = btn.nextElementSibling;
-        item.classList.toggle('active');
-        if (item.classList.contains('active')) {
-            content.style.maxHeight = content.scrollHeight + 'px';
-        } else {
-            content.style.maxHeight = null;
-        }
+      const item = btn.parentElement;
+      const content = btn.nextElementSibling;
+      item.classList.toggle('active');
+      content.style.maxHeight = item.classList.contains('active') ? content.scrollHeight + 'px' : null;
     });
-});
+  });
 
-// GLightbox + Scroll restore
-window.addEventListener("load", function () {
-    // Initialize GLightbox
-    GLightbox({
-        selector: '.glightbox',
-        loop: true,
-        openEffect: 'fade',
-        closeEffect: 'fade',
-        slideEffect: 'fade',
-        moreLength: 0
+  // GLightbox
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    loop: true,
+    openEffect: 'fade',
+    closeEffect: 'fade',
+    slideEffect: 'fade'
+  });
+
+  // Featured scroll restore
+  document.querySelectorAll('.featured-project-link').forEach(link => {
+    link.addEventListener('click', () => {
+      sessionStorage.setItem('mainScroll', window.scrollY);
     });
+  });
+  const scrollY = sessionStorage.getItem('mainScroll');
+  if (scrollY) {
+    window.scrollTo({ top: parseInt(scrollY), behavior: "smooth" });
+    sessionStorage.removeItem('mainScroll');
+  }
 
-    // Restore scroll position
-    const scrollY = sessionStorage.getItem('mainScroll');
-    if (scrollY) {
-        window.scrollTo({ top: parseInt(scrollY), behavior: "smooth" });
-        sessionStorage.removeItem('mainScroll');
-    }
-
-    // Save scroll position on project click
-    document.querySelectorAll('.featured-project-link').forEach(link => {
-        link.addEventListener('click', () => {
-            sessionStorage.setItem('mainScroll', window.scrollY);
-        });
-    });
-});
-
-	<script>
-window.addEventListener("DOMContentLoaded", () => {
-  // Create custom cursor
+  /* ===== Custom Cursor ===== */
   const cursor = document.createElement("div");
   cursor.classList.add("cursor");
   document.body.appendChild(cursor);
 
-  // Track mouse movement
   document.addEventListener("mousemove", e => {
-    cursor.style.top = e.clientY + "px";
-    cursor.style.left = e.clientX + "px";
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
   });
 
-  // Interactive elements
   const interactiveSelectors = "a, button, .accordion-btn, .glightbox";
-  const interactiveElements = document.querySelectorAll(interactiveSelectors);
-
-  interactiveElements.forEach(el => {
-    el.addEventListener("mouseenter", () => cursor.classList.add("cursor-hover"));
-    el.addEventListener("mouseleave", () => cursor.classList.remove("cursor-hover"));
+  document.querySelectorAll(interactiveSelectors).forEach(el => {
+    el.addEventListener("mouseenter", () => cursor.classList.add("hovering"));
+    el.addEventListener("mouseleave", () => cursor.classList.remove("hovering"));
   });
 
-  // Hide cursor leaving window
-  document.addEventListener("mouseleave", () => cursor.style.opacity = 0);
-  document.addEventListener("mouseenter", () => cursor.style.opacity = 1);
+  // Track dynamically added GLightbox elements
+  document.addEventListener("mouseover", e => {
+    if (e.target.closest(".gslide")) cursor.classList.add("hovering");
+  });
 });
-</script>
-
 	</script>
 	
+
 
 
 
