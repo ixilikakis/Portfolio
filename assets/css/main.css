@@ -2747,20 +2747,21 @@ input, select, textarea {
   left: 0;
   width: 24px;
   height: 24px;
-  border: 2px solid #4F5D4A;
+  border: 2px solid #4F5D4A; /* olive green default */
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: width 0.2s ease, height 0.2s ease, border 0.2s ease;
   z-index: 9999;
-  mix-blend-mode: difference; /* optional for contrast */
+  mix-blend-mode: difference; /* optional */
+  background: transparent; /* ensure not white */
 }
 
 .cursor.hovering {
   width: 60px;
   height: 60px;
+  border-color: #4F5D4A; /* olive green on hover */
   animation: radiate 1s infinite;
-  border-color: #4F5D4A;
 }
 
 @keyframes radiate {
@@ -2779,7 +2780,7 @@ input, select, textarea {
 }
 
 /* Hide default cursor globally */
-body, a, button {
+body, a, button, .glightbox, .featured-project-link, .accordion-btn {
   cursor: none !important;
 }
 
