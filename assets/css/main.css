@@ -2740,27 +2740,27 @@ input, select, textarea {
    GLOBAL RESET & BASE
    ========================== */
 
-/* ======= Custom Cursor ======= */
+/* ===== Cursor Base ===== */
 .cursor {
   position: fixed;
   top: 0;
   left: 0;
   width: 24px;
   height: 24px;
-  border: 2px solid #4F5D4A; /* olive green default */
+  border: 2px solid #4F5D4A; /* olive green */
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease, border 0.2s ease;
   z-index: 9999;
-  mix-blend-mode: difference; /* optional */
-  background: transparent; /* ensure not white */
+  background: transparent;
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
 }
 
+/* Hover / interactive effect */
 .cursor.hovering {
   width: 60px;
   height: 60px;
-  border-color: #4F5D4A; /* olive green on hover */
+  border-color: #4F5D4A;
   animation: radiate 1s infinite;
 }
 
@@ -2779,7 +2779,7 @@ input, select, textarea {
   }
 }
 
-/* Hide default cursor globally */
+/* Hide system cursor everywhere */
 body, a, button, .glightbox, .featured-project-link, .accordion-btn {
   cursor: none !important;
 }
