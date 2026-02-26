@@ -291,22 +291,18 @@ function animateCursor() {
 }
 animateCursor();
 
-// Hover effect for interactive elements (delegated to catch dynamic elements)
-function toggleHover(e, add) {
-  if (add) cursor.classList.add('cursor-hover');
-  else cursor.classList.remove('cursor-hover');
-}
-
-const hoverSelectors = ['a', 'button', '.accordion-btn', '.cta-button', '.glightbox'];
-
-document.body.addEventListener('mouseover', e => {
-  if (hoverSelectors.some(sel => e.target.closest(sel))) toggleHover(e, true);
+// Hover effect (works on all current + future elements)
+document.addEventListener('mouseover', e => {
+  if (e.target.closest('a, button, .accordion-btn, .cta-button')) {
+    cursor.classList.add('cursor-hover');
+  }
 });
 
-document.body.addEventListener('mouseout', e => {
-  if (hoverSelectors.some(sel => e.target.closest(sel))) toggleHover(e, false);
+document.addEventListener('mouseout', e => {
+  if (e.target.closest('a, button, .accordion-btn, .cta-button')) {
+    cursor.classList.remove('cursor-hover');
+  }
 });
-
   
 </script>
 
