@@ -2740,48 +2740,33 @@ input, select, textarea {
    GLOBAL RESET & BASE
    ========================== */
 
-/* Custom cursor */
-.custom-cursor {
+/* Hide the default cursor */
+body {
+  cursor: none;
+}
+
+/* Base cursor */
+.cursor {
   position: fixed;
   top: 0;
   left: 0;
-  width: 24px;
-  height: 24px;
-  border: 2px solid #4F5D4A; /* olive green */
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  pointer-events: none; /* so it doesn’t block clicks */
+  pointer-events: none;
+  background: #4F5D4A; /* Olive green */
   transform: translate(-50%, -50%);
-  transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease, opacity 0.2s ease;
+  transition: width 0.2s ease, height 0.2s ease, box-shadow 0.3s ease;
   z-index: 9999;
-  mix-blend-mode: difference; /* optional for contrast */
 }
 
-/* Hover effect */
-.custom-cursor.hover {
-  width: 48px;
-  height: 48px;
-  animation: radiate 0.8s ease-out;
-}
-
-/* Radiating keyframes */
-@keyframes radiate {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.8);
-    opacity: 0.3;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0;
-  }
-}
-
-/* Hide system cursor */
-body, a, button, .accordion-btn {
-  cursor: none;
+/* Hover effect for interactive elements */
+.cursor-hover {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 0 15px rgba(79, 93, 74, 0.2),
+              0 0 0 30px rgba(79, 93, 74, 0.1);
+  background: #4F5D4A;
 }
 
 * {
