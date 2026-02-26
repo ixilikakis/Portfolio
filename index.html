@@ -435,95 +435,105 @@
 
 		</div>
 
-		<script>
-
-			<!-- Scripts -->
+		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-	
+	<script>
 document.addEventListener("DOMContentLoaded", () => {
+    const carrot = document.getElementById("scroll-carrot");
 
-  // ===== Scroll carrot logic =====
-  const carrot = document.getElementById("scroll-carrot");
-  const sections = [
-      document.getElementById("header"),
-      document.getElementById("portfolio"),
-      document.getElementById("services"),
-      document.getElementById("footer")
-  ];
-  let currentIndex = 0;
+    const sections = [
+        document.getElementById("header"),
+        document.getElementById("portfolio"),
+        document.getElementById("services"),
+        document.getElementById("footer")
+    ];
 
-  function isCompletelyOffScreen(el) {
-      const rect = el.getBoundingClientRect();
-      return rect.bottom <= 0;
-  }
+    let currentIndex = 0;
 
-  function updateCurrentSection() {
-      if (!isCompletelyOffScreen(sections[0])) {
-          carrot.classList.remove("visible");
-          currentIndex = 0;
-          return;
-      }
-      carrot.classList.add("visible");
-      for (let i = sections.length - 1; i > 0; i--) {
-          if (isCompletelyOffScreen(sections[i - 1])) {
-              currentIndex = i;
-              break;
-          }
-      }
-  }
+    function isCompletelyOffScreen(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.bottom <= 0;
+    }
 
-  carrot.addEventListener("click", () => {
-      if (currentIndex > 0) {
-          sections[currentIndex - 1].scrollIntoView({ behavior: "smooth" });
-      }
-  });
+    function updateCurrentSection() {
+        // Navigation still visible → hide carrot
+        if (!isCompletelyOffScreen(sections[0])) {
+            carrot.classList.remove("visible");
+            currentIndex = 0;
+            return;
+        }
 
-  window.addEventListener("scroll", updateCurrentSection);
-  window.addEventListener("resize", updateCurrentSection);
-  updateCurrentSection();
+        carrot.classList.add("visible");
 
-  // ===== Hero text fade logic =====
-  const heroTexts = document.querySelectorAll('.fade-text-container');
-  let current = 0;
+        // Determine current section based on complete disappearance
+        for (let i = sections.length - 1; i > 0; i--) {
+            if (isCompletelyOffScreen(sections[i - 1])) {
+                currentIndex = i;
+                break;
+            }
+        }
+    }
 
-  setInterval(() => {
-      heroTexts[current].style.opacity = 0;
-      setTimeout(() => {
-          heroTexts[current].style.display = 'none';
-          current = (current + 1) % heroTexts.length;
-          heroTexts[current].style.display = 'block';
-          heroTexts[current].style.opacity = 1;
-      }, 1000);
-  }, 5000);
+    carrot.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            sections[currentIndex - 1].scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    });
 
-  // ===== Accordion logic =====
-  document.querySelectorAll('.accordion-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-          const item = btn.parentElement;
-          const content = btn.nextElementSibling;
-          item.classList.toggle('active');
-          if (item.classList.contains('active')) {
-              content.style.maxHeight = content.scrollHeight + 'px';
-          } else {
-              content.style.maxHeight = null;
-          }
-      });
-  });
+    window.addEventListener("scroll", updateCurrentSection);
+    window.addEventListener("resize", updateCurrentSection);
 
-  // ===== GLightbox initialization =====
- <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    updateCurrentSection();
+});
+</script>
+
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script>
-const lightbox = GLightbox({
-    selector: '.glightbox',
-    loop: true,
-    touchNavigation: true,
-    openEffect: 'fade',
-    closeEffect: 'fade'
+const heroTexts = document.querySelectorAll('.fade-text-container');
+let current = 0;
+
+setInterval(() => {
+  // Fade out current
+  heroTexts[current].style.opacity = 0;
+
+  setTimeout(() => {
+    // Hide current
+    heroTexts[current].style.display = 'none';
+
+    // Move to next
+    current = (current + 1) % heroTexts.length;
+
+    // Show next and fade in
+    heroTexts[current].style.display = 'block';
+    heroTexts[current].style.opacity = 1;
+  }, 1000); // matches 1s CSS transition
+}, 5000); // switch every 5 seconds
+</script>
+
+	<script>
+document.querySelectorAll('.accordion-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const content = btn.nextElementSibling;
+
+    // Toggle active class
+    item.classList.toggle('active');
+
+    // Expand/collapse content
+    if (item.classList.contains('active')) {
+      content.style.maxHeight = content.scrollHeight + 'px';
+    } else {
+      content.style.maxHeight = null;
+    }
+  });
 });
 </script>
 
@@ -534,6 +544,7 @@ const lightbox = GLightbox({
 	</body>
 
 </html>
+
 
 
 
