@@ -544,8 +544,39 @@ window.addEventListener("load", function () {
         });
     });
 });
+
+	// Create the cursor element
+const cursor = document.createElement('div');
+cursor.classList.add('cursor');
+document.body.appendChild(cursor);
+
+// Track mouse movement
+let mouseX = 0, mouseY = 0;
+let currentX = 0, currentY = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+// Smooth trailing and exact positioning
+function animateCursor() {
+  currentX += (mouseX - currentX) * 0.2;
+  currentY += (mouseY - currentY) * 0.2;
+  cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// Hover effect for interactive elements
+document.querySelectorAll('a, .accordion-btn, .cta-button, button').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+});
+	
 </script>
 	
+
 
 
 
