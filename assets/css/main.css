@@ -3834,11 +3834,6 @@ nav.main-nav a {
     background-color: #F2F3F1; /* same as main page */
 }
 
-#project-page nav.main-nav a {
-    color: #1F1F1F;          /* dark text for readability */
-    font-weight: 600;        /* optional, match main page links */
-    font-family: 'Open Sans', sans-serif;
-}
 
 /* Remove padding/margin inside the grid */
 .project-grid {
