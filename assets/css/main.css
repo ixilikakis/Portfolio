@@ -3661,12 +3661,16 @@ nav.main-nav .nav-links a:hover {
     background-color: #1F1F1F;
 }
 
-#project-page h1, #project-page h2, #project-page h3, #project-page h4,
-#project-page h5, #project-page h6 {
+##project-page .content h1,
+#project-page .content h2,
+#project-page .content h3,
+#project-page .content h4,
+#project-page .content h5,
+#project-page .content h6 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     letter-spacing: 1.5px;
-    color: #F2F3F1;
+    color: #1F1F1F; /* your content color */
 }
 
 #project-page .hero {
