@@ -506,15 +506,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===== GLightbox initialization =====
-  <!-- GLightbox JS -->
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  const lightbox = GLightbox({
+      selector: '.glightbox'
+  });
 
-<!-- Your GLightbox initialization -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const lightbox = GLightbox({
-        selector: '.glightbox'
-    });
 });
 </script>
 
@@ -525,6 +520,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	</body>
 
 </html>
+
 
 
 
