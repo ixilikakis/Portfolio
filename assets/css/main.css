@@ -3828,12 +3828,6 @@ nav.main-nav a {
     font-family: 'Open Sans', sans-serif !important;
 }
 
-#project-page nav.main-nav {
-    height: 152px;           /* match main page */
-    padding: 16px 32px;      /* match main page */
-    background-color: #F2F3F1; /* same as main page */
-}
-
 
 /* Remove padding/margin inside the grid */
 .project-grid {
