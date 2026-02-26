@@ -531,29 +531,48 @@ document.addEventListener("DOMContentLoaded", () => {
     sessionStorage.removeItem('mainScroll');
   }
 
-  /* ===== Custom Cursor ===== */
+  document.addEventListener("DOMContentLoaded", () => {
+  // Create cursor
   const cursor = document.createElement("div");
   cursor.classList.add("cursor");
   document.body.appendChild(cursor);
 
+  // Move cursor with mouse
   document.addEventListener("mousemove", e => {
     cursor.style.top = `${e.clientY}px`;
     cursor.style.left = `${e.clientX}px`;
   });
 
-  const interactiveSelectors = "a, button, .accordion-btn, .glightbox";
-  document.querySelectorAll(interactiveSelectors).forEach(el => {
-    el.addEventListener("mouseenter", () => cursor.classList.add("hovering"));
-    el.addEventListener("mouseleave", () => cursor.classList.remove("hovering"));
+  // Hover interactions
+  const interactiveSelector = "a, button, .accordion-btn, .glightbox, .featured-project-link";
+  
+  // Use event delegation for dynamically added elements
+  document.addEventListener("mouseover", e => {
+    if (e.target.closest(interactiveSelector)) {
+      cursor.classList.add("hovering");
+    }
+  });
+  document.addEventListener("mouseout", e => {
+    if (e.target.closest(interactiveSelector)) {
+      cursor.classList.remove("hovering");
+    }
   });
 
-  // Track dynamically added GLightbox elements
+  // GLightbox hover fix (works on slides as well)
   document.addEventListener("mouseover", e => {
-    if (e.target.closest(".gslide")) cursor.classList.add("hovering");
+    if (e.target.closest(".gslide")) {
+      cursor.classList.add("hovering");
+    }
+  });
+  document.addEventListener("mouseout", e => {
+    if (e.target.closest(".gslide")) {
+      cursor.classList.remove("hovering");
+    }
   });
 });
 	</script>
 	
+
 
 
 
