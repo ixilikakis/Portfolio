@@ -551,23 +551,19 @@ cursor.classList.add('cursor');
 document.body.appendChild(cursor);
 
 // Track mouse movement
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-});
-
-// Smooth trailing effect (optional)
 let mouseX = 0, mouseY = 0;
 let currentX = 0, currentY = 0;
+
 document.addEventListener('mousemove', e => {
   mouseX = e.clientX;
   mouseY = e.clientY;
 });
 
+// Smooth trailing and exact positioning
 function animateCursor() {
   currentX += (mouseX - currentX) * 0.2;
   currentY += (mouseY - currentY) * 0.2;
-  cursor.style.transform = `translate(calc(${currentX}px - 50%), calc(${currentY}px - 50%))`;
+  cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
   requestAnimationFrame(animateCursor);
 }
 animateCursor();
@@ -579,6 +575,7 @@ document.querySelectorAll('a, .accordion-btn, .cta-button, button').forEach(el =
 });
 	
 </script>
+
 
 
 
