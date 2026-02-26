@@ -2740,32 +2740,47 @@ input, select, textarea {
    GLOBAL RESET & BASE
    ========================== */
 
-/* Custom Cursor */
+/* ======= Custom Cursor ======= */
 .cursor {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
-  background-color: #4F5D4A;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #4F5D4A;
   border-radius: 50%;
-  pointer-events: none; /* don't block clicks */
+  pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease, box-shadow 0.3s ease, opacity 0.2s ease;
+  transition: width 0.2s ease, height 0.2s ease, border 0.2s ease;
   z-index: 9999;
-  mix-blend-mode: difference; /* optional for visibility on light/dark backgrounds */
+  mix-blend-mode: difference; /* optional for contrast */
 }
 
-/* Hover effect for interactive elements */
-.cursor-hover {
+.cursor.hovering {
   width: 60px;
   height: 60px;
-  box-shadow: 0 0 15px 5px rgba(79, 93, 74, 0.6); /* radiating olive green */
+  animation: radiate 1s infinite;
+  border-color: #4F5D4A;
 }
 
-/* Ensure links/buttons have no default cursor */
-a, button, .accordion-btn, .glightbox {
-  cursor: none;
+@keyframes radiate {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Hide default cursor globally */
+body, a, button {
+  cursor: none !important;
 }
 
 * {
