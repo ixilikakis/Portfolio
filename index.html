@@ -117,8 +117,8 @@
         presence that felt intentional, versatile, and timeless.
       </p>
 
-		<a href="/legacy-camera-sling/" class="cta-button">
-  inside the project
+		<a href="/legacy-camera-sling/" class="cta-button featured-project-link">
+  Inside the project
 </a>
     </div>
 
@@ -158,7 +158,7 @@
         with contemporary clarity.
       </p>
 
-		<a href="/palaiologue-branding-styleguide/" class="cta-button">Inside the Project</a>
+		<a href="/palaiologue-branding-styleguide/" class="cta-button featured-project-link">Inside the Project</a>
 
     </div>
 
@@ -555,11 +555,26 @@ window.addEventListener("load", function () {
 });
 </script>
 
+// Step 2a: Save scroll position when clicking a featured project
+document.querySelectorAll('.featured-project-link').forEach(link => {
+  link.addEventListener('click', () => {
+    sessionStorage.setItem('mainScroll', window.scrollY);
+  });
+});
 
+// Step 2b: Restore scroll position when returning to the main page
+window.addEventListener("load", function () {
+  const scrollY = sessionStorage.getItem('mainScroll');
+  if (scrollY) {
+    window.scrollTo({ top: parseInt(scrollY), behavior: "smooth" });
+    sessionStorage.removeItem('mainScroll'); // optional cleanup
+  }
+});
 
 	</body>
 
 </html>
+
 
 
 
