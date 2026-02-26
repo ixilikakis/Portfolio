@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="assets/css/main.css?v=1" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-
 </head>
 <body class="homepage is-preload">
     <div id="page-wrapper">
@@ -507,10 +506,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===== GLightbox initialization =====
-  const lightbox = GLightbox({
-      selector: '.glightbox'
-  });
+  <!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
+<!-- Your GLightbox initialization -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = GLightbox({
+        selector: '.glightbox'
+    });
 });
 </script>
 
@@ -521,6 +525,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	</body>
 
 </html>
+
 
 
 
