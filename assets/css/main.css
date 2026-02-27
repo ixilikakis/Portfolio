@@ -2740,12 +2740,18 @@ input, select, textarea {
    GLOBAL RESET & BASE
    ========================== */
 
-//* Hide default cursor everywhere */
-body, a, button, .portfolio-grid a {
+/* Hide the native cursor globally */
+body,
+a,
+button,
+.accordion-btn,
+.cta-button,
+.portfolio-grid a,
+.glightbox {
   cursor: none !important;
 }
 
-/* Base cursor */
+/* Base custom cursor */
 .cursor {
   position: fixed;
   top: 0;
