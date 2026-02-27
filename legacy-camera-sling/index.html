@@ -268,12 +268,12 @@ if (isPartiallyVisible(footer)) {
     updateCurrentSection();
 });
 
-  // Create the cursor element
+  // Create the custom cursor element
 const cursor = document.createElement('div');
 cursor.classList.add('cursor');
 document.body.appendChild(cursor);
 
-// Track mouse movement
+// Track mouse position
 let mouseX = 0, mouseY = 0;
 let currentX = 0, currentY = 0;
 
@@ -282,7 +282,7 @@ document.addEventListener('mousemove', e => {
   mouseY = e.clientY;
 });
 
-// Smooth trailing and exact positioning
+// Smooth cursor animation
 function animateCursor() {
   currentX += (mouseX - currentX) * 0.2;
   currentY += (mouseY - currentY) * 0.2;
@@ -291,15 +291,17 @@ function animateCursor() {
 }
 animateCursor();
 
-// Hover effect (works on all current + future elements)
-document.addEventListener('mouseover', e => {
-  if (e.target.closest('a, button, .accordion-btn, .cta-button')) {
+// Hover effect for interactive elements (including GLightbox)
+const hoverSelectors = ['a', 'button', '.accordion-btn', '.cta-button', '.glightbox'];
+
+document.body.addEventListener('mouseover', e => {
+  if (hoverSelectors.some(sel => e.target.closest(sel))) {
     cursor.classList.add('cursor-hover');
   }
 });
 
-document.addEventListener('mouseout', e => {
-  if (e.target.closest('a, button, .accordion-btn, .cta-button')) {
+document.body.addEventListener('mouseout', e => {
+  if (hoverSelectors.some(sel => e.target.closest(sel))) {
     cursor.classList.remove('cursor-hover');
   }
 });
