@@ -2782,6 +2782,23 @@ button,
   cursor: none !important;
 }
 
+/* Pulse animation for idle cursor */
+@keyframes cursorPulse {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  50%  { transform: translate(-50%, -50%) scale(1.1); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Add this to your existing .cursor class */
+.cursor {
+  animation: cursorPulse 2s infinite ease-in-out;
+}
+
+/* Stop pulse when hovering over interactive elements */
+.cursor-hover {
+  animation: none; /* keeps your radiate hover effect active */
+}
+
 * {
     margin: 0;
     padding: 0;
