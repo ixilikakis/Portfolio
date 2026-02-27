@@ -2740,8 +2740,8 @@ input, select, textarea {
    GLOBAL RESET & BASE
    ========================== */
 
-/* Hide default cursor on all links and interactive elements */
-a, .portfolio-grid a, button, .accordion-btn, .cta-button {
+//* Hide default cursor everywhere */
+body, a, button, .portfolio-grid a {
   cursor: none !important;
 }
 
