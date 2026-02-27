@@ -2782,26 +2782,6 @@ button,
   cursor: none !important;
 }
 
-@keyframes cursorPulse {
-  0%   { transform: translate(-50%, -50%) scale(1); }
-  50%  { transform: translate(-50%, -50%) scale(1.15); }
-  100% { transform: translate(-50%, -50%) scale(1); }
-}
-
-.cursor {
-  animation: cursorPulse 2s infinite ease-in-out;
-}
-
-.cursor-hover {
-  width: 50px;
-  height: 50px;
-  box-shadow: 0 0 0 15px rgba(79, 93, 74, 0.2),
-              0 0 0 30px rgba(79, 93, 74, 0.1);
-  background: #4F5D4A;
-  /* optional: you can also increase the pulse on hover by adding */
-  animation: cursorPulse 1.5s infinite ease-in-out;
-}
-
 * {
     margin: 0;
     padding: 0;
