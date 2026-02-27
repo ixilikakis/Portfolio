@@ -2794,11 +2794,6 @@ button,
   animation: cursorPulse 2s infinite ease-in-out;
 }
 
-/* Stop pulse when hovering over interactive elements */
-.cursor-hover {
-  animation: none; /* keeps your radiate hover effect active */
-}
-
 * {
     margin: 0;
     padding: 0;
