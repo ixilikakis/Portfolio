@@ -2744,7 +2744,6 @@ input, select, textarea {
 a, .portfolio-grid a, button, .accordion-btn, .cta-button {
   cursor: none !important;
 }
-}
 
 /* Base cursor */
 .cursor {
