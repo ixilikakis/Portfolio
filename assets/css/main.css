@@ -2881,26 +2881,32 @@ nav.main-nav .nav-links a:hover {
     background-color: #F2F3F1;
 }
 
-/* Project section H2 headings */
-.project-grid + h2,
-.project-grid h2,
-h2 {
-  font-family: 'Open Sans', sans-serif; /* match your main typography */
+/* Project section H2 headings aligned with the grids */
+.project-grid-heading {
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
-  font-size: 1.8rem; /* adjust if needed */
-  color: #f2f3f1; /* light off-white text */
-  margin: 3rem 0 1.5rem 0; /* spacing: top 3rem, bottom 1.5rem */
+  font-size: 1.8rem;
+  color: #f2f3f1;
+  margin: 3rem 0 1.5rem 0;
   text-transform: uppercase;
   letter-spacing: 1px;
+
+  /* Align with the grid container */
+  max-width: 1200px; /* match your grid container width */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* Optional: slightly smaller for mobile */
 @media (max-width: 768px) {
-  h2 {
+  .project-grid-heading {
     font-size: 1.4rem;
     margin: 2rem 0 1rem 0;
   }
-}
+
+
 
 /* ==========================
    MOBILE NAV - POLISHED VERSION (NO SEPARATORS)
