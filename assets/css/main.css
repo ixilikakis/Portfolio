@@ -2881,31 +2881,25 @@ nav.main-nav .nav-links a:hover {
     background-color: #F2F3F1;
 }
 
-/* Project section H2 headings aligned with the grids */
+/* Headings above project grids only */
 .project-grid-heading {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 1.8rem;
   color: #f2f3f1;
-  margin: 3rem 0 1.5rem 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-
-  /* Align with the grid container */
-  max-width: 1200px; /* match your grid container width */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  font-size: 2rem; /* adjust to match your design */
+  font-weight: 600;
+  margin: 2rem 0 1rem 0; /* spacing above and below */
+  width: 100%; /* match grid width */
+  max-width: 1200px; /* optional: limit width for large screens */
+  text-align: left;
+  display: block;
 }
 
-/* Optional: slightly smaller for mobile */
+/* Optional: add spacing for smaller screens */
 @media (max-width: 768px) {
   .project-grid-heading {
-    font-size: 1.4rem;
-    margin: 2rem 0 1rem 0;
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.75rem 0;
   }
-
+}
 
 
 /* ==========================
