@@ -290,50 +290,51 @@ if (isPartiallyVisible(footer)) {
     }
 });
 
-    window.addEventListener("scroll", updateCurrentSection);
-    window.addEventListener("resize", updateCurrentSection);
+    <script>
 
-    updateCurrentSection();
-});
+// Only run custom cursor on devices that actually have a mouse
+if (!window.matchMedia("(hover: none), (pointer: coarse)").matches) {
 
   // Create the custom cursor element
-const cursor = document.createElement('div');
-cursor.classList.add('cursor');
-document.body.appendChild(cursor);
+  const cursor = document.createElement('div');
+  cursor.classList.add('cursor');
+  document.body.appendChild(cursor);
 
-// Track mouse position
-let mouseX = 0, mouseY = 0;
-let currentX = 0, currentY = 0;
+  // Track mouse position
+  let mouseX = 0, mouseY = 0;
+  let currentX = 0, currentY = 0;
 
-document.addEventListener('mousemove', e => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
 
-// Smooth cursor animation
-function animateCursor() {
-  currentX += (mouseX - currentX) * 0.2;
-  currentY += (mouseY - currentY) * 0.2;
-  cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
-  requestAnimationFrame(animateCursor);
+  // Smooth cursor animation
+  function animateCursor() {
+    currentX += (mouseX - currentX) * 0.2;
+    currentY += (mouseY - currentY) * 0.2;
+    cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  // Hover effect for interactive elements
+  const hoverSelectors = ['a', 'button', '.accordion-btn', '.cta-button', '.glightbox'];
+
+  document.body.addEventListener('mouseover', e => {
+    if (hoverSelectors.some(sel => e.target.closest(sel))) {
+      cursor.classList.add('cursor-hover');
+    }
+  });
+
+  document.body.addEventListener('mouseout', e => {
+    if (hoverSelectors.some(sel => e.target.closest(sel))) {
+      cursor.classList.remove('cursor-hover');
+    }
+  });
+
 }
-animateCursor();
 
-// Hover effect for interactive elements (including GLightbox)
-const hoverSelectors = ['a', 'button', '.accordion-btn', '.cta-button', '.glightbox'];
-
-document.body.addEventListener('mouseover', e => {
-  if (hoverSelectors.some(sel => e.target.closest(sel))) {
-    cursor.classList.add('cursor-hover');
-  }
-});
-
-document.body.addEventListener('mouseout', e => {
-  if (hoverSelectors.some(sel => e.target.closest(sel))) {
-    cursor.classList.remove('cursor-hover');
-  }
-});
-  
 </script>
 
 </body>
