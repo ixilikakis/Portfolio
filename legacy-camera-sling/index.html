@@ -290,8 +290,11 @@ if (isPartiallyVisible(footer)) {
     }
 });
 
-    <script>
-if (window.innerWidth > 768) { // only desktop
+   <script>
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth <= 768) return; // skip mobile
+
+  // Create the cursor
   const cursor = document.createElement('div');
   cursor.classList.add('cursor');
   document.body.appendChild(cursor);
@@ -299,11 +302,13 @@ if (window.innerWidth > 768) { // only desktop
   let mouseX = 0, mouseY = 0;
   let currentX = 0, currentY = 0;
 
+  // Track mouse
   document.addEventListener('mousemove', e => {
     mouseX = e.clientX;
     mouseY = e.clientY;
   });
 
+  // Smooth animation
   function animateCursor() {
     currentX += (mouseX - currentX) * 0.2;
     currentY += (mouseY - currentY) * 0.2;
@@ -312,6 +317,7 @@ if (window.innerWidth > 768) { // only desktop
   }
   animateCursor();
 
+  // Hover effects
   const hoverSelectors = ['a', 'button', '.accordion-btn', '.cta-button', '.glightbox'];
 
   document.body.addEventListener('mouseover', e => {
@@ -321,7 +327,7 @@ if (window.innerWidth > 768) { // only desktop
   document.body.addEventListener('mouseout', e => {
     if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.remove('cursor-hover');
   });
-}
+});
 </script>
 
 </body>
