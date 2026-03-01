@@ -290,40 +290,39 @@ if (isPartiallyVisible(footer)) {
     }
 });
 
-  <script>
+ <script>
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.innerWidth <= 768) return; // skip mobile
+  if (window.innerWidth > 768) { // only enable on desktop
+    const cursor = document.createElement('div');
+    cursor.classList.add('cursor');
+    document.body.appendChild(cursor);
 
-  // Create cursor
-  const cursor = document.createElement('div');
-  cursor.classList.add('cursor');
-  document.body.appendChild(cursor);
+    let mouseX = 0, mouseY = 0;
+    let currentX = 0, currentY = 0;
 
-  let mouseX = 0, mouseY = 0;
-  let currentX = 0, currentY = 0;
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
 
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
+    function animateCursor() {
+      currentX += (mouseX - currentX) * 0.2;
+      currentY += (mouseY - currentY) * 0.2;
+      cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
 
-  function animateCursor() {
-    currentX += (mouseX - currentX) * 0.2;
-    currentY += (mouseY - currentY) * 0.2;
-    cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
-    requestAnimationFrame(animateCursor);
+    const hoverSelectors = ['a', 'button', '.accordion-btn', '.cta-button', '.glightbox'];
+
+    document.body.addEventListener('mouseover', e => {
+      if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.add('cursor-hover');
+    });
+
+    document.body.addEventListener('mouseout', e => {
+      if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.remove('cursor-hover');
+    });
   }
-  animateCursor();
-
-  const hoverSelectors = ['a', 'button', '.accordion-btn', '.cta-button', '.glightbox'];
-
-  document.body.addEventListener('mouseover', e => {
-    if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.add('cursor-hover');
-  });
-
-  document.body.addEventListener('mouseout', e => {
-    if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.remove('cursor-hover');
-  });
 });
 </script>
   
