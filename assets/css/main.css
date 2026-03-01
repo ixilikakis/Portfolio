@@ -2881,26 +2881,13 @@ nav.main-nav .nav-links a:hover {
     background-color: #F2F3F1;
 }
 
-/* Headings above project grids only */
 .project-grid-heading {
+  grid-column: 1 / -1;
   color: #f2f3f1;
-  font-size: 2rem; /* adjust to match your design */
+  font-size: 2rem;
   font-weight: 600;
-  margin: 2rem 0 1rem 0; /* spacing above and below */
-  width: 100%; /* match grid width */
-  max-width: 1200px; /* optional: limit width for large screens */
-  text-align: left;
-  display: block;
+  margin: 2.5rem 0 1rem 0;
 }
-
-/* Optional: add spacing for smaller screens */
-@media (max-width: 768px) {
-  .project-grid-heading {
-    font-size: 1.5rem;
-    margin: 1.5rem 0 0.75rem 0;
-  }
-}
-
 
 /* ==========================
    MOBILE NAV - POLISHED VERSION (NO SEPARATORS)
