@@ -292,8 +292,9 @@ if (isPartiallyVisible(footer)) {
 
     <script>
 
-// Only run custom cursor on devices that actually have a mouse
-if (!window.matchMedia("(hover: none), (pointer: coarse)").matches) {
+<script>
+// Only run custom cursor on desktop (screen width > 768px)
+if (window.innerWidth > 768) {
 
   // Create the custom cursor element
   const cursor = document.createElement('div');
@@ -334,7 +335,6 @@ if (!window.matchMedia("(hover: none), (pointer: coarse)").matches) {
   });
 
 }
-
 </script>
 
 </body>
