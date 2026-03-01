@@ -317,38 +317,56 @@ if (isPartiallyVisible(footer)) {
     }
 });
 
-    <script>
-if (window.innerWidth > 768) { // desktop only
-  const cursor = document.createElement('div');
-  cursor.classList.add('cursor');
-  document.body.appendChild(cursor);
+  <script>
+(function() {
+  // Only desktop
+  if (window.innerWidth <= 768) return;
 
-  let mouseX = 0, mouseY = 0;
-  let currentX = 0, currentY = 0;
+  // Wait until the DOM is fully loaded
+  function initCursor() {
+    // Check if cursor already exists
+    if (document.querySelector('.cursor')) return;
 
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
+    // Create cursor element
+    const cursor = document.createElement('div');
+    cursor.classList.add('cursor');
+    document.body.appendChild(cursor);
 
-  function animateCursor() {
-    currentX += (mouseX - currentX) * 0.2;
-    currentY += (mouseY - currentY) * 0.2;
-    cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
-    requestAnimationFrame(animateCursor);
+    let mouseX = 0, mouseY = 0;
+    let currentX = 0, currentY = 0;
+
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+      currentX += (mouseX - currentX) * 0.2;
+      currentY += (mouseY - currentY) * 0.2;
+      cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    const hoverSelectors = ['a', 'button', '.accordion-btn', '.cta-button', '.glightbox'];
+
+    document.body.addEventListener('mouseover', e => {
+      if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.add('cursor-hover');
+    });
+
+    document.body.addEventListener('mouseout', e => {
+      if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.remove('cursor-hover');
+    });
   }
-  animateCursor();
 
-  const hoverSelectors = ['a', 'button', '.accordion-btn', '.cta-button', '.glightbox'];
-
-  document.body.addEventListener('mouseover', e => {
-    if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.add('cursor-hover');
-  });
-
-  document.body.addEventListener('mouseout', e => {
-    if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.remove('cursor-hover');
-  });
-}
+  // Use both DOMContentLoaded and window load for safety
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    initCursor();
+  } else {
+    document.addEventListener('DOMContentLoaded', initCursor);
+    window.addEventListener('load', initCursor);
+  }
+})();
 </script>
 
 </body>
