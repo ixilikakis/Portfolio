@@ -290,13 +290,16 @@ if (isPartiallyVisible(footer)) {
     }
 });
 
- <script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.innerWidth > 768) { // only enable on desktop
+  // Only enable cursor on desktop
+  if (window.innerWidth > 768) {
+    // Create the custom cursor element
     const cursor = document.createElement('div');
     cursor.classList.add('cursor');
     document.body.appendChild(cursor);
 
+    // Track mouse position
     let mouseX = 0, mouseY = 0;
     let currentX = 0, currentY = 0;
 
@@ -305,6 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mouseY = e.clientY;
     });
 
+    // Smooth cursor animation
     function animateCursor() {
       currentX += (mouseX - currentX) * 0.2;
       currentY += (mouseY - currentY) * 0.2;
@@ -313,14 +317,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     animateCursor();
 
+    // Hover effects for interactive elements
     const hoverSelectors = ['a', 'button', '.accordion-btn', '.cta-button', '.glightbox'];
 
     document.body.addEventListener('mouseover', e => {
-      if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.add('cursor-hover');
+      if (hoverSelectors.some(sel => e.target.closest(sel))) {
+        cursor.classList.add('cursor-hover');
+      }
     });
 
     document.body.addEventListener('mouseout', e => {
-      if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.remove('cursor-hover');
+      if (hoverSelectors.some(sel => e.target.closest(sel))) {
+        cursor.classList.remove('cursor-hover');
+      }
     });
   }
 });
