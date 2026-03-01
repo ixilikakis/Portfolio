@@ -291,15 +291,11 @@ if (isPartiallyVisible(footer)) {
 });
 
     <script>
-
-// Only enable cursor on desktop
-if (window.innerWidth > 768) { // adjust breakpoint if needed
-  // Create the cursor element
+if (window.innerWidth > 768) { // desktop only
   const cursor = document.createElement('div');
   cursor.classList.add('cursor');
   document.body.appendChild(cursor);
 
-  // Track mouse movement
   let mouseX = 0, mouseY = 0;
   let currentX = 0, currentY = 0;
 
@@ -308,7 +304,6 @@ if (window.innerWidth > 768) { // adjust breakpoint if needed
     mouseY = e.clientY;
   });
 
-  // Smooth trailing
   function animateCursor() {
     currentX += (mouseX - currentX) * 0.2;
     currentY += (mouseY - currentY) * 0.2;
@@ -317,23 +312,16 @@ if (window.innerWidth > 768) { // adjust breakpoint if needed
   }
   animateCursor();
 
-  // Hover effects
-  function toggleHover(e, add) {
-    if (add) cursor.classList.add('cursor-hover');
-    else cursor.classList.remove('cursor-hover');
-  }
-
   const hoverSelectors = ['a', 'button', '.accordion-btn', '.cta-button', '.glightbox'];
 
   document.body.addEventListener('mouseover', e => {
-    if (hoverSelectors.some(sel => e.target.closest(sel))) toggleHover(e, true);
+    if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.add('cursor-hover');
   });
 
   document.body.addEventListener('mouseout', e => {
-    if (hoverSelectors.some(sel => e.target.closest(sel))) toggleHover(e, false);
+    if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.remove('cursor-hover');
   });
 }
-	
 </script>
 
 </body>
