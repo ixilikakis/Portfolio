@@ -291,15 +291,20 @@ if (isPartiallyVisible(footer)) {
 });
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  // Only enable cursor on desktop
-  if (window.innerWidth > 768) {
-    // Create the custom cursor element
+(function() {
+  // Only desktop
+  if (window.innerWidth <= 768) return;
+
+  // Wait until the DOM is fully loaded
+  function initCursor() {
+    // Check if cursor already exists
+    if (document.querySelector('.cursor')) return;
+
+    // Create cursor element
     const cursor = document.createElement('div');
     cursor.classList.add('cursor');
     document.body.appendChild(cursor);
 
-    // Track mouse position
     let mouseX = 0, mouseY = 0;
     let currentX = 0, currentY = 0;
 
@@ -308,7 +313,6 @@ document.addEventListener("DOMContentLoaded", () => {
       mouseY = e.clientY;
     });
 
-    // Smooth cursor animation
     function animateCursor() {
       currentX += (mouseX - currentX) * 0.2;
       currentY += (mouseY - currentY) * 0.2;
@@ -317,22 +321,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     animateCursor();
 
-    // Hover effects for interactive elements
     const hoverSelectors = ['a', 'button', '.accordion-btn', '.cta-button', '.glightbox'];
 
     document.body.addEventListener('mouseover', e => {
-      if (hoverSelectors.some(sel => e.target.closest(sel))) {
-        cursor.classList.add('cursor-hover');
-      }
+      if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.add('cursor-hover');
     });
 
     document.body.addEventListener('mouseout', e => {
-      if (hoverSelectors.some(sel => e.target.closest(sel))) {
-        cursor.classList.remove('cursor-hover');
-      }
+      if (hoverSelectors.some(sel => e.target.closest(sel))) cursor.classList.remove('cursor-hover');
     });
   }
-});
+
+  // Use both DOMContentLoaded and window load for safety
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    initCursor();
+  } else {
+    document.addEventListener('DOMContentLoaded', initCursor);
+    window.addEventListener('load', initCursor);
+  }
+})();
 </script>
   
 </body>
