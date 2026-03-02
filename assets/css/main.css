@@ -3295,7 +3295,7 @@ nav.main-nav .nav-links a:hover {
 
 /* Optional intro text above the grid */
 .section-intro {
-  text-align: center;
+  text-align: left;
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 2.5rem; /* space between intro and grid */
