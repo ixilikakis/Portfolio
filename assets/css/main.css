@@ -3168,7 +3168,7 @@ nav.main-nav .nav-links a:hover {
 .featured-header {
   max-width: 1100px;
   margin: 0 auto 60px auto; /* keeps section centered, adds bottom space */
-  text-align: left;
+  text-align: center;
 }
 
 .featured-header p {
@@ -3295,7 +3295,7 @@ nav.main-nav .nav-links a:hover {
 
 /* Optional intro text above the grid */
 .section-intro {
-  text-align: left;
+  text-align: center;
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 2.5rem; /* space between intro and grid */
