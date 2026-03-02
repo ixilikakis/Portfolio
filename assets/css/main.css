@@ -3166,7 +3166,17 @@ nav.main-nav .nav-links a:hover {
 
 /* Section Title */
 .featured-header {
-  margin-bottom: 60px;
+  max-width: 1100px;
+  margin: 0 auto 60px auto; /* keeps section centered, adds bottom space */
+  text-align: left;
+}
+
+.featured-header p {
+  max-width: 700px;
+  margin-top: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1F1F1F;
 }
 
 .section-title {
